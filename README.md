@@ -2,6 +2,10 @@
 
 This is a fixed-scope service package for selling website conversion audits to founders and small teams.
 
+## Live site
+
+<https://newworldba.github.io/ai-growth-audit/>
+
 ## Publish
 
 This repository publishes `index.html` to GitHub Pages with the workflow in `.github/workflows/pages.yml`.
