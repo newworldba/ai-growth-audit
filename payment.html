@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Options — AI Growth Audit</title>
+  <meta name="description" content="Alipay and WeChat Pay are accepted for confirmed AI Growth Audit orders.">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(980px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,52px); letter-spacing:-.03em; line-height:1.08; margin:42px 0 14px; }
+    .lede { color:var(--muted); font-size:18px; max-width:740px; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:40px 0; }
+    .card { border:1px solid var(--line); border-radius:14px; padding:18px; background:#fff; }
+    .card h3 { margin:0 0 8px; font-size:18px; }
+    .card p { margin:0; color:var(--muted); font-size:14px; }
+    .pay-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:28px 0 44px; }
+    .pay-card { border:1px solid var(--line); border-radius:16px; padding:24px; background:#fff; }
+    .pay-card h2 { margin:0 0 8px; font-size:24px; }
+    .price { font-weight:800; letter-spacing:-.02em; }
+    .qr { position:relative; min-height:230px; display:grid; place-items:center; border:1px dashed var(--line); border-radius:12px; margin:18px 0; background:var(--soft); overflow:hidden; }
+    .qr img { width:210px; height:210px; object-fit:contain; background:#fff; padding:8px; }
+    .qr.empty::after { content:attr(data-placeholder); color:var(--muted); font-size:14px; text-align:center; padding:18px; }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; font-weight:700; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:50px; font-size:14px; }
+    @media(max-width:760px){ .steps,.pay-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>支付宝 / 微信支付</h1>
+    <p class="lede">适合中国客户的人民币付款方式。请在提交需求并获得确认后付款；付款前不会开始交付。</p>
+
+    <div class="steps">
+      <div class="card"><h3>1. 提交需求</h3><p>填写审计申请表，提供网站、目标和客户画像。</p></div>
+      <div class="card"><h3>2. 确认范围</h3><p>确认页面数量、交付时间和最终金额。</p></div>
+      <div class="card"><h3>3. 支付款项</h3><p>使用支付宝或微信扫码付款。</p></div>
+      <div class="card"><h3>4. 开始交付</h3><p>收到付款确认后，按承诺时间交付报告。</p></div>
+    </div>
+
+    <section>
+      <h2 style="font-size:30px;margin:0 0 8px;">选择付款方式</h2>
+      <p class="muted" style="color:var(--muted);margin:0 0 18px;">下方收款码由服务提供者上传后自动显示。未上传时，请在确认订单后索取收款信息。</p>
+      <div class="pay-grid">
+        <div class="pay-card">
+          <h2>Alipay 支付宝</h2>
+          <p class="muted" style="color:var(--muted);">适合支付宝转账或扫码付款。</p>
+          <div class="qr empty" data-placeholder="上传 assets/alipay-qr.png 后，这里会显示支付宝收款码。">
+            <img src="assets/alipay-qr.png" alt="Alipay payment QR code" onerror="this.closest('.qr').classList.add('empty'); this.remove();">
+          </div>
+          <div><strong>Quick Audit：</strong><span class="price">¥1,080</span></div>
+          <div><strong>Growth Audit：</strong><span class="price">¥2,880</span></div>
+          <div><strong>Implementation Sprint：</strong><span class="price">¥7,180</span></div>
+        </div>
+        <div class="pay-card">
+          <h2>WeChat Pay 微信支付</h2>
+          <p class="muted" style="color:var(--muted);">适合微信转账或扫码付款。</p>
+          <div class="qr empty" data-placeholder="上传 assets/wechat-qr.png 后，这里会显示微信收款码。">
+            <img src="assets/wechat-qr.png" alt="WeChat Pay payment QR code" onerror="this.closest('.qr').classList.add('empty'); this.remove();">
+          </div>
+          <div><strong>Quick Audit：</strong><span class="price">¥1,080</span></div>
+          <div><strong>Growth Audit：</strong><span class="price">¥2,880</span></div>
+          <div><strong>Implementation Sprint：</strong><span class="price">¥7,180</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">人民币金额为服务报价参考，最终金额以确认订单后的发票或收款说明为准。请勿在申请表中发送密码、支付密码、身份证号或其他敏感信息。</div>
+    <div style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn" href="https://github.com/newworldba/ai-growth-audit/issues/new?template=audit-request.yml">提交审计申请</a>
+      <a class="btn secondary" href="/">返回首页</a>
+    </div>
+  </main>
+  <footer><div class="wrap">仅提供分析与建议服务。未授权访问与收入保证均不提供。</div></footer>
+</body>
+</html>

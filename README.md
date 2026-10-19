@@ -21,6 +21,7 @@ After pushing to `main`:
 
 - `index.html` — public landing page.
 - `sample-report.html` — anonymized sample report format.
+- `payment.html` — Alipay and WeChat Pay order flow for RMB invoices.
 - `.github/ISSUE_TEMPLATE/audit-request.yml` — structured client intake form.
 - `offer.md` — packages, scope, delivery workflow, and legal guardrails.
 - `lead-magnet.md` — downloadable checklist for collecting leads.
