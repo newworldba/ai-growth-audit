@@ -20,6 +20,8 @@ After pushing to `main`:
 ## Contents
 
 - `index.html` — public landing page.
+- `zh/index.html` — Chinese landing page for Alipay and WeChat clients.
+- `.github/ISSUE_TEMPLATE/audit-request-zh.yml` — Chinese client intake form.
 - `sample-report.html` — anonymized sample report format.
 - `payment.html` — Alipay and WeChat Pay order flow for RMB invoices.
 - `.github/ISSUE_TEMPLATE/audit-request.yml` — structured client intake form.
