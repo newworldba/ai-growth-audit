@@ -1,0 +1,75 @@
+name: Audit request
+description: Request a website conversion or growth audit.
+title: "Audit request: [company or site name]"
+labels: ["audit-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit this form to request an audit. Do not include passwords or private credentials. We will confirm scope and invoice before starting paid work.
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - Quick Audit — USD 149
+        - Growth Audit — USD 399
+        - Implementation Sprint — USD 999
+        - Unsure — please recommend
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      description: Enter the page or site you own or are authorized to have reviewed.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: company
+    attributes:
+      label: Company or product name
+    validations:
+      required: true
+  - type: input
+    id: audience
+    attributes:
+      label: Target customer
+      description: Who should buy or sign up?
+      placeholder: Series A SaaS operations managers
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Main conversion goal
+      description: What action should visitors take?
+      placeholder: Book a demo / start trial / purchase
+    validations:
+      required: true
+  - type: textarea
+    id: traffic
+    attributes:
+      label: Traffic and sources
+      description: Approximate monthly visitors and main channels. Analytics access is optional.
+      placeholder: "About 2,000/month; organic search and LinkedIn."
+    validations:
+      required: false
+  - type: textarea
+    id: issues
+    attributes:
+      label: Known problems or questions
+    validations:
+      required: false
+  - type: checkboxes
+    id: authorization
+    attributes:
+      label: Authorization and terms
+      options:
+        - label: I own this website or am authorized to request this review.
+          required: true
+        - label: I understand the audit provides recommendations and does not guarantee revenue.
+          required: true
+        - label: I understand payment is required before delivery.
+          required: true

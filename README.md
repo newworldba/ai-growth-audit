@@ -20,6 +20,8 @@ After pushing to `main`:
 ## Contents
 
 - `index.html` — public landing page.
+- `sample-report.html` — anonymized sample report format.
+- `.github/ISSUE_TEMPLATE/audit-request.yml` — structured client intake form.
 - `offer.md` — packages, scope, delivery workflow, and legal guardrails.
 - `lead-magnet.md` — downloadable checklist for collecting leads.
 - `cold-email-sequence.md` — four-email outreach sequence.

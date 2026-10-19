@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Audit Report — AI Growth Audit</title>
+  <meta name="description" content="An example of the prioritized fixes included in the AI Growth Audit.">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(920px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    .brand { font-weight:800; text-decoration:none; color:var(--ink); }
+    h1 { font-size:clamp(32px,5vw,52px); line-height:1.08; letter-spacing:-.03em; margin:38px 0 16px; }
+    .lede { color:var(--muted); font-size:18px; max-width:720px; }
+    .notice { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:26px 0 40px; font-size:14px; }
+    h2 { font-size:28px; letter-spacing:-.02em; margin:44px 0 14px; }
+    ol { padding-left:20px; }
+    li { margin-bottom:18px; }
+    .fix { border:1px solid var(--line); border-radius:14px; padding:18px; margin:14px 0; }
+    .impact { display:inline-block; background:#ecf3ff; color:#1f5eff; border-radius:999px; padding:2px 10px; font-size:12px; font-weight:700; text-transform:uppercase; }
+    a { color:var(--brand); }
+    .cta { display:inline-block; background:var(--brand); color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; font-weight:700; margin-top:24px; }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:60px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>Sample audit report</h1>
+    <p class="lede">This is an anonymized example of the format used in a Quick Audit. The full report identifies the issue, why it matters, and the exact change to make.</p>
+    <div class="notice"><strong>Important:</strong> This sample is for illustration only. It is not a client case study and does not represent actual results.</div>
+
+    <h2>Prioritized fixes</h2>
+    <ol>
+      <li><div class="fix"><span class="impact">High impact</span><h3>Clarify the audience in the first five words</h3><p>Replace a general headline such as “Smarter workflows for modern teams” with the customer and outcome: “Automate invoice approvals for small finance teams.” Visitors should know within five words whether the page is relevant.</p></div></li>
+      <li><div class="fix"><span class="impact">High impact</span><h3>Make the next step specific</h3><p>Change “Learn more” to “Get the 48-hour audit.” The button should describe the result, not ask the visitor to work harder to understand the offer.</p></div></li>
+      <li><div class="fix"><span class="impact">Medium impact</span><h3>Move proof above the final CTA</h3><p>If the only evidence appears in the footer, visitors reach the decision point without support. Place one specific quote, certification, customer count, or guarantee near the pricing or signup block.</p></div></li>
+      <li><div class="fix"><span class="impact">Medium impact</span><h3>Answer the main buying objection</h3><p>If onboarding effort is the likely concern, add one sentence near the CTA: “No engineering time required; connect your existing tools in under 10 minutes.” Only use claims that are accurate.</p></div></li>
+      <li><div class="fix"><span class="impact">Quick win</span><h3>Fix mobile CTA spacing</h3><p>Ensure the primary button remains visible after the fold and has at least 44px tap height. Reduce competing links around it so the next action is obvious.</p></div></li>
+    </ol>
+
+    <h2>Deliverables in a paid report</h2>
+    <ul>
+      <li>Issue list with evidence from the page.</li>
+      <li>Impact priority and effort estimate.</li>
+      <li>Copy rewrite suggestions.</li>
+      <li>SEO and mobile usability notes.</li>
+      <li>30-day action order for Growth Audit clients.</li>
+    </ul>
+
+    <a class="cta" href="https://github.com/newworldba/ai-growth-audit/issues/new?template=audit-request.yml">Request your audit</a>
+  </main>
+  <footer><div class="wrap">Analysis and recommendations only. No unauthorized access and no guaranteed revenue.</div></footer>
+</body>
+</html>
