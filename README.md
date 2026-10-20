@@ -31,6 +31,15 @@ After pushing to `main`:
 - `cold-email-sequence.md` — four-email outreach sequence.
 - `outreach-plan.md` — target profiles and daily outreach routine.
 - `launch-checklist.md` — setup, launch, delivery, and weekly review checklist.
+- `zh/target-leads-batch-2.md` — second batch of verified target sites.
+- `zh/skill-and-market-research.md` — reusable findings from skills and market research.
+
+## How To Use This Kit
+
+1. Start with `zh/target-leads-batch-2.md` or `zh/target-leads.md`; verify the site is still live before contacting anyone.
+2. Use one specific observation from the target row in the first message. Do not send identical bulk messages.
+3. Send at most five first contacts per day and log every attempt in `zh/outreach-tracker.xlsx`.
+4. After a reply, send the relevant application form, then use `zh/proposal-template.md` and `zh/delivery-report-template.md` for delivery.
 
 ## Legal Position
 
