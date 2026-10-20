@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公开页面微诊断示例 — AI 增长审计</title>
+  <meta name="description" content="5 个公开网站的转化诊断示例，展示首屏、信任、路径和定价页面的修复思路。">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(960px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,50px); letter-spacing:-.02em; margin:42px 0 14px; }
+    .lede { color:var(--muted); font-size:18px; max-width:760px; }
+    .audit { border:1px solid var(--line); border-radius:16px; padding:24px; margin:24px 0; }
+    .audit h2 { margin:0 0 6px; font-size:26px; }
+    .meta { color:var(--muted); font-size:14px; margin:0 0 16px; }
+    ol { color:var(--muted); padding-left:20px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; font-weight:700; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .cta { background:var(--soft); border-radius:18px; padding:32px; margin:44px 0; }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:50px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>公开页面微诊断示例</h1>
+    <p class="lede">以下示例只使用公开页面和公开仓库信息，不是客户案例，也不包含任何私密数据。它们展示同一套审计方法：先找出信任、路径和决策成本问题，再给出可执行修复。</p>
+
+    <article class="audit">
+      <h2>Virling</h2>
+      <p class="meta">公开页面：<a href="https://virling.com">virling.com</a> · 主题：收入归因</p>
+      <ol>
+        <li>把 self-hosting 免费路径与 hosted waitlist 分开，避免用户误以为产品还不能使用。</li>
+        <li>把“ChatGPT 访客收入高于 X 访客 24 倍”的证据前移到首屏。</li>
+        <li>在 $19 hosted 价格附近重复 read-only key 和数据边界说明。</li>
+      </ol>
+    </article>
+
+    <article class="audit">
+      <h2>Papertrail</h2>
+      <p class="meta">公开页面：<a href="https://subtrace.app/">subtrace.app</a> · 主题：自动发票收集</p>
+      <ol>
+        <li>在 “Start filing free” 附近重复 read-only OAuth、加密和不能删除邮件的承诺。</li>
+        <li>明确 Free 计划的来源数量或文件数量限制，减少注册后的落差。</li>
+        <li>为自动检测的演示数据添加“示例结果”说明，避免用户误认为固定承诺。</li>
+      </ol>
+    </article>
+
+    <article class="audit">
+      <h2>Menivor</h2>
+      <p class="meta">公开页面：<a href="https://menivor.com">menivor.com</a> · 主题：生成 TikTok 演示视频</p>
+      <ol>
+        <li>把 App Store 用户和任意链接用户分成不同入口，降低首屏理解成本。</li>
+        <li>用一条时间线解释“第 1 支免费无卡”和“后续免费额度需要 $1 验证”。</li>
+        <li>把珠宝、球鞋和 help desk 三个最相关示例放在第一个 CTA 附近。</li>
+      </ol>
+    </article>
+
+    <article class="audit">
+      <h2>Megaphone</h2>
+      <p class="meta">公开页面：<a href="https://2104178150-ai.github.io/megaphone/">Megaphone</a> · 主题：开源项目发布检查</p>
+      <ol>
+        <li>在输入 GitHub 仓库前展示一份静态评分报告，让用户理解输出结构。</li>
+        <li>把英文全球渠道和中文社区渠道分成两条发布路径。</li>
+        <li>在“不在服务器存储数据”附近说明哪些公开仓库数据只在浏览器读取。</li>
+      </ol>
+    </article>
+
+    <article class="audit">
+      <h2>Worksitem</h2>
+      <p class="meta">公开页面：<a href="https://worksitem.com">worksitem.com</a> · 主题：建筑成本估算</p>
+      <ol>
+        <li>为房主和承包商设置不同入口：一个关注预算，一个关注管理报价。</li>
+        <li>展示一份 itemized PDF 样例，让用户知道会收到哪些条目和假设。</li>
+        <li>统一 74 tools、60+ tools 和 233 routes 的口径，减少信息不一致。</li>
+      </ol>
+    </article>
+
+    <div class="cta">
+      <h2 style="margin:0 0 10px;font-size:30px;">需要同样深度的 Top 10 修复清单？</h2>
+      <p style="color:var(--muted);margin:0 0 22px;">提交网站和目标客户，我会在确认范围后 48 小时内交付快速审计。</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="btn" href="apply.html">申请 48 小时审计</a>
+        <a class="btn secondary" href="checklist.html">先看免费自查清单</a>
+      </div>
+    </div>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit。示例只基于公开页面；不承诺收入。</div></footer>
+</body>
+</html>

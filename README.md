@@ -33,6 +33,7 @@ After pushing to `main`:
 - `launch-checklist.md` — setup, launch, delivery, and weekly review checklist.
 - `zh/target-leads-batch-2.md` — second batch of verified target sites.
 - `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
+- `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
 - `zh/skill-and-market-research.md` — reusable findings from skills and market research.
 
 ## How To Use This Kit
