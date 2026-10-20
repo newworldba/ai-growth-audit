@@ -32,6 +32,7 @@ After pushing to `main`:
 - `outreach-plan.md` — target profiles and daily outreach routine.
 - `launch-checklist.md` — setup, launch, delivery, and weekly review checklist.
 - `zh/target-leads-batch-2.md` — second batch of verified target sites.
+- `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
 - `zh/skill-and-market-research.md` — reusable findings from skills and market research.
 
 ## How To Use This Kit
