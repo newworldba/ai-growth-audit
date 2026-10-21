@@ -33,6 +33,7 @@ After pushing to `main`:
 - `launch-checklist.md` — setup, launch, delivery, and weekly review checklist.
 - `zh/target-leads-batch-2.md` — second batch of verified target sites.
 - `zh/target-leads-batch-3.md` — third batch from the last 30 days of Show HN.
+- `zh/follow-ups-batch-3.md` — ready-to-copy follow-up drafts for the batch.
 - `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
 - `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
 - `public-micro-audits-en.html` — English public mini-audit examples for the landing page.
