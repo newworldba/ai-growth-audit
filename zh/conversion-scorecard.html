@@ -147,6 +147,12 @@
       const subject = encodeURIComponent('转化体检结果：' + (pageUrl || '新审计申请'));
       const body = encodeURIComponent(resultText.value + '\n\n我的目标：');
       document.getElementById('mailto-link').href = `mailto:hailong.wei@ushow.media?subject=${subject}&body=${body}`;
+      const applyParams = new URLSearchParams({
+        package: '快速审计 ¥1,080',
+        website: pageUrl,
+        context: resultText.value
+      });
+      document.getElementById('apply-link').href = 'apply.html?' + applyParams.toString();
 
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -78,8 +78,13 @@
   <footer><div class="wrap">© 2026 GrowthAudit。仅提供分析与建议，不保证收入。</div></footer>
   <script>
     const packageSelect = document.getElementById('package');
-    const requestedPackage = new URLSearchParams(location.search).get('package');
+    const requestParams = new URLSearchParams(location.search);
+    const requestedPackage = requestParams.get('package');
     if (requestedPackage) packageSelect.value = requestedPackage;
+    ['website', 'audience', 'goal', 'context'].forEach(id => {
+      const value = requestParams.get(id);
+      if (value) document.getElementById(id).value = value;
+    });
 
     document.getElementById('audit-form').addEventListener('submit', (event) => {
       event.preventDefault();

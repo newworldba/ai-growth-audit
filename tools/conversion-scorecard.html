@@ -146,6 +146,12 @@
       const subject = encodeURIComponent('Conversion Scorecard: ' + (pageUrl || 'New audit request'));
       const body = encodeURIComponent(resultText.value + '\n\nMy goal: ');
       document.getElementById('mailto-link').href = `mailto:hailong.wei@ushow.media?subject=${subject}&body=${body}`;
+      const applyParams = new URLSearchParams({
+        package: 'Quick Audit $149',
+        website: pageUrl,
+        context: resultText.value
+      });
+      document.getElementById('apply-link').href = '../apply.html?' + applyParams.toString();
 
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
