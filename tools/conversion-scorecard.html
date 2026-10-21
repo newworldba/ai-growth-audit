@@ -47,6 +47,7 @@
 
     <form id="scorecard">
       <div class="card">
+        <div class="question"><strong>Optional: paste the page URL</strong><input id="page-url" name="page-url" type="url" placeholder="https://example.com" style="width:100%;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;"></div>
         <div class="question"><strong>1. Do the first five words show who the page is for?</strong><div class="answers"><label class="option"><input type="radio" name="q1" value="yes" required> Yes</label><label class="option"><input type="radio" name="q1" value="no"> No</label></div></div>
         <div class="question"><strong>2. Does the first screen state the outcome, not only the product category?</strong><div class="answers"><label class="option"><input type="radio" name="q2" value="yes" required> Yes</label><label class="option"><input type="radio" name="q2" value="no"> No</label></div></div>
         <div class="question"><strong>3. Can a new visitor identify the next action in five seconds?</strong><div class="answers"><label class="option"><input type="radio" name="q3" value="yes" required> Yes</label><label class="option"><input type="radio" name="q3" value="no"> No</label></div></div>
@@ -74,6 +75,7 @@
       </div>
       <div class="actions">
         <a id="apply-link" class="btn" href="../#pricing">Get the 48-hour audit</a>
+        <a id="mailto-link" class="btn secondary" href="#">Send result for $149 audit</a>
         <button id="copy-result" class="btn secondary" type="button">Copy result</button>
       </div>
       <div class="card">
@@ -109,6 +111,7 @@
       const summary = document.getElementById('summary');
       const fixList = document.getElementById('fixes');
       const resultText = document.getElementById('result-text');
+      const pageUrl = (data.get('page-url') || '').trim();
 
       status.className = 'label ' + (score >= 8 ? 'good' : score >= 6 ? 'medium' : 'urgent');
       status.textContent = score >= 8 ? 'Strong baseline' : score >= 6 ? 'Fixable gaps' : 'Urgent conversion risk';
@@ -131,6 +134,7 @@
 
       resultText.value = [
         'GrowthAudit Conversion Scorecard',
+        pageUrl ? 'Page: ' + pageUrl : 'Page: not provided',
         'Score: ' + score + '/10 — ' + status.textContent,
         '',
         'Top fixes:',
@@ -138,6 +142,10 @@
         '',
         'Need a page-specific Top 10 list? https://newworldba.github.io/ai-growth-audit/#pricing'
       ].join('\n');
+
+      const subject = encodeURIComponent('Conversion Scorecard: ' + (pageUrl || 'New audit request'));
+      const body = encodeURIComponent(resultText.value + '\n\nMy goal: ');
+      document.getElementById('mailto-link').href = `mailto:hailong.wei@ushow.media?subject=${subject}&body=${body}`;
 
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -35,6 +35,7 @@ After pushing to `main`:
 - `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
 - `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
+- `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
 - `zh/skill-and-market-research.md` — reusable findings from skills and market research.
 
 ## How To Use This Kit

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>免费转化体检 — 60 秒找出网站转化卡点</title>
+  <meta name="description" content="回答 10 个是/否问题，立即获得转化分数和前 3 个优先修复建议。免费、隐私安全、无需注册。">
+  <meta property="og:title" content="免费转化体检">
+  <meta property="og:description" content="60 秒找出落地页上三个最影响转化的卡点。">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(880px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:20px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,48px); letter-spacing:-.02em; line-height:1.1; margin:42px 0 14px; }
+    .lede { color:var(--muted); font-size:18px; max-width:720px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; margin:22px 0; }
+    .question { padding:14px 0; border-bottom:1px solid var(--line); }
+    .question:last-child { border-bottom:0; }
+    .question strong { display:block; margin-bottom:10px; }
+    .answers { display:flex; gap:10px; flex-wrap:wrap; }
+    label.option { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:99px; padding:8px 14px; cursor:pointer; font-size:14px; }
+    input[type="radio"] { accent-color:var(--brand); }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin:26px 0; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border:0; border-radius:10px; font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .result { display:none; margin-top:28px; }
+    .score { font-size:54px; font-weight:850; line-height:1; letter-spacing:-.04em; margin:6px 0 8px; }
+    .label { display:inline-block; font-size:14px; font-weight:750; border-radius:99px; padding:6px 12px; }
+    .label.good { color:#126a3d; background:#e7f7ee; }
+    .label.medium { color:#8a5300; background:#fff4d6; }
+    .label.urgent { color:#a12622; background:#ffe7e5; }
+    ol { color:var(--muted); padding-left:20px; }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    textarea { width:100%; min-height:180px; border:1px solid var(--line); border-radius:12px; padding:14px; font:inherit; color:var(--ink); background:#fff; }
+    footer { border-top:1px solid var(--line); margin-top:52px; padding:24px 0; color:var(--muted); font-size:14px; }
+    input[type="url"] { width:100%; min-height:44px; border:1px solid var(--line); border-radius:10px; padding:10px 12px; font:inherit; }
+    @media(max-width:560px){ .answers { display:grid; } label.option { justify-content:flex-start; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>免费转化体检</h1>
+    <p class="lede">针对一个落地页回答 10 个是/否问题，马上获得分数、状态和前 3 个优先修复建议。结果只保存在你的浏览器里。</p>
+
+    <form id="scorecard">
+      <div class="card">
+        <div class="question"><strong>可选：粘贴页面链接</strong><input id="page-url" name="page-url" type="url" placeholder="https://example.com"></div>
+        <div class="question"><strong>1. 前 5 个字能让访客看出页面服务谁吗？</strong><div class="answers"><label class="option"><input type="radio" name="q1" value="yes" required> 是</label><label class="option"><input type="radio" name="q1" value="no"> 否</label></div></div>
+        <div class="question"><strong>2. 首屏说的是客户结果，而不只是产品类别吗？</strong><div class="answers"><label class="option"><input type="radio" name="q2" value="yes" required> 是</label><label class="option"><input type="radio" name="q2" value="no"> 否</label></div></div>
+        <div class="question"><strong>3. 新访客能在 5 秒内知道下一步做什么吗？</strong><div class="answers"><label class="option"><input type="radio" name="q3" value="yes" required> 是</label><label class="option"><input type="radio" name="q3" value="no"> 否</label></div></div>
+        <div class="question"><strong>4. 主要按钮写的是结果，而不是“了解更多”吗？</strong><div class="answers"><label class="option"><input type="radio" name="q4" value="yes" required> 是</label><label class="option"><input type="radio" name="q4" value="no"> 否</label></div></div>
+        <div class="question"><strong>5. 决策点附近有至少一条相关证据吗？</strong><div class="answers"><label class="option"><input type="radio" name="q5" value="yes" required> 是</label><label class="option"><input type="radio" name="q5" value="no"> 否</label></div></div>
+        <div class="question"><strong>6. 价格、范围或套餐边界容易理解吗？</strong><div class="answers"><label class="option"><input type="radio" name="q6" value="yes" required> 是</label><label class="option"><input type="radio" name="q6" value="no"> 否</label></div></div>
+        <div class="question"><strong>7. 手机端的主要动作明显且容易点击吗？</strong><div class="answers"><label class="option"><input type="radio" name="q7" value="yes" required> 是</label><label class="option"><input type="radio" name="q7" value="no"> 否</label></div></div>
+        <div class="question"><strong>8. 标题和描述匹配买家真正搜索的问题吗？</strong><div class="answers"><label class="option"><input type="radio" name="q8" value="yes" required> 是</label><label class="option"><input type="radio" name="q8" value="no"> 否</label></div></div>
+        <div class="question"><strong>9. 页面回答了“实施会不会很麻烦”这个顾虑吗？</strong><div class="answers"><label class="option"><input type="radio" name="q9" value="yes" required> 是</label><label class="option"><input type="radio" name="q9" value="no"> 否</label></div></div>
+        <div class="question"><strong>10. 你知道本周用什么事件判断成功吗？</strong><div class="answers"><label class="option"><input type="radio" name="q10" value="yes" required> 是</label><label class="option"><input type="radio" name="q10" value="no"> 否</label></div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" type="submit">查看分数</button>
+        <button class="btn secondary" type="reset">重新填写</button>
+      </div>
+    </form>
+
+    <section id="result" class="result" aria-live="polite">
+      <div class="card">
+        <span id="status" class="label medium">加载中</span>
+        <div id="score" class="score">0/10</div>
+        <p id="summary" class="muted"></p>
+        <h2>先检查这三项</h2>
+        <ol id="fixes"></ol>
+      </div>
+      <div class="actions">
+        <a id="apply-link" class="btn" href="apply.html">申请 48 小时审计</a>
+        <a id="mailto-link" class="btn secondary" href="#">发送结果并申请审计</a>
+        <button id="copy-result" class="btn secondary" type="button">复制结果</button>
+      </div>
+      <div class="card">
+        <h2>诊断结果</h2>
+        <textarea id="result-text" readonly></textarea>
+      </div>
+    </section>
+
+    <div class="note">这个自检工具不会收集数据，也不能替代针对具体页面的审计。它用于快速判断优先级，避免在文案、设计和投放上盲目花钱。</div>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit。仅提供分析与建议；不保证收入。</div></footer>
+
+  <script>
+    const fixes = {
+      q1: { title: '在前 5 个字里写出买家', fix: '把泛泛的产品类别改成客户和场景，例如“面向独立 SaaS 创始人”或“面向小型装修工作室”。' },
+      q2: { title: '用结果开头，而不是产品', fix: '先改写标题中的客户结果，再在下一句解释产品如何实现。' },
+      q3: { title: '让下一步显而易见', fix: '减少首屏竞争链接，只保留一个主要动作，并用结果型文案命名按钮。' },
+      q4: { title: '重写主要 CTA', fix: '把“了解更多”改成“申请 48 小时审计”“开始免费使用”等明确结果。' },
+      q5: { title: '把证据靠近决策点', fix: '在价格或注册按钮附近放一张截图、一个数字、一句评价、一个保证或公开示例。' },
+      q6: { title: '说明套餐边界', fix: '在付款前写清包含什么、不包含什么，以及下一步会产生什么费用。' },
+      q7: { title: '优化手机端动作', fix: '保持主要按钮可见，点击区域至少 44px，并移除附近的竞争按钮。' },
+      q8: { title: '让 SEO 对齐购买意图', fix: '更新标题和描述，加入买家的问题以及页面真正提供的下一步。' },
+      q9: { title: '回答实施顾虑', fix: '在 CTA 附近用一句话说明实施时间、所需权限、数据隐私或迁移工作量。' },
+      q10: { title: '定义本周成功事件', fix: '选择一个转化事件——试用、申请、下单或预约——并在加流量前每周检查它。' }
+    };
+
+    document.getElementById('scorecard').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const missing = Object.keys(fixes).filter(key => data.get(key) === 'no');
+      const score = 10 - missing.length;
+      const status = document.getElementById('status');
+      const summary = document.getElementById('summary');
+      const fixList = document.getElementById('fixes');
+      const resultText = document.getElementById('result-text');
+      const pageUrl = (data.get('page-url') || '').trim();
+
+      status.className = 'label ' + (score >= 8 ? 'good' : score >= 6 ? 'medium' : 'urgent');
+      status.textContent = score >= 8 ? '基础良好' : score >= 6 ? '存在可修复缺口' : '转化风险较高';
+      document.getElementById('score').textContent = score + '/10';
+      summary.textContent = score >= 8
+        ? '基础已经比较健康。下一步可以针对具体页面测试更精准的定位和定价表达。'
+        : score >= 6
+          ? '页面有可用基础，但几个明显缺口可能正在影响回复或注册。先做下面三项。'
+          : '访客很可能在理解 offer 之前就离开。先完成下面三项，再增加流量。';
+
+      fixList.innerHTML = '';
+      missing.slice(0, 3).forEach(key => {
+        const li = document.createElement('li');
+        const strong = document.createElement('strong');
+        strong.textContent = fixes[key].title + '。';
+        li.appendChild(strong);
+        li.appendChild(document.createTextNode(fixes[key].fix));
+        fixList.appendChild(li);
+      });
+
+      resultText.value = [
+        'GrowthAudit 免费转化体检',
+        pageUrl ? '页面：' + pageUrl : '页面：未提供',
+        '分数：' + score + '/10 — ' + status.textContent,
+        '',
+        '优先修复：',
+        ...missing.slice(0, 3).map((key, index) => (index + 1) + '. ' + fixes[key].title + ' — ' + fixes[key].fix),
+        '',
+        '需要针对页面的 Top 10 清单：https://newworldba.github.io/ai-growth-audit/zh/'
+      ].join('\n');
+
+      const subject = encodeURIComponent('转化体检结果：' + (pageUrl || '新审计申请'));
+      const body = encodeURIComponent(resultText.value + '\n\n我的目标：');
+      document.getElementById('mailto-link').href = `mailto:hailong.wei@ushow.media?subject=${subject}&body=${body}`;
+
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('copy-result').addEventListener('click', async () => {
+      const button = document.getElementById('copy-result');
+      await navigator.clipboard.writeText(document.getElementById('result-text').value);
+      button.textContent = '已复制';
+      setTimeout(() => { button.textContent = '复制结果'; }, 1800);
+    });
+  </script>
+</body>
+</html>
