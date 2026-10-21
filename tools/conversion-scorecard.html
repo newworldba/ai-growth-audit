@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Conversion Scorecard — Find Website Sales Blockers</title>
+  <meta name="description" content="Answer 10 questions and get a conversion score plus the three highest-impact fixes to check on your landing page. Free, private, and no signup.">
+  <meta property="og:title" content="Free Conversion Scorecard">
+  <meta property="og:description" content="Find the three highest-impact conversion blockers on your landing page in 60 seconds.">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(880px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:20px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,48px); letter-spacing:-.02em; line-height:1.1; margin:42px 0 14px; }
+    .lede { color:var(--muted); font-size:18px; max-width:720px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; margin:22px 0; }
+    .question { padding:14px 0; border-bottom:1px solid var(--line); }
+    .question:last-child { border-bottom:0; }
+    .question strong { display:block; margin-bottom:10px; }
+    .answers { display:flex; gap:10px; flex-wrap:wrap; }
+    label.option { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:99px; padding:8px 14px; cursor:pointer; font-size:14px; }
+    input[type="radio"] { accent-color:var(--brand); }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin:26px 0; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border:0; border-radius:10px; font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .result { display:none; margin-top:28px; }
+    .score { font-size:54px; font-weight:850; line-height:1; letter-spacing:-.04em; margin:6px 0 8px; }
+    .label { display:inline-block; font-size:14px; font-weight:750; border-radius:99px; padding:6px 12px; }
+    .label.good { color:#126a3d; background:#e7f7ee; }
+    .label.medium { color:#8a5300; background:#fff4d6; }
+    .label.urgent { color:#a12622; background:#ffe7e5; }
+    ol { color:var(--muted); padding-left:20px; }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    textarea { width:100%; min-height:180px; border:1px solid var(--line); border-radius:12px; padding:14px; font:inherit; color:var(--ink); background:#fff; }
+    footer { border-top:1px solid var(--line); margin-top:52px; padding:24px 0; color:var(--muted); font-size:14px; }
+    @media(max-width:560px){ .answers { display:grid; } label.option { justify-content:flex-start; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>Free Conversion Scorecard</h1>
+    <p class="lede">Answer 10 yes/no questions about one landing page. You get a score, a status, and the three highest-impact fixes to review first. The result stays in your browser.</p>
+
+    <form id="scorecard">
+      <div class="card">
+        <div class="question"><strong>1. Do the first five words show who the page is for?</strong><div class="answers"><label class="option"><input type="radio" name="q1" value="yes" required> Yes</label><label class="option"><input type="radio" name="q1" value="no"> No</label></div></div>
+        <div class="question"><strong>2. Does the first screen state the outcome, not only the product category?</strong><div class="answers"><label class="option"><input type="radio" name="q2" value="yes" required> Yes</label><label class="option"><input type="radio" name="q2" value="no"> No</label></div></div>
+        <div class="question"><strong>3. Can a new visitor identify the next action in five seconds?</strong><div class="answers"><label class="option"><input type="radio" name="q3" value="yes" required> Yes</label><label class="option"><input type="radio" name="q3" value="no"> No</label></div></div>
+        <div class="question"><strong>4. Does the primary CTA describe the result instead of “Learn more”?</strong><div class="answers"><label class="option"><input type="radio" name="q4" value="yes" required> Yes</label><label class="option"><input type="radio" name="q4" value="no"> No</label></div></div>
+        <div class="question"><strong>5. Is one piece of relevant proof visible near the decision point?</strong><div class="answers"><label class="option"><input type="radio" name="q5" value="yes" required> Yes</label><label class="option"><input type="radio" name="q5" value="no"> No</label></div></div>
+        <div class="question"><strong>6. Are price, scope, or plan boundaries easy to understand?</strong><div class="answers"><label class="option"><input type="radio" name="q6" value="yes" required> Yes</label><label class="option"><input type="radio" name="q6" value="no"> No</label></div></div>
+        <div class="question"><strong>7. Is the primary action obvious and usable on a phone?</strong><div class="answers"><label class="option"><input type="radio" name="q7" value="yes" required> Yes</label><label class="option"><input type="radio" name="q7" value="no"> No</label></div></div>
+        <div class="question"><strong>8. Does the title and meta description match what buyers actually search for?</strong><div class="answers"><label class="option"><input type="radio" name="q8" value="yes" required> Yes</label><label class="option"><input type="radio" name="q8" value="no"> No</label></div></div>
+        <div class="question"><strong>9. Does the page answer the main “is this hard to set up?” objection?</strong><div class="answers"><label class="option"><input type="radio" name="q9" value="yes" required> Yes</label><label class="option"><input type="radio" name="q9" value="no"> No</label></div></div>
+        <div class="question"><strong>10. Do you know which event proves success this week?</strong><div class="answers"><label class="option"><input type="radio" name="q10" value="yes" required> Yes</label><label class="option"><input type="radio" name="q10" value="no"> No</label></div></div>
+      </div>
+      <div class="actions">
+        <button class="btn" type="submit">Get my score</button>
+        <button class="btn secondary" type="reset">Reset</button>
+      </div>
+    </form>
+
+    <section id="result" class="result" aria-live="polite">
+      <div class="card">
+        <span id="status" class="label medium">Loading</span>
+        <div id="score" class="score">0/10</div>
+        <p id="summary" class="muted"></p>
+        <h2>Review these three first</h2>
+        <ol id="fixes"></ol>
+      </div>
+      <div class="actions">
+        <a id="apply-link" class="btn" href="../#pricing">Get the 48-hour audit</a>
+        <button id="copy-result" class="btn secondary" type="button">Copy result</button>
+      </div>
+      <div class="card">
+        <h2>Result</h2>
+        <textarea id="result-text" readonly></textarea>
+      </div>
+    </section>
+
+    <div class="note">This self-assessment does not collect data or replace a page-specific audit. Use it as a fast triage before investing in copy, design, or paid traffic.</div>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit. Analysis and recommendations only. No guaranteed revenue.</div></footer>
+
+  <script>
+    const fixes = {
+      q1: { title: 'Name the buyer in the first five words', fix: 'Replace a generic category statement with the customer and situation, such as “For boutique fitness studios” or “For independent SaaS founders”.' },
+      q2: { title: 'Lead with the outcome, not the product', fix: 'Rewrite the headline around the customer result, then keep the product explanation for the next sentence.' },
+      q3: { title: 'Make the next action obvious', fix: 'Remove competing links from the first screen and keep one primary action with a result-focused label.' },
+      q4: { title: 'Rewrite the primary CTA', fix: 'Replace “Learn more” with the actual next result, such as “Get the 48-hour audit” or “Start filing free”.' },
+      q5: { title: 'Move proof closer to the decision', fix: 'Place one specific screenshot, number, quote, guarantee, or public example near the pricing or signup block.' },
+      q6: { title: 'Clarify plan boundaries', fix: 'State what is included, what is excluded, and the exact next cost before the visitor reaches checkout.' },
+      q7: { title: 'Prioritize the mobile action', fix: 'Keep the primary button visible after the fold, give it at least 44px tap height, and remove competing buttons nearby.' },
+      q8: { title: 'Align SEO with buying intent', fix: 'Update the title and meta description to include the buyer’s problem and the page’s actual next step.' },
+      q9: { title: 'Answer setup objections', fix: 'Add one sentence near the CTA about implementation time, access required, data privacy, or migration effort.' },
+      q10: { title: 'Define this week’s success event', fix: 'Choose one conversion event — trial start, application, checkout, or demo — and check it weekly before adding traffic.' }
+    };
+
+    document.getElementById('scorecard').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const missing = Object.keys(fixes).filter(key => data.get(key) === 'no');
+      const score = 10 - missing.length;
+      const status = document.getElementById('status');
+      const summary = document.getElementById('summary');
+      const fixList = document.getElementById('fixes');
+      const resultText = document.getElementById('result-text');
+
+      status.className = 'label ' + (score >= 8 ? 'good' : score >= 6 ? 'medium' : 'urgent');
+      status.textContent = score >= 8 ? 'Strong baseline' : score >= 6 ? 'Fixable gaps' : 'Urgent conversion risk';
+      document.getElementById('score').textContent = score + '/10';
+      summary.textContent = score >= 8
+        ? 'The fundamentals look healthy. A page-specific audit can now test sharper positioning and pricing messages.'
+        : score >= 6
+          ? 'The page has a workable base, but a few visible gaps may be costing replies or signups. Start with the three fixes below.'
+          : 'Visitors are likely leaving before they understand the offer. Focus only on the three fixes below before adding more traffic.';
+
+      fixList.innerHTML = '';
+      missing.slice(0, 3).forEach(key => {
+        const li = document.createElement('li');
+        const strong = document.createElement('strong');
+        strong.textContent = fixes[key].title + '. ';
+        li.appendChild(strong);
+        li.appendChild(document.createTextNode(fixes[key].fix));
+        fixList.appendChild(li);
+      });
+
+      resultText.value = [
+        'GrowthAudit Conversion Scorecard',
+        'Score: ' + score + '/10 — ' + status.textContent,
+        '',
+        'Top fixes:',
+        ...missing.slice(0, 3).map((key, index) => (index + 1) + '. ' + fixes[key].title + ' — ' + fixes[key].fix),
+        '',
+        'Need a page-specific Top 10 list? https://newworldba.github.io/ai-growth-audit/#pricing'
+      ].join('\n');
+
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('copy-result').addEventListener('click', async () => {
+      const button = document.getElementById('copy-result');
+      await navigator.clipboard.writeText(document.getElementById('result-text').value);
+      button.textContent = 'Copied';
+      setTimeout(() => { button.textContent = 'Copy result'; }, 1800);
+    });
+  </script>
+</body>
+</html>
