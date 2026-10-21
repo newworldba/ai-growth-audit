@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Founder CRO Kit Checkout</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(960px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,50px); letter-spacing:-.02em; margin:38px 0 12px; }
+    .lede { color:var(--muted); font-size:18px; max-width:740px; }
+    .pay-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:28px 0 40px; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:24px; background:#fff; }
+    .card h2 { margin:0 0 8px; font-size:24px; }
+    .qr { position:relative; min-height:230px; display:grid; place-items:center; border:1px dashed var(--line); border-radius:12px; margin:18px 0; background:var(--soft); overflow:hidden; }
+    .qr img { width:210px; height:210px; object-fit:contain; background:#fff; padding:8px; }
+    .qr.empty::after { content:attr(data-placeholder); color:var(--muted); font-size:14px; text-align:center; padding:18px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; font-weight:700; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:40px; font-size:14px; }
+    @media(max-width:760px){ .pay-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>Founder CRO Kit checkout</h1>
+    <p class="lede">Pay with Alipay or WeChat. After payment, send the confirmation with your transaction reference and email address. We reply with your kit link.</p>
+
+    <div class="card">
+      <h2>Order summary</h2>
+      <p><strong>Product:</strong> Founder CRO Kit</p>
+      <p><strong>Format:</strong> Browser-friendly HTML file, printable as PDF</p>
+      <p><strong>Price:</strong> $29 / ¥199</p>
+      <p><strong>Delivery:</strong> Link sent after payment confirmation</p>
+    </div>
+
+    <div class="pay-grid">
+      <div class="card">
+        <h2>Alipay</h2>
+        <p>Scan and pay ¥199.</p>
+        <div class="qr" data-placeholder="Payment QR code unavailable">
+          <img src="assets/alipay-qr.png" alt="Alipay payment QR code" onerror="this.closest('.qr').classList.add('empty'); this.remove();">
+        </div>
+      </div>
+      <div class="card">
+        <h2>WeChat Pay</h2>
+        <p>Scan and pay ¥199.</p>
+        <div class="qr" data-placeholder="Payment QR code unavailable">
+          <img src="assets/wechat-qr.png" alt="WeChat Pay payment QR code" onerror="this.closest('.qr').classList.add('empty'); this.remove();">
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      After paying, email your payment reference, email address, and “Founder CRO Kit” to <strong>hailong.wei@ushow.media</strong>. We manually verify the payment and send your kit link. Do not send passwords or sensitive financial details.
+    </div>
+
+    <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn" href="mailto:hailong.wei@ushow.media?subject=Founder%20CRO%20Kit%20payment%20confirmation&body=Product%3A%20Founder%20CRO%20Kit%0AEmail%20for%20delivery%3A%0APayment%20method%3A%0ATransaction%20reference%3A%0APaid%20at%3A">Confirm payment</a>
+      <a class="btn secondary" href="kit.html">Back to product page</a>
+    </div>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit. Analysis templates and recommendations only. No revenue guarantee.</div></footer>
+</body>
+</html>

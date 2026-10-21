@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Founder CRO Kit</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(920px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:24px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,50px); letter-spacing:-.02em; margin:40px 0 12px; }
+    .lede { color:var(--muted); font-size:18px; max-width:760px; }
+    section { padding:32px 0; border-top:1px solid var(--line); }
+    h2 { font-size:30px; letter-spacing:-.02em; margin:0 0 14px; }
+    h3 { font-size:20px; margin:26px 0 8px; }
+    ol,ul { color:var(--muted); padding-left:22px; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:22px; margin:18px 0; background:#fff; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    label { display:flex; gap:10px; align-items:flex-start; padding:10px 0; }
+    input[type="checkbox"] { accent-color:var(--brand); width:18px; height:18px; margin-top:3px; }
+    table { width:100%; border-collapse:collapse; margin:16px 0; }
+    th,td { border:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
+    th { background:var(--soft); }
+    code,pre { background:var(--soft); border-radius:8px; padding:2px 6px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+    pre { padding:14px; overflow:auto; white-space:pre-wrap; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:11px 18px; border:0; border-radius:10px; font:inherit; font-weight:700; cursor:pointer; text-decoration:none; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:40px; font-size:14px; }
+    @media(max-width:760px){ .grid { grid-template-columns:1fr; } }
+    @media print { .btn { display:none; } body { font-size:12px; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>Founder CRO Kit</h1>
+    <p class="lede">A practical kit for founders and small teams who need to find conversion blockers, rewrite key copy, and build a 30-day action plan. Work through it in order; do not try to fix everything at once.</p>
+    <div class="actions" style="margin:22px 0;">
+      <button class="btn" type="button" onclick="window.print()">Print / Save as PDF</button>
+      <a class="btn secondary" href="/">GrowthAudit home</a>
+    </div>
+
+    <section>
+      <h2>1. Start with the 10-question scorecard</h2>
+      <p>Answer yes or no for one landing page. Any “no” is a candidate fix, but only work on the first three.</p>
+      <div class="grid">
+        <div class="card"><strong>Clarity</strong><ol><li>First five words show who it’s for.</li><li>First screen states the outcome.</li><li>Next action is obvious in five seconds.</li></ol></div>
+        <div class="card"><strong>Action</strong><ol><li>Primary CTA describes the result.</li><li>Only one primary action competes for attention.</li><li>Price or plan boundaries are clear.</li></ol></div>
+        <div class="card"><strong>Trust</strong><ol><li>Relevant proof appears near the decision point.</li><li>Objections about setup, privacy, or effort are answered.</li><li>Contact or support path is easy to find.</li></ol></div>
+        <div class="card"><strong>Delivery</strong><ol><li>Mobile action is obvious and tap-friendly.</li><li>Title and description match buyer intent.</li><li>You know this week’s success event.</li></ol></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Run the 26-point page checklist</h2>
+      <p>Use this on one page at a time. Mark a fix “done” only after it is live, not after it is written.</p>
+      <div class="grid">
+        <div class="card"><h3>First screen</h3><div id="checklist-1"></div></div>
+        <div class="card"><h3>Offer and CTA</h3><div id="checklist-2"></div></div>
+        <div class="card"><h3>Proof and objections</h3><div id="checklist-3"></div></div>
+        <div class="card"><h3>Pricing and risk</h3><div id="checklist-4"></div></div>
+        <div class="card"><h3>Mobile and speed</h3><div id="checklist-5"></div></div>
+        <div class="card"><h3>Search basics</h3><div id="checklist-6"></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Rewrite the headline and CTA</h2>
+      <p>Fill this table before touching design. Copy is usually the fastest lever.</p>
+      <table>
+        <tr><th>Element</th><th>Current version</th><th>Improved version</th><th>Why it should work</th></tr>
+        <tr><td>Headline</td><td></td><td></td><td></td></tr>
+        <tr><td>Subheadline</td><td></td><td></td><td></td></tr>
+        <tr><td>Primary CTA</td><td></td><td></td><td></td></tr>
+        <tr><td>Proof line</td><td></td><td></td><td></td></tr>
+        <tr><td>Objection answer</td><td></td><td></td><td></td></tr>
+      </table>
+      <h3>Headline patterns</h3>
+      <ul>
+        <li><strong>Audience + outcome:</strong> For boutique fitness studios, fill empty classes without discounting.</li>
+        <li><strong>Problem + mechanism:</strong> Stop chasing receipts. Connect Gmail, AWS, and Stripe once.</li>
+        <li><strong>Before + after:</strong> Turn a product page into a 60-second demo reel.</li>
+        <li><strong>Specific time:</strong> Get a prioritized Top 10 fix list in 48 hours.</li>
+        <li><strong>Alternative:</strong> The self-hosted alternative to scattered analytics tools.</li>
+      </ul>
+      <h3>CTA patterns</h3>
+      <ul>
+        <li>Start filing free</li>
+        <li>Get the 48-hour audit</li>
+        <li>Generate my demo reel</li>
+        <li>Book a 20-minute fit check</li>
+        <li>Download the launch checklist</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Answer the three buying objections</h2>
+      <p>Most pages lose action because they answer features, not doubts. Pick the three objections that actually appear in sales calls.</p>
+      <table>
+        <tr><th>Objection</th><th>Where it appears</th><th>Exact reassurance</th></tr>
+        <tr><td>“This looks hard to set up.”</td><td>Near primary CTA</td><td></td></tr>
+        <tr><td>“Can I trust this with my data?”</td><td>Near form or payment</td><td></td></tr>
+        <tr><td>“Will this work for my situation?”</td><td>Near pricing or showcase</td><td></td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>5. Build the 30-day action plan</h2>
+      <div class="grid">
+        <div class="card"><h3>Week 1 — clarity</h3><ul><li>Fix headline and subheadline.</li><li>Rewrite primary CTA.</li><li>Remove competing links.</li><li>Check mobile first screen.</li></ul></div>
+        <div class="card"><h3>Week 2 — trust</h3><ul><li>Add one relevant proof element near CTA.</li><li>Answer top three objections.</li><li>Clarify pricing boundaries.</li><li>Check contact path.</li></ul></div>
+        <div class="card"><h3>Week 3 — activation</h3><ul><li>Reduce form fields.</li><li>Fix mobile tap targets.</li><li>Clarify onboarding steps.</li><li>Add a sample output or demo.</li></ul></div>
+        <div class="card"><h3>Week 4 — measurement</h3><ul><li>Define one conversion event.</li><li>Review visitor-to-action rate.</li><li>Keep what improved.</li><li>Revert what did not.</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Review weekly</h2>
+      <table>
+        <tr><th>Date</th><th>Changes shipped</th><th>Primary metric</th><th>Result</th><th>Next test</th></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="note">This kit provides analysis frameworks and recommendations only. It does not guarantee revenue, traffic, or conversion improvements.</div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit. For the purchaser’s own business use.</div></footer>
+
+  <script>
+    const groups = {
+      1: ['Headline says who the page is for.', 'Subheadline says the outcome.', 'Primary action is visible without scrolling.', 'No unrelated links compete with the primary CTA.'],
+      2: ['Primary CTA uses a result-focused verb.', 'Secondary CTA does not compete with primary CTA.', 'Form asks only for necessary fields.', 'Submit button describes the result.'],
+      3: ['At least one relevant proof element is visible near the decision.', 'Proof is specific, not generic praise.', 'Setup effort is explained.', 'Privacy or data boundary is explained.', 'Main objection is answered.'],
+      4: ['Price or plan boundary is easy to find.', 'What is included is clear.', 'What is excluded is clear.', 'Refund or cancellation policy is stated.'],
+      5: ['Primary mobile action is visible.', 'Tap targets are at least 44px.', 'Forms are usable on a phone.', 'Page loads without blocking visual issues.'],
+      6: ['Title matches buyer intent.', 'Meta description explains the next step.', 'H1 matches page purpose.', 'Images have useful alt text.', 'Internal links point to relevant pages.']
+    };
+    Object.entries(groups).forEach(([id, items]) => {
+      const host = document.getElementById('checklist-' + id);
+      items.forEach(item => {
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(item));
+        host.appendChild(label);
+      });
+    });
+  </script>
+</body>
+</html>
