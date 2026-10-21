@@ -35,6 +35,7 @@ After pushing to `main`:
 - `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
 - `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
 - `public-micro-audits-en.html` — English public mini-audit examples for the landing page.
+- `apply.html` — English audit request form for non-GitHub visitors.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
 - `zh/scorecard-promotion-pack.md` — ready-to-use posts for promoting the scorecard.
