@@ -5,6 +5,12 @@
 
 ## 一、知道业务来了
 
+打开 [收入监控台](ops-monitor.html) 可以集中查看本机支付记录。命令行检查请运行：
+
+```bash
+scripts/check-business.sh
+```
+
 当前有三个入口：
 
 1. 邮件回复：`hailong.wei@ushow.media`。
