@@ -36,6 +36,7 @@ After pushing to `main`:
 - `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
+- `zh/scorecard-promotion-pack.md` — ready-to-use posts for promoting the scorecard.
 - `zh/skill-and-market-research.md` — reusable findings from skills and market research.
 
 ## How To Use This Kit
