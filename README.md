@@ -40,6 +40,8 @@ After pushing to `main`:
 - `kit.html` — Founder CRO Kit sales page.
 - `kit-checkout.html` — Alipay/WeChat checkout for the Founder CRO Kit.
 - `assets/founder-cro-kit.html` — delivered Founder CRO Kit product.
+- `zh/kit.html` — Chinese Founder CRO Kit sales page.
+- `zh/kit-checkout.html` — Chinese Alipay/WeChat checkout for the kit.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
 - `zh/scorecard-promotion-pack.md` — ready-to-use posts for promoting the scorecard.
