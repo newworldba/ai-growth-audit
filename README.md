@@ -38,6 +38,7 @@ After pushing to `main`:
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
 - `zh/scorecard-promotion-pack.md` — ready-to-use posts for promoting the scorecard.
+- `outreach/send-ready.html` — internal one-click mailto workspace for the first five leads.
 - `zh/skill-and-market-research.md` — reusable findings from skills and market research.
 
 ## How To Use This Kit

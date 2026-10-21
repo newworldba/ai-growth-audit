@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Send-ready outreach workspace</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(980px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(30px,5vw,46px); letter-spacing:-.02em; margin:38px 0 12px; }
+    .lede { color:var(--muted); font-size:17px; max-width:760px; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:22px; margin:22px 0; background:#fff; }
+    .card h2 { margin:0 0 8px; font-size:24px; }
+    .meta { color:var(--muted); font-size:14px; margin:0 0 14px; }
+    textarea { width:100%; min-height:220px; border:1px solid var(--line); border-radius:12px; padding:14px; font:inherit; color:var(--ink); background:#fff; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:11px 18px; border:0; border-radius:10px; text-decoration:none; font:inherit; font-weight:700; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .btn.discussion { background:#101828; }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:42px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="/">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>Send-ready outreach workspace</h1>
+    <p class="lede">这是发送前工作台，不会自动发送邮件。点击 mailto 只会打开你本机邮件客户端；Megaphone 会打开公开 Discussion。发送后请更新外联跟踪表。</p>
+
+    <article class="card" id="virling">
+      <h2>1. Virling</h2>
+      <p class="meta">To: <code>login@virling.com</code> · Subject: 3 fixes for Virling’s waitlist-to-self-host path</p>
+      <textarea data-id="virling">Hi Deven and Rahul,
+
+I reviewed Virling’s public page. “Traffic is a guess. Revenue is a receipt” is strong, and the revenue-per-visitor table is the clearest part.
+
+Three quick observations:
+1. “Get early access” and “Join the waitlist” appear before “self-hosting is free”, so the strongest low-friction path may read like a future option.
+2. The ChatGPT vs X revenue-per-visitor example is persuasive and could appear higher.
+3. Read-only keys and data-boundary trust points could sit next to the $19 hosted plan.
+
+I can turn these into a prioritized Top 10 audit within 48 hours for $149, including suggested copy and where to place each fix. If useful, I can send the intake form.</textarea>
+      <div class="actions"><a class="btn" href="#" data-email="login@virling.com" data-subject="3 fixes for Virling’s waitlist-to-self-host path" data-body="virling">Open mailto</a><button class="btn secondary" type="button" data-copy="virling">Copy body</button></div>
+    </article>
+
+    <article class="card" id="papertrail">
+      <h2>2. Papertrail</h2>
+      <p class="meta">To: <code>meenasujal60@gmail.com</code> · Subject: 3 trust fixes for Papertrail’s free-to-pro funnel</p>
+      <textarea data-id="papertrail">Hi Sujal,
+
+I reviewed Papertrail’s public page. The “Every receipt, found and filed” promise is clear, and the 6.2 hours/month saving is a strong way to frame the problem.
+
+Three quick observations:
+1. Read-only OAuth and end-to-end encryption could be repeated near the first CTA, not only in the product section.
+2. The Free plan’s source or volume boundary should be visible before signup to reduce post-signup disappointment.
+3. The detection feed is convincing, and one line explaining that it is sample data can make the proof safer.
+
+I can expand these into a 48-hour Top 10 audit for $149, including suggested headlines, trust copy, and CTA placement. Want the intake form?</textarea>
+      <div class="actions"><a class="btn" href="#" data-email="meenasujal60@gmail.com" data-subject="3 trust fixes for Papertrail’s free-to-pro funnel" data-body="papertrail">Open mailto</a><button class="btn secondary" type="button" data-copy="papertrail">Copy body</button></div>
+    </article>
+
+    <article class="card" id="menivor">
+      <h2>3. Menivor</h2>
+      <p class="meta">To: <code>support@menivor.com</code> · Subject: 3 clarity fixes for Menivor’s first-free-reel funnel</p>
+      <textarea data-id="menivor">Hi Caelum,
+
+I reviewed Menivor’s public page. The idea is easy to understand, and showing reels for a jewelry shop, sneaker brand, and help desk software is a strong proof pattern.
+
+Three quick observations:
+1. “Paste an App Store link” and “Any link or a topic” target different users; separate entry cards may reduce confusion.
+2. The free/no-card step and the later $1 verification step could be explained as one timeline.
+3. The three most relevant showcase examples could appear closer to the first CTA.
+
+I can turn this into a 48-hour Top 10 audit for $149, including suggested entry cards and CTA copy. Want the intake form?</textarea>
+      <div class="actions"><a class="btn" href="#" data-email="support@menivor.com" data-subject="3 clarity fixes for Menivor’s first-free-reel funnel" data-body="menivor">Open mailto</a><button class="btn secondary" type="button" data-copy="menivor">Copy body</button></div>
+    </article>
+
+    <article class="card" id="megaphone">
+      <h2>4. Megaphone</h2>
+      <p class="meta">Channel: GitHub Discussion · Title: 3 ideas to make the readiness score easier to preview</p>
+      <textarea data-id="megaphone">Nice project — I reviewed the public landing page. The readiness score is clear, and the browser-only processing is a good trust point.
+
+Three ideas:
+1. Show a static sample report before the GitHub repo input, so users know what “fixed list” contains.
+2. Separate English global channels from Chinese community channels to reduce choice overload.
+3. Add one line near “Nothing is stored on a server” explaining which public repo data is read in-browser.
+
+I run a 48-hour Top 10 growth audit for $149, but no pressure to buy. If helpful, I can send a short intake form.</textarea>
+      <div class="actions"><a class="btn discussion" href="https://github.com/2104178150-ai/megaphone/discussions">Open Discussion</a><button class="btn secondary" type="button" data-copy="megaphone">Copy body</button></div>
+    </article>
+
+    <article class="card" id="worksitem">
+      <h2>5. Worksitem</h2>
+      <p class="meta">To: <code>info@worksitem.com</code> · Subject: 3 ways to improve Worksitem’s estimate-to-quote path</p>
+      <textarea data-id="worksitem">Hi Worksitem team,
+
+I reviewed worksitem.com. The calculator-first approach is practical, and showing that estimates are not exact quotes is honest.
+
+Three quick observations:
+1. Homeowners and contractors may need separate entry paths: one for budgeting, one for managing clients.
+2. A sample itemized PDF would help users understand what they receive before they enter details.
+3. The 74 tools and 60+ tools descriptions should use one consistent number across site and GitHub.
+
+I can expand this into a 48-hour Top 10 audit for $149, including suggested page structure and CTA fixes. Want the intake form?</textarea>
+      <div class="actions"><a class="btn" href="#" data-email="info@worksitem.com" data-subject="3 ways to improve Worksitem’s estimate-to-quote path" data-body="worksitem">Open mailto</a><button class="btn secondary" type="button" data-copy="worksitem">Copy body</button></div>
+    </article>
+
+    <div class="note">发送前请重新确认网站仍在线；不要修改成通用模板；不承诺收入；两次无回复即停止。每条发送后在 <code>zh/outreach-tracker.xlsx</code> 记录状态。</div>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit. Internal outreach workspace. No automated sending.</div></footer>
+
+  <script>
+    document.querySelectorAll('a[data-email]').forEach(link => {
+      const id = link.dataset.body;
+      const subject = link.dataset.subject;
+      const body = document.querySelector(`textarea[data-id="${id}"]`).value;
+      link.href = `mailto:${link.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    document.querySelectorAll('button[data-copy]').forEach(button => {
+      button.addEventListener('click', async () => {
+        const textarea = document.querySelector(`textarea[data-id="${button.dataset.copy}"]`);
+        await navigator.clipboard.writeText(textarea.value);
+        button.textContent = 'Copied';
+        setTimeout(() => { button.textContent = 'Copy body'; }, 1800);
+      });
+    });
+  </script>
+</body>
+</html>
