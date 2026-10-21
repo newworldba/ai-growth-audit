@@ -34,6 +34,7 @@ After pushing to `main`:
 - `zh/target-leads-batch-2.md` — second batch of verified target sites.
 - `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
 - `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
+- `public-micro-audits-en.html` — English public mini-audit examples for the landing page.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
 - `zh/scorecard-promotion-pack.md` — ready-to-use posts for promoting the scorecard.
