@@ -124,9 +124,18 @@
           <pre id="output"></pre>
           <div class="actions">
             <button class="btn" type="button" id="copy">复制草稿</button>
+            <button class="btn secondary" type="button" id="download">下载草稿</button>
             <a class="btn" id="apply" href="apply.html?package=AI%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BF%AE%E5%A4%8D%20%C2%A5680">申请 48 小时蓝图</a>
           </div>
         </div>
+
+        <section style="padding:32px 0 0;">
+          <div class="card">
+            <h2 style="font-size:26px;">分享这个工具</h2>
+            <p class="muted">如果它帮你省了时间，可以发给一个还在手工写项目周报的负责人。</p>
+            <div class="actions"><button class="btn secondary" type="button" id="copy-link">复制工具链接</button></div>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -163,6 +172,15 @@
 
 待决策
 - [问题] — [为什么重要]</pre>
+      </div>
+    </section>
+
+    <section class="faq" style="background:var(--soft);">
+      <div class="wrap">
+        <h2>常见问题</h2>
+        <details open><summary>什么是客户状态更新？</summary><p class="muted">客户状态更新是一份短而可重复的报告，说明已完成工作、当前进展、阻塞点、下一步和需要客户决策的事项。</p></details>
+        <details><summary>怎么写客户状态更新？</summary><p class="muted">把工单证据分成已完成、进行中、阻塞、下一步和待决策五段。每条结论尽量附来源，删除内部注释，并由负责人在发送前检查。</p></details>
+        <details><summary>这个工具收费吗？</summary><p class="muted">浏览器工具和模板免费。可选的 48 小时 AI 工作流诊断是单独付费服务。</p></details>
       </div>
     </section>
   </main>
@@ -215,6 +233,22 @@
       await navigator.clipboard.writeText(document.getElementById('output').textContent);
       event.target.textContent = '已复制';
       setTimeout(() => { event.target.textContent = '复制草稿'; }, 1800);
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const blob = new Blob([document.getElementById('output').textContent], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'client-status-update.txt';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('copy-link').addEventListener('click', async event => {
+      await navigator.clipboard.writeText('https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html?example=1');
+      event.target.textContent = '已复制';
+      setTimeout(() => { event.target.textContent = '复制工具链接'; }, 1800);
     });
 
     document.getElementById('example').addEventListener('click', () => {
