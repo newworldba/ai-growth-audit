@@ -3,8 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Client Status Generator — Turn Ticket Evidence Into a Safe Update</title>
-  <meta name="description" content="Paste ticket evidence and generate a structured client-ready status update in your browser. No upload, no account, and human approval stays in your workflow.">
+  <title>Client Status Update Generator &amp; Template — Turn Ticket Evidence Into a Safe Weekly Update</title>
+  <meta name="description" content="Use this free client status update generator and template to turn ticket evidence into a safe weekly update. Browser-only, no upload, with human approval before sending.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Client Status Update Generator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "url": "https://newworldba.github.io/ai-growth-audit/client-status-generator.html",
+        "description": "Turn ticket evidence into a structured client-ready status update without uploading data.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a client status update?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A client status update is a short, repeatable report showing completed work, current progress, blockers, next steps, and decisions needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I write a client status update?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Group ticket evidence into completed, in progress, blocked, next, and decisions needed. Cite the source for each claim, remove internal notes, and have the owner review before sending."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this client status update template free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The browser tool and template are free. The optional 48-hour workflow diagnosis is a separate paid service."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
     * { box-sizing:border-box; }
@@ -52,7 +97,7 @@
     <div class="hero">
       <div class="wrap">
         <p class="eyebrow">Free browser tool</p>
-        <h1>Turn messy ticket notes into a client-safe status update.</h1>
+        <h1>Client status update generator &amp; template</h1>
         <p class="sub">Paste ticket evidence with a simple prefix. The tool groups it into completed, in progress, blocked, next, and decisions. Nothing leaves your browser; you review the draft before sending it.</p>
         <div class="proof"><span>No upload</span><span>No account</span><span>Human approval first</span><span>Structured output</span></div>
       </div>
@@ -92,6 +137,32 @@
           <div class="card"><h3>Evidence before narrative</h3><p>Each line can keep its ticket link, so the update is easier to trust.</p></div>
           <div class="card"><h3>Approval stays human</h3><p>You decide what leaves the team and what remains internal.</p></div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Client status update template</h2>
+        <p class="muted">Use this structure when the ticket evidence changes but the format should not.</p>
+        <pre style="white-space:pre-wrap;overflow-wrap:break-word;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;color:var(--ink);font:inherit;">Subject: [Project] status update — [Date range]
+
+Project: [Project]
+Period: [Date range]
+
+Completed
+- [Result] — [Ticket or doc link]
+
+In progress
+- [Current work] — [Ticket or doc link]
+
+Blocked
+- [What is stuck] — [Who must decide]
+
+Next
+- [Next action] — [Owner and date]
+
+Decisions needed
+- [Question] — [Why it matters]</pre>
       </div>
     </section>
   </main>
