@@ -2,7 +2,23 @@
 set -euo pipefail
 
 repo="${GROWTHAUDIT_REPO:-newworldba/ai-growth-audit}"
-keywords=("GrowthAudit" "审计" "audit" "Founder CRO Kit" "转化体检结果" "Koody" "PDFkind" "Grafista" "Skillsync")
+keywords=(
+  "GrowthAudit"
+  "审计"
+  "audit"
+  "Founder CRO Kit"
+  "转化体检结果"
+  "Koody"
+  "PDFkind"
+  "Grafista"
+  "Skillsync"
+  "AI Workflow Fix"
+  "AI 工作流修复"
+  "workflow"
+  "工作流"
+  "Client status draft"
+  "client status update"
+)
 
 printf '%s\n' '--- GitHub Issues ---'
 gh issue list --repo "$repo" --state open --limit 20 \
