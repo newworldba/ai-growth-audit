@@ -67,16 +67,17 @@
           <div class="field"><label for="project">Project</label><input id="project" required placeholder="Client portal v2"></div>
           <div class="field"><label for="range">Date range</label><input id="range" required placeholder="Week 31"></div>
           <div class="field"><label for="evidence">Ticket evidence</label><textarea id="evidence" required placeholder="DONE: Payment API is live — https://example.com/ticket/138&#10;PROGRESS: Approval UI is in review — https://example.com/ticket/142&#10;BLOCKED: Waiting for client to approve endpoint&#10;NEXT: Deploy staging on Tuesday&#10;DECISION: Confirm whether CSV export is in this release"></textarea></div>
-          <div class="actions"><button class="btn" type="submit">Generate draft</button><button class="btn secondary" type="reset">Reset</button></div>
+          <div class="actions"><button class="btn" type="submit">Generate draft</button><button class="btn secondary" type="button" id="example">Load example</button><button class="btn secondary" type="reset">Reset</button></div>
         </form>
 
         <div class="result" id="result">
           <h2>Draft for human review</h2>
           <p class="muted">Check every claim and permission before sending. This tool does not send anything automatically.</p>
           <pre id="output"></pre>
+          <p class="muted" style="margin:18px 0 0;">Email me this draft and I’ll reply with whether it fits a 48-hour rollout blueprint. No obligation.</p>
           <div class="actions">
             <button class="btn" type="button" id="copy">Copy draft</button>
-            <a class="btn secondary" id="mailto" href="#">Email me this draft</a>
+            <a class="btn" id="mailto" href="#">Email me this draft</a>
             <a class="btn secondary" id="apply" href="automation-fix.html">Automate this workflow</a>
           </div>
         </div>
@@ -143,6 +144,19 @@
       await navigator.clipboard.writeText(document.getElementById('output').textContent);
       event.target.textContent = 'Copied';
       setTimeout(() => { event.target.textContent = 'Copy draft'; }, 1800);
+    });
+
+    document.getElementById('example').addEventListener('click', () => {
+      document.getElementById('project').value = 'Client portal v2';
+      document.getElementById('range').value = 'Week 31';
+      document.getElementById('evidence').value = [
+        'DONE: Payment API is live — https://example.com/ticket/138',
+        'PROGRESS: Approval UI is in review — https://example.com/ticket/142',
+        'BLOCKED: Waiting for client to approve endpoint',
+        'NEXT: Deploy staging on Tuesday',
+        'DECISION: Confirm whether CSV export is in this release'
+      ].join('\n');
+      document.getElementById('status-form').requestSubmit();
     });
   </script>
 </body>
