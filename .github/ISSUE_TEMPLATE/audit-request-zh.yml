@@ -12,6 +12,7 @@ body:
     attributes:
       label: 选择套餐
       options:
+        - AI 工作流修复 — ¥680
         - Quick Audit 快速审计 — ¥1,080
         - Growth Audit 增长审计 — ¥2,880
         - Implementation Sprint 实施冲刺 — ¥7,180

@@ -69,6 +69,7 @@
       </div>
       <div class="actions">
         <button class="btn" type="submit">Generate application email</button>
+        <button class="btn secondary" type="button" id="copy-request">Copy request</button>
         <a class="btn secondary" href="https://github.com/newworldba/ai-growth-audit/issues/new?template=audit-request.yml">Submit with GitHub</a>
         <a class="btn secondary" href="payment.html">Payment options</a>
       </div>
@@ -103,6 +104,23 @@
       const subject = `Audit request: ${data.get('company')}`;
       const body = encodeURIComponent(lines.join('\n'));
       window.location.href = `mailto:hailong.wei@ushow.media?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+
+    document.getElementById('copy-request').addEventListener('click', async (event) => {
+      const data = new FormData(document.getElementById('audit-form'));
+      const lines = [
+        `Name: ${data.get('name')}`,
+        `Company/product: ${data.get('company')}`,
+        `Website: ${data.get('website')}`,
+        `Target customer: ${data.get('audience')}`,
+        `Primary conversion goal: ${data.get('goal')}`,
+        `Package: ${data.get('package')}`,
+        `Traffic sources/known problems: ${data.get('context') || 'Not provided'}`,
+        'I confirm that I own the website or have authorization to review it.'
+      ];
+      await navigator.clipboard.writeText(lines.join('\n'));
+      event.target.textContent = 'Copied';
+      setTimeout(() => { event.target.textContent = 'Copy request'; }, 1800);
     });
   </script>
 </body>

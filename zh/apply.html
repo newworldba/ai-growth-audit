@@ -69,6 +69,7 @@
       </div>
       <div class="actions">
         <button class="btn" type="submit">生成申请邮件</button>
+        <button class="btn secondary" type="button" id="copy-request">复制申请内容</button>
         <a class="btn secondary" href="https://github.com/newworldba/ai-growth-audit/issues/new?template=audit-request-zh.yml">用 GitHub 提交</a>
         <a class="btn secondary" href="payment.html">查看支付方式</a>
       </div>
@@ -103,6 +104,23 @@
       const subject = `审计申请：${data.get('company')}`;
       const body = encodeURIComponent(lines.join('\n'));
       window.location.href = `mailto:hailong.wei@ushow.media?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+
+    document.getElementById('copy-request').addEventListener('click', async (event) => {
+      const data = new FormData(document.getElementById('audit-form'));
+      const lines = [
+        `称呼：${data.get('name')}`,
+        `公司/产品：${data.get('company')}`,
+        `网站：${data.get('website')}`,
+        `目标客户：${data.get('audience')}`,
+        `主要转化目标：${data.get('goal')}`,
+        `套餐：${data.get('package')}`,
+        `流量来源/已知问题：${data.get('context') || '未填写'}`,
+        '我确认我拥有该网站或已获得审查授权。'
+      ];
+      await navigator.clipboard.writeText(lines.join('\n'));
+      event.target.textContent = '已复制';
+      setTimeout(() => { event.target.textContent = '复制申请内容'; }, 1800);
     });
   </script>
 </body>
