@@ -9,7 +9,7 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | Direction | Offer | First revenue target | Test budget | Stop / pause trigger | Next action |
 |---|---|---:|---:|---|---|
 | A. Conversion Audit | Founder CRO Kit, Quick Audit, Growth Audit | CNY 199 or CNY 1,080 | CNY 0 | After 20 qualified contacts or 7 days, no reply, demo, or sale. | Publish one useful public micro-audit and promote the scorecard. |
-| B. AI Workflow Fix | Turn one repetitive manual workflow into a documented automation blueprint or working browser workflow. | CNY 680 | CNY 0 | After 15 qualified contacts or 7 days, no reply, paid diagnosis, or sale. | Build a focused offer page and free workflow-selection tool. |
+| B. AI Workflow Fix | Turn one repetitive manual workflow into a documented automation blueprint or working browser workflow. | CNY 680 | CNY 0 | After 15 qualified contacts or 7 days, no reply, paid diagnosis, or sale. | Use the client-status generator, teardown, and distribution kit; publish only after explicit user approval. |
 | C. Agent Setup Help | Help one solo founder set up a local AI agent workflow and reusable skill library. | CNY 199 | CNY 0 | After 15 qualified posts or 5 days, no reply or sale. | Create one short public setup guide and a paid 45-minute setup session. |
 
 ## Time Allocation

@@ -229,6 +229,10 @@ Decisions needed
       ].join('\n');
       document.getElementById('status-form').requestSubmit();
     });
+
+    if (new URLSearchParams(location.search).get('example') === '1') {
+      document.getElementById('example').click();
+    }
   </script>
 </body>
 </html>
