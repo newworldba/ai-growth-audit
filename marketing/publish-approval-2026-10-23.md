@@ -46,7 +46,7 @@ https://newworldba.github.io/ai-growth-audit/client-status-generator.html?exampl
 
 适合外包交付、项目助理、小型团队给客户写周报。
 
-👉 示例：https://newworldba.github.io/ai-growth-audit/client-status-generator.html?example=1
+👉 示例：https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html?example=1
 
 发送前仍需要人工检查语气、权限和商业信息。工具只负责把内部证据整理成可审查草稿。
 
@@ -61,5 +61,5 @@ https://newworldba.github.io/ai-growth-audit/client-status-generator.html?exampl
 做了一个免费的客户状态更新生成器：贴入工单记录，自动整理成“已完成 / 进行中 / 阻塞 / 下一步 / 需要决策”。不上传数据，不用注册，发送前人工检查。
 
 适合经常写项目周报、交付更新或客户同步的人：
-https://newworldba.github.io/ai-growth-audit/client-status-generator.html?example=1
+https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html?example=1
 ```

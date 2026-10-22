@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>客户状态更新生成器 — 把工单记录变成客户能看懂的周报</title>
+  <meta name="description" content="免费在浏览器里把工单、聊天和项目记录整理成客户状态更新。包含已完成、进行中、阻塞、下一步和待决策五段，不上传数据，发送前人工检查。">
+  <link rel="canonical" href="https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="客户状态更新生成器">
+  <meta property="og:description" content="把工单记录变成客户能看懂的周报。浏览器运行，不上传数据，发送前人工检查。">
+  <meta property="og:url" content="https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html">
+  <meta property="og:image" content="https://newworldba.github.io/ai-growth-audit/assets/client-status-generator-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GrowthAudit 客户状态更新生成器。">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "客户状态更新生成器",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "url": "https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html",
+        "description": "把工单证据整理成结构化客户状态更新，不上传数据。",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "什么是客户状态更新？",
+            "acceptedAnswer": { "@type": "Answer", "text": "客户状态更新是一份短而可重复的报告，说明已完成工作、当前进展、阻塞点、下一步和需要客户决策的事项。" }
+          },
+          {
+            "@type": "Question",
+            "name": "怎么写客户状态更新？",
+            "acceptedAnswer": { "@type": "Answer", "text": "把工单证据分成已完成、进行中、阻塞、下一步和待决策五段。每条结论尽量附来源，删除内部注释，并由负责人在发送前检查。" }
+          },
+          {
+            "@type": "Question",
+            "name": "这个工具收费吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "浏览器工具和模板免费。可选的 48 小时 AI 工作流诊断是单独付费服务。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(980px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:20px 0; }
+    .logo { font-weight:800; letter-spacing:-.02em; text-decoration:none; color:var(--ink); }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; border:0; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 60px; background:linear-gradient(180deg,#fff 0%,var(--soft) 100%); }
+    .eyebrow { font-size:14px; font-weight:700; color:var(--brand); margin:0 0 16px; }
+    h1 { font-size:clamp(34px,6vw,56px); line-height:1.08; letter-spacing:-.03em; margin:0 0 18px; }
+    .sub { max-width:780px; font-size:19px; color:var(--muted); margin:0 0 28px; }
+    .proof { display:flex; gap:24px; margin-top:36px; flex-wrap:wrap; font-size:14px; font-weight:700; color:var(--muted); }
+    section { padding:56px 0; }
+    h2 { font-size:clamp(26px,4vw,38px); letter-spacing:-.02em; line-height:1.15; margin:0 0 14px; }
+    .muted { color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:22px; background:#fff; }
+    .card h3 { margin:0 0 8px; font-size:20px; }
+    .card p { margin:0; color:var(--muted); }
+    form { border:1px solid var(--line); border-radius:20px; padding:30px; background:#fff; }
+    label { display:block; font-weight:700; margin:0 0 8px; }
+    input, textarea { width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; }
+    textarea { min-height:260px; resize:vertical; }
+    .field { margin-bottom:18px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+    .result { display:none; border:1px solid var(--line); border-radius:20px; padding:30px; background:var(--soft); margin-top:28px; }
+    pre { white-space:pre-wrap; overflow-wrap:break-word; background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px; color:var(--ink); font:inherit; }
+    .note { border-left:4px solid var(--brand); background:#fff; padding:16px 20px; border-radius:0 12px 12px 0; }
+    footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    @media(max-width:820px){ .grid{grid-template-columns:1fr;} .nav{flex-direction:column;align-items:flex-start;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="./">GrowthAudit</a>
+      <a class="btn" href="automation-fix.html?package=AI%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BF%AE%E5%A4%8D%20%C2%A5680">获取 48 小时蓝图</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">免费浏览器工具</p>
+        <h1>客户状态更新生成器</h1>
+        <p class="sub">把工单、聊天和项目记录贴进来，自动整理成已完成、进行中、阻塞、下一步和待决策五段。数据留在你的浏览器里，发送前仍由人工检查。</p>
+        <div class="proof"><span>不上传数据</span><span>不用注册</span><span>不新建客户门户</span><span>人工检查优先</span></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="note">
+          <p class="muted" style="margin:0;">支持 <code>已完成:</code>、<code>进行中:</code>、<code>阻塞:</code>、<code>下一步:</code>、<code>决策:</code>，也支持英文 <code>DONE:</code> 等前缀。结论后面可以直接放工单或文档链接。内部评论请不要粘贴。</p>
+        </div>
+        <form id="status-form" style="margin-top:26px;">
+          <div class="field"><label for="project">项目</label><input id="project" required placeholder="客户门户 v2"></div>
+          <div class="field"><label for="range">时间范围</label><input id="range" required placeholder="第 31 周"></div>
+          <div class="field"><label for="evidence">项目证据</label><textarea id="evidence" required placeholder="已完成: 支付 API 已上线 — https://example.com/ticket/138&#10;进行中: 审批界面正在测试 — https://example.com/ticket/142&#10;阻塞: 等客户确认接口范围&#10;下一步: 周二部署到预发布环境&#10;决策: 确认 CSV 导出是否进入本版本"></textarea></div>
+          <div class="actions"><button class="btn" type="submit">生成草稿</button><button class="btn secondary" type="button" id="example">加载示例</button><button class="btn secondary" type="reset">清空</button></div>
+        </form>
+
+        <div class="result" id="result">
+          <h2>待人工检查的草稿</h2>
+          <p class="muted">发送前请检查每条结论和权限。工具不会自动发送任何内容。</p>
+          <pre id="output"></pre>
+          <div class="actions">
+            <button class="btn" type="button" id="copy">复制草稿</button>
+            <a class="btn" id="apply" href="apply.html?package=AI%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BF%AE%E5%A4%8D%20%C2%A5680">申请 48 小时蓝图</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--soft);">
+      <div class="wrap">
+        <h2>为什么更省时间</h2>
+        <div class="grid">
+          <div class="card"><h3>格式统一</h3><p>客户知道去哪里看进展、风险和需要自己决定的事。</p></div>
+          <div class="card"><h3>证据优先</h3><p>每条结论都可以保留工单或文档链接，更容易获得信任。</p></div>
+          <div class="card"><h3>人来审批</h3><p>哪些内容可以离开团队，哪些仍属于内部信息，由你决定。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>客户状态更新模板</h2>
+        <pre>主题：[项目] 状态更新 — [时间范围]
+
+项目：[项目]
+时间：[时间范围]
+
+已完成
+- [结果] — [工单或文档链接]
+
+进行中
+- [当前工作] — [工单或文档链接]
+
+阻塞
+- [卡住的问题] — [需要谁决策]
+
+下一步
+- [下一个动作] — [负责人和时间]
+
+待决策
+- [问题] — [为什么重要]</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 GrowthAudit。工具只在浏览器里运行，不上传数据；结果只是草稿，不保证收入。</div></footer>
+
+  <script>
+    const sectionLabels = {
+      done: '已完成',
+      progress: '进行中',
+      blocked: '阻塞',
+      next: '下一步',
+      decision: '待决策'
+    };
+
+    document.getElementById('status-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const project = document.getElementById('project').value.trim();
+      const range = document.getElementById('range').value.trim();
+      const groups = { done: [], progress: [], blocked: [], next: [], decision: [] };
+      const evidence = document.getElementById('evidence').value.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+
+      for (const line of evidence) {
+        const match = line.match(/^(DONE|已完成|PROGRESS|进行中|BLOCKED|阻塞|NEXT|下一步|DECISION|决策)\s*[:：]\s*(.+)$/i);
+        const rawKey = match ? match[1].toLowerCase() : 'progress';
+        const key = { done: 'done', '已完成': 'done', progress: 'progress', '进行中': 'progress', blocked: 'blocked', '阻塞': 'blocked', next: 'next', '下一步': 'next', decision: 'decision', '决策': 'decision' }[rawKey] || 'progress';
+        const text = match ? match[2].trim() : line;
+        groups[key].push(text);
+      }
+
+      const output = [`主题：${project} 状态更新 — ${range}`, '', `项目：${project}`, `时间：${range}`, ''];
+      for (const [key, label] of Object.entries(sectionLabels)) {
+        if (groups[key].length) {
+          output.push(label);
+          output.push(...groups[key].map(item => `- ${item}`));
+          output.push('');
+        }
+      }
+      output.push('项目负责人已在证据审查后整理。');
+
+      const text = output.join('\n');
+      const encoded = encodeURIComponent(text);
+      document.getElementById('output').textContent = text;
+      document.getElementById('apply').href = `apply.html?package=AI%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BF%AE%E5%A4%8D%20%C2%A5680&context=${encoded}`;
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('copy').addEventListener('click', async event => {
+      await navigator.clipboard.writeText(document.getElementById('output').textContent);
+      event.target.textContent = '已复制';
+      setTimeout(() => { event.target.textContent = '复制草稿'; }, 1800);
+    });
+
+    document.getElementById('example').addEventListener('click', () => {
+      document.getElementById('project').value = '客户门户 v2';
+      document.getElementById('range').value = '第 31 周';
+      document.getElementById('evidence').value = [
+        '已完成: 支付 API 已上线 — https://example.com/ticket/138',
+        '进行中: 审批界面正在测试 — https://example.com/ticket/142',
+        '阻塞: 等客户确认接口范围',
+        '下一步: 周二部署到预发布环境',
+        '决策: 确认 CSV 导出是否进入本版本'
+      ].join('\n');
+      document.getElementById('status-form').requestSubmit();
+    });
+
+    if (new URLSearchParams(location.search).get('example') === '1') {
+      document.getElementById('example').click();
+    }
+  </script>
+</body>
+</html>
