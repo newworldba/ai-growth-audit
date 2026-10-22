@@ -6,15 +6,16 @@ Rule: one approved action at a time. Do not post to a channel that prohibits pro
 
 | Priority | Action | Asset | Expected result |
 |---|---|---|---|
-| 1 | Send Alignear email | `zh/outreach-batch-5-status-evidence.md` | First qualified reply or rejection signal |
-| 2 | Publish X post | Copy below | Tool traffic and public feedback |
-| 3 | Publish LinkedIn post | Copy below | Founder/delivery-lead reach |
-| 4 | Publish Xiaohongshu note | Copy below | Chinese client / freelancer reach |
-| 5 | Submit Indie Hackers | `marketing/directory-launch-pack.md` | Founder feedback and possible distribution |
-| 6 | Submit one relevant subreddit | `marketing/directory-launch-pack.md` | Project-management feedback; check rules first |
-| 7 | Prepare Product Hunt | `marketing/directory-launch-pack.md` | Strong launch reach, but needs account and assets |
+| 1 | Send Stintly email | `zh/outreach-batch-6-client-portals.md` | First qualified reply or rejection signal |
+| 2 | Send Clienwork email | `zh/outreach-batch-6-client-portals.md` | Client-portal founder feedback |
+| 3 | Send MakeWay email | `zh/outreach-batch-6-client-portals.md` | Async-client-workflow feedback |
+| 4 | Publish X post | Copy below | Tool traffic and public feedback |
+| 5 | Publish LinkedIn post | Copy below | Founder/delivery-lead reach |
+| 6 | Publish Xiaohongshu note | Copy below | Chinese client / freelancer reach |
+| 7 | Submit Indie Hackers | `marketing/directory-launch-pack.md` | Founder feedback and possible distribution |
 
-Reply with one of: `发送 Alignear`, `发布 X`, `发布 LinkedIn`, `发布小红书`, `提交 Indie Hackers`, `准备 Product Hunt`, or `批准全部`.
+Alignear remains ready in `zh/outreach-batch-5-status-evidence.md`.
+Reply with one of: `发送 Stintly`, `发送 Clienwork`, `发送 MakeWay`, `发布 X`, `发布 LinkedIn`, `发布小红书`, `提交 Indie Hackers`, `准备 Product Hunt`, or `批准全部`.
 
 ## X / Twitter
 
