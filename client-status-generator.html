@@ -134,8 +134,8 @@
           <p class="muted" style="margin:18px 0 0;">Email me this draft and I’ll reply with whether it fits a 48-hour rollout blueprint. No obligation.</p>
           <div class="actions">
             <button class="btn" type="button" id="copy">Copy draft</button>
-            <a class="btn" id="mailto" href="#">Email me this draft</a>
-            <a class="btn secondary" id="apply" href="automation-fix.html">Automate this workflow</a>
+            <a class="btn" id="apply" href="apply.html?package=AI%20Workflow%20Fix%20%2499">Request the 48-hour blueprint</a>
+            <a class="btn secondary" id="mailto" href="#">Email me this draft</a>
           </div>
         </div>
 
@@ -231,7 +231,7 @@ Decisions needed
       const encoded = encodeURIComponent(text);
       document.getElementById('output').textContent = text;
       document.getElementById('mailto').href = `mailto:hailong.wei@ushow.media?subject=${encodeURIComponent(`Client status draft: ${project} — ${range}`)}&body=${encoded}`;
-      document.getElementById('apply').href = `automation-fix.html?package=AI%20Workflow%20Fix%20%2499&context=${encoded}`;
+      document.getElementById('apply').href = `apply.html?package=AI%20Workflow%20Fix%20%2499&context=${encoded}`;
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
     });
