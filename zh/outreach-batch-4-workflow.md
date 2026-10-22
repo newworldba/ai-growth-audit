@@ -24,7 +24,7 @@ GrowthAudit
 ## 2. Lalabase
 
 **To:** `hello@lalabase.com`  
-**Subject:** Reducing manual task entry in Lalabase  
+**Subject:** Client-ready status workflow for Lalabase  
 
 Hi Lalabase team,
 
