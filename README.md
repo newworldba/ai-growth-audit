@@ -46,6 +46,7 @@ After pushing to `main`:
 - `zh/kit.html` — Chinese Founder CRO Kit sales page.
 - `zh/kit-checkout.html` — Chinese Alipay/WeChat checkout for the kit.
 - `zh/automation-fix.html` — Chinese AI workflow diagnosis offer.
+- `zh/workflow-scorecard.html` — Chinese browser-only workflow triage tool.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `checklist.html` — English 26-point landing page audit checklist.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
