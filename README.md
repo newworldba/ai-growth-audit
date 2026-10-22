@@ -1,6 +1,13 @@
 # AI Growth Audit Launch Kit
 
-This is a fixed-scope service package for selling website conversion audits to founders and small teams.
+This is a fixed-scope service package for selling website conversion audits and AI workflow fixes to founders and small teams.
+
+## Start here
+
+- [Free conversion scorecard](https://newworldba.github.io/ai-growth-audit/tools/conversion-scorecard.html) — browser-only triage for landing pages.
+- [Free workflow scorecard](https://newworldba.github.io/ai-growth-audit/workflow-scorecard.html) — decide whether a repeating process is worth fixing.
+- [Client status update generator](https://newworldba.github.io/ai-growth-audit/client-status-generator.html) — turn ticket evidence into a client-safe update without uploading data. A Chinese version is available at [`zh/client-status-generator.html`](https://newworldba.github.io/ai-growth-audit/zh/client-status-generator.html).
+- [AI Workflow Fix](https://newworldba.github.io/ai-growth-audit/automation-fix.html) — a fixed-price, 48-hour diagnosis for one repeating workflow.
 
 ## Live site
 
@@ -47,6 +54,8 @@ After pushing to `main`:
 - `zh/kit-checkout.html` — Chinese Alipay/WeChat checkout for the kit.
 - `zh/automation-fix.html` — Chinese AI workflow diagnosis offer.
 - `automation-fix.html` — English AI workflow diagnosis offer.
+- `client-status-generator.html` — English browser-only client status update generator.
+- `zh/client-status-generator.html` — Chinese browser-only client status update generator.
 - `workflow-scorecard.html` — English browser-only workflow triage tool.
 - `zh/workflow-scorecard.html` — Chinese browser-only workflow triage tool.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
