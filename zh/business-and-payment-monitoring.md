@@ -37,7 +37,7 @@ scripts/check-business.sh
 
 | 产品 | 金额 | 确认条件 | 下一步 |
 |---|---:|---|---|
-| Founder CRO Kit | ¥199 / $29 | 支付宝/微信交易记录匹配订单号和金额 | 发送 `assets/founder-cro-kit.html` 或私有交付链接 |
+| Founder CRO Kit | ¥199 / $29 | 支付宝/微信交易记录匹配订单号和金额 | 通过邮件附件发送 `private-products/founder-cro-kit-en.html` 和 `private-products/founder-cro-kit-zh.html` |
 | Quick Audit | ¥1,080 / $149 | 支付记录匹配 | 发送审计申请表 |
 | Growth Audit | ¥2,880 / $399 | 支付记录匹配 | 发送审计申请表和页面清单 |
 | Implementation Sprint | ¥7,180 / $999 | 支付记录匹配 | 发送项目范围和排期 |

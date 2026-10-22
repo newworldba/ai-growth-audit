@@ -49,7 +49,7 @@ After pushing to `main`:
 - `apply.html` — English audit request form for non-GitHub visitors.
 - `kit.html` — Founder CRO Kit sales page.
 - `kit-checkout.html` — Alipay/WeChat checkout for the Founder CRO Kit.
-- `assets/founder-cro-kit.html` — delivered Founder CRO Kit product.
+- `private-products/founder-cro-kit-en.html` and `private-products/founder-cro-kit-zh.html` — paid Founder CRO Kit files; kept local and delivered by email attachment.
 - `zh/kit.html` — Chinese Founder CRO Kit sales page.
 - `zh/kit-checkout.html` — Chinese Alipay/WeChat checkout for the kit.
 - `zh/automation-fix.html` — Chinese AI workflow diagnosis offer.
