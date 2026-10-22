@@ -14,7 +14,7 @@ Rule: use value-first posts only. Do not spam communities, do not claim customer
 
 Most project updates make the client ask, “so what happened?”
 
-I built a small browser tool that turns ticket notes into a structured client-safe update: completed, progress, blocked, next, and decisions needed. No upload. No account. Human review first.
+I built a small browser tool that turns ticket notes into a structured client-safe update: completed, progress, blocked, next, and decisions needed. No upload. No account. No new client portal. Human review first.
 
 Try it with the example loaded:
 https://newworldba.github.io/ai-growth-audit/client-status-generator.html?example=1
@@ -23,7 +23,7 @@ https://newworldba.github.io/ai-growth-audit/client-status-generator.html?exampl
 
 **Text:**
 
-Client status updates usually fail in one of two ways: too much internal detail, or too little evidence.
+Client status updates usually fail in one of two ways: too much internal detail, or too little evidence. Clients rarely ask for another portal; they ask why communication stopped.
 
 A safer format has five sections—completed, in progress, blocked, next, and decisions needed. Each claim should trace to a ticket, document, time entry, or approved meeting note. A human still reviews tone, permissions, and commercial sensitivity before sending.
 
@@ -38,7 +38,7 @@ https://newworldba.github.io/ai-growth-audit/client-status-generator.html?exampl
 
 I kept seeing the same workflow problem: the team knows what happened, but the client still does not get a clear update because someone has to turn ticket notes into something safe and useful.
 
-I made a small browser-only tool. You paste lines like `DONE:`, `PROGRESS:`, `BLOCKED:`, `NEXT:`, and `DECISION:`, and it creates a repeatable update. It can keep ticket links, but it does not upload data or send anything automatically.
+I made a small browser-only tool. You paste lines like `DONE:`, `PROGRESS:`, `BLOCKED:`, `NEXT:`, and `DECISION:`, and it creates a repeatable update. It can keep ticket links, but it does not upload data, send anything automatically, or force the client into another portal.
 
 Example link: https://newworldba.github.io/ai-growth-audit/client-status-generator.html?example=1
 
