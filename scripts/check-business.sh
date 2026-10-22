@@ -18,6 +18,17 @@ keywords=(
   "工作流"
   "Client status draft"
   "client status update"
+  "Payment confirmation"
+  "payment"
+  "paid"
+  "receipt"
+  "invoice"
+  "付款"
+  "支付"
+  "收款"
+  "发票"
+  "支付宝"
+  "微信支付"
 )
 
 printf '%s\n' '--- GitHub Issues ---'
