@@ -28,7 +28,7 @@ GrowthAudit
 
 Hi Lalabase team,
 
-The “self-hosted project management with AI that cites sources” positioning is clear. The next hurdle for small teams is usually not understanding the value—it’s keeping task, meeting, and follow-up data consistent without adding another manual entry step.
+The “self-hosted project management with AI that cites sources” positioning is clear. The next hurdle for small teams is usually not understanding the value—it’s turning ticket evidence into a client-safe status update without leaking internal notes.
 
 I help teams fix one workflow at a time. For Lalabase, I drafted a public, non-affiliated example based only on your site: a client-ready status workflow that pulls evidence from tickets, docs, time and meetings, then keeps human checkpoints for accuracy and permissions. Here it is: https://newworldba.github.io/ai-growth-audit/workflow-teardown-lalabase.html
 
