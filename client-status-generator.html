@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Status Generator — Turn Ticket Evidence Into a Safe Update</title>
+  <meta name="description" content="Paste ticket evidence and generate a structured client-ready status update in your browser. No upload, no account, and human approval stays in your workflow.">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(980px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:20px 0; }
+    .logo { font-weight:800; letter-spacing:-.02em; text-decoration:none; color:var(--ink); }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; border:0; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 60px; background:linear-gradient(180deg,#fff 0%,var(--soft) 100%); }
+    .eyebrow { font-size:14px; font-weight:700; color:var(--brand); margin:0 0 16px; }
+    h1 { font-size:clamp(34px,6vw,58px); line-height:1.08; letter-spacing:-.03em; margin:0 0 18px; }
+    .sub { max-width:780px; font-size:19px; color:var(--muted); margin:0 0 28px; }
+    .proof { display:flex; gap:28px; margin-top:36px; flex-wrap:wrap; font-size:14px; font-weight:700; color:var(--muted); }
+    section { padding:56px 0; }
+    h2 { font-size:clamp(26px,4vw,38px); letter-spacing:-.02em; line-height:1.15; margin:0 0 14px; }
+    .muted { color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:22px; background:#fff; }
+    .card h3 { margin:0 0 8px; font-size:20px; }
+    .card p { margin:0; color:var(--muted); }
+    form { border:1px solid var(--line); border-radius:20px; padding:30px; background:#fff; }
+    label { display:block; font-weight:700; margin:0 0 8px; }
+    input, textarea { width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; }
+    textarea { min-height:260px; resize:vertical; }
+    .field { margin-bottom:18px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+    .result { display:none; border:1px solid var(--line); border-radius:20px; padding:30px; background:var(--soft); margin-top:28px; }
+    pre { white-space:pre-wrap; overflow-wrap:break-word; background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px; color:var(--ink); font:inherit; }
+    .note { border-left:4px solid var(--brand); background:#fff; padding:16px 20px; border-radius:0 12px 12px 0; box-shadow:0 4px 16px rgba(16,24,40,.06); }
+    footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    @media(max-width:820px){ .grid{grid-template-columns:1fr;} .nav{flex-direction:column;align-items:flex-start;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="./">GrowthAudit</a>
+      <a class="btn" href="automation-fix.html?package=AI%20Workflow%20Fix%20%2499">Get the 48-hour blueprint</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Free browser tool</p>
+        <h1>Turn messy ticket notes into a client-safe status update.</h1>
+        <p class="sub">Paste ticket evidence with a simple prefix. The tool groups it into completed, in progress, blocked, next, and decisions. Nothing leaves your browser; you review the draft before sending it.</p>
+        <div class="proof"><span>No upload</span><span>No account</span><span>Human approval first</span><span>Structured output</span></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="note">
+          <p class="muted" style="margin:0;">Use prefixes <code>DONE:</code>, <code>PROGRESS:</code>, <code>BLOCKED:</code>, <code>NEXT:</code>, or <code>DECISION:</code>. Add a source URL to any line when you have one. Internal comments should not be pasted.</p>
+        </div>
+        <form id="status-form" style="margin-top:26px;">
+          <div class="field"><label for="project">Project</label><input id="project" required placeholder="Client portal v2"></div>
+          <div class="field"><label for="range">Date range</label><input id="range" required placeholder="Week 31"></div>
+          <div class="field"><label for="evidence">Ticket evidence</label><textarea id="evidence" required placeholder="DONE: Payment API is live — https://example.com/ticket/138&#10;PROGRESS: Approval UI is in review — https://example.com/ticket/142&#10;BLOCKED: Waiting for client to approve endpoint&#10;NEXT: Deploy staging on Tuesday&#10;DECISION: Confirm whether CSV export is in this release"></textarea></div>
+          <div class="actions"><button class="btn" type="submit">Generate draft</button><button class="btn secondary" type="reset">Reset</button></div>
+        </form>
+
+        <div class="result" id="result">
+          <h2>Draft for human review</h2>
+          <p class="muted">Check every claim and permission before sending. This tool does not send anything automatically.</p>
+          <pre id="output"></pre>
+          <div class="actions">
+            <button class="btn" type="button" id="copy">Copy draft</button>
+            <a class="btn secondary" id="mailto" href="#">Email me this draft</a>
+            <a class="btn secondary" id="apply" href="automation-fix.html">Automate this workflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--soft);">
+      <div class="wrap">
+        <h2>Why this saves time</h2>
+        <div class="grid">
+          <div class="card"><h3>One repeatable format</h3><p>Every client learns where to find progress, blockers, and the next decision.</p></div>
+          <div class="card"><h3>Evidence before narrative</h3><p>Each line can keep its ticket link, so the update is easier to trust.</p></div>
+          <div class="card"><h3>Approval stays human</h3><p>You decide what leaves the team and what remains internal.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 GrowthAudit. Runs in your browser and does not upload data. Results are drafts only and do not guarantee revenue.</div></footer>
+
+  <script>
+    const sectionLabels = {
+      done: 'Completed',
+      progress: 'In progress',
+      blocked: 'Blocked',
+      next: 'Next',
+      decision: 'Decisions needed'
+    };
+
+    document.getElementById('status-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const project = document.getElementById('project').value.trim();
+      const range = document.getElementById('range').value.trim();
+      const groups = { done: [], progress: [], blocked: [], next: [], decision: [] };
+      const evidence = document.getElementById('evidence').value.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+
+      for (const line of evidence) {
+        const match = line.match(/^(DONE|PROGRESS|BLOCKED|NEXT|DECISION)\s*:\s*(.+)$/i);
+        const key = match ? match[1].toLowerCase() : 'progress';
+        const text = match ? match[2].trim() : line;
+        groups[key].push(text);
+      }
+
+      const output = [`Subject: ${project} status update — ${range}`, '', `Project: ${project}`, `Period: ${range}`, ''];
+      for (const [key, label] of Object.entries(sectionLabels)) {
+        if (groups[key].length) {
+          output.push(label);
+          output.push(...groups[key].map(item => `- ${item}`));
+          output.push('');
+        }
+      }
+      output.push('Prepared by project owner after evidence review.');
+
+      const text = output.join('\n');
+      const encoded = encodeURIComponent(text);
+      document.getElementById('output').textContent = text;
+      document.getElementById('mailto').href = `mailto:hailong.wei@ushow.media?subject=${encodeURIComponent(`Client status draft: ${project} — ${range}`)}&body=${encoded}`;
+      document.getElementById('apply').href = `automation-fix.html?package=AI%20Workflow%20Fix%20%2499&context=${encoded}`;
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('copy').addEventListener('click', async event => {
+      await navigator.clipboard.writeText(document.getElementById('output').textContent);
+      event.target.textContent = 'Copied';
+      setTimeout(() => { event.target.textContent = 'Copy draft'; }, 1800);
+    });
+  </script>
+</body>
+</html>
