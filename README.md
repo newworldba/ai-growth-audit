@@ -34,6 +34,8 @@ After pushing to `main`:
 - `zh/target-leads-batch-2.md` — second batch of verified target sites.
 - `zh/target-leads-batch-3.md` — third batch from the last 30 days of Show HN.
 - `zh/follow-ups-batch-3.md` — ready-to-copy follow-up drafts for the batch.
+- `finance/budget-policy.md` — minimum-spend rules and purchase gates.
+- `finance/revenue-experiments.md` — parallel revenue directions with stop/pause triggers.
 - `zh/first-five-micro-audits.md` — value-first mini audits and outreach drafts.
 - `zh/public-micro-audits.html` — public mini-audit examples for the landing page.
 - `public-micro-audits-en.html` — English public mini-audit examples for the landing page.
@@ -43,6 +45,7 @@ After pushing to `main`:
 - `assets/founder-cro-kit.html` — delivered Founder CRO Kit product.
 - `zh/kit.html` — Chinese Founder CRO Kit sales page.
 - `zh/kit-checkout.html` — Chinese Alipay/WeChat checkout for the kit.
+- `zh/automation-fix.html` — Chinese AI workflow diagnosis offer.
 - `tools/conversion-scorecard.html` — free browser-only conversion triage tool.
 - `checklist.html` — English 26-point landing page audit checklist.
 - `zh/conversion-scorecard.html` — Chinese conversion triage tool with lead capture.
