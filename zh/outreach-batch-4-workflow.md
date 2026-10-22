@@ -30,9 +30,9 @@ Hi Lalabase team,
 
 The “self-hosted project management with AI that cites sources” positioning is clear. The next hurdle for small teams is usually not understanding the value—it’s keeping task, meeting, and follow-up data consistent without adding another manual entry step.
 
-I help teams fix one workflow at a time. For Lalabase, I’d start with the path from meeting note or chat update to task creation, owner, due date, and cited source.
+I help teams fix one workflow at a time. For Lalabase, I drafted a public, non-affiliated example based only on your site: a client-ready status workflow that pulls evidence from tickets, docs, time and meetings, then keeps human checkpoints for accuracy and permissions. Here it is: https://newworldba.github.io/ai-growth-audit/workflow-teardown-lalabase.html
 
-If you’d like, I’ll send a one-page draft of that flow. No charge for the first outline.
+If you’d like, I’ll send a one-page rollout checklist tailored to your stack. No charge for the first outline.
 
 Best,  
 Hailong Wei  
