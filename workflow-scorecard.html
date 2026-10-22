@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Workflow Check — Find the Process Worth Fixing First</title>
+  <meta name="description" content="Answer eight questions to identify which repetitive process deserves an AI workflow fix first, then generate a short diagnosis you can share.">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(900px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(30px,5vw,46px); letter-spacing:-.03em; line-height:1.1; margin:36px 0 12px; }
+    .lede { color:var(--muted); font-size:18px; max-width:760px; }
+    form { margin:32px 0; }
+    .question { border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:14px; }
+    label { display:block; font-weight:700; margin-bottom:8px; }
+    select,textarea,input { width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; }
+    textarea { min-height:90px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; font-weight:700; border:0; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .result { border:1px solid var(--line); border-radius:16px; padding:24px; background:var(--soft); display:none; }
+    .score { font-size:44px; font-weight:850; margin:0 0 4px; }
+    .muted { color:var(--muted); }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0; margin-top:40px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="./">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>AI workflow check</h1>
+    <p class="lede">Answer eight questions to identify the repeating process worth fixing first. The result stays in your browser and creates a short summary you can send to your team.</p>
+    <form id="scorecard">
+      <div class="question"><label for="process">1. Which process do you most want to fix?</label><input id="process" required placeholder="For example: collecting and organizing client assets"></div>
+      <div class="question"><label for="hours">2. How much human time does it take each week?</label><select id="hours" required><option value="1">1–2 hours</option><option value="2">3–5 hours</option><option value="4">6–10 hours</option><option value="7">More than 10 hours</option></select></div>
+      <div class="question"><label for="people">3. How many people are involved?</label><select id="people" required><option value="1">1 person</option><option value="3">2–4 people</option><option value="5">5–9 people</option><option value="8">10+ people</option></select></div>
+      <div class="question"><label for="tools">4. How many tools are involved?</label><select id="tools" required><option value="1">1 tool</option><option value="3">2–3 tools</option><option value="6">4–6 tools</option><option value="9">7+ tools</option></select></div>
+      <div class="question"><label for="handoffs">5. How many manual handoffs are there?</label><select id="handoffs" required><option value="1">Almost none</option><option value="3">1–2 handoffs</option><option value="6">3–5 handoffs</option><option value="9">6+ handoffs</option></select></div>
+      <div class="question"><label for="repetition">6. How often do the same steps repeat each week?</label><select id="repetition" required><option value="1">Less than 5 times</option><option value="3">5–20 times</option><option value="6">21–50 times</option><option value="9">More than 50 times</option></select></div>
+      <div class="question"><label for="errors">7. How many misses or rework incidents happened last month?</label><select id="errors" required><option value="0">Almost none</option><option value="2">1–3 incidents</option><option value="5">4–10 incidents</option><option value="8">More than 10 incidents</option></select></div>
+      <div class="question"><label for="pain">8. What is the most frustrating step right now?</label><textarea id="pain" required placeholder="For example: client assets arrive in chat and cloud drives, but nobody confirms whether the folder is complete."></textarea></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;"><button class="btn" type="submit">Generate diagnosis</button><button class="btn secondary" type="reset">Reset</button></div>
+    </form>
+    <div class="result" id="result">
+      <p class="muted">Diagnosis</p>
+      <p class="score" id="score">0</p>
+      <p class="muted" id="verdict"></p>
+      <h2>Suggested first three steps</h2>
+      <ol id="steps"></ol>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+        <a class="btn" id="apply-link" href="automation-fix.html">Request the $99 workflow fix</a>
+        <a class="btn secondary" id="mailto-link" href="#">Email this diagnosis</a>
+      </div>
+    </div>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit. This tool runs in your browser and does not upload data. Results are diagnostic only and do not guarantee revenue.</div></footer>
+  <script>
+    document.getElementById('scorecard').addEventListener('submit', event => {
+      event.preventDefault();
+      const value = id => document.getElementById(id).value.trim();
+      const numeric = id => Number(document.getElementById(id).value || 0);
+      const score = ['hours','people','tools','handoffs','repetition','errors'].reduce((sum,id) => sum + numeric(id), 0);
+      const verdict = score >= 26 ? 'High priority: the coordination cost is clearly high. Start with a 48-hour workflow diagnosis.' : score >= 15 ? 'Medium priority: worth fixing. Focus on the most frustrating step instead of automating the whole process at once.' : 'Low priority: document the key steps for now and revisit when repetition increases.';
+      const steps = [`Break “${value('process')}” into trigger, input, processing, approval, and delivery stages.`, `Solve this first: ${value('pain')}.`, 'Assign an owner, tool, completion standard, and exception path to each stage.'];
+      document.getElementById('score').textContent = `${score} / 44`;
+      document.getElementById('verdict').textContent = verdict;
+      document.getElementById('steps').innerHTML = steps.map(item => `<li>${item}</li>`).join('');
+      const summary = [`Process: ${value('process')}`, `Weekly human time: ${document.getElementById('hours').selectedOptions[0].textContent}`, `People involved: ${document.getElementById('people').selectedOptions[0].textContent}`, `Tools: ${document.getElementById('tools').selectedOptions[0].textContent}`, `Manual handoffs: ${document.getElementById('handoffs').selectedOptions[0].textContent}`, `Weekly repetitions: ${document.getElementById('repetition').selectedOptions[0].textContent}`, `Misses or rework last month: ${document.getElementById('errors').selectedOptions[0].textContent}`, `Most frustrating step: ${value('pain')}`, `Diagnosis score: ${score} / 44`, verdict].join('\n');
+      document.getElementById('mailto-link').href = `mailto:hailong.wei@ushow.media?subject=${encodeURIComponent('AI workflow check result')}&body=${encodeURIComponent(summary)}`;
+      const params = new URLSearchParams({ package: 'AI Workflow Fix $99', context: summary });
+      document.getElementById('apply-link').href = `apply.html?${params.toString()}`;
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
