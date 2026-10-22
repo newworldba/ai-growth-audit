@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Client Status Update Generator &amp; Template — Turn Ticket Evidence Into a Safe Weekly Update</title>
   <meta name="description" content="Use this free client status update generator and template to turn ticket evidence into a safe weekly update. Browser-only, no upload, with human approval before sending.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Client Status Update Generator & Template">
+  <meta property="og:description" content="Turn ticket evidence into a client-safe weekly update in your browser. No upload, no account, human approval first.">
+  <meta property="og:url" content="https://newworldba.github.io/ai-growth-audit/client-status-generator.html">
+  <meta property="og:image" content="https://newworldba.github.io/ai-growth-audit/assets/client-status-generator-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Client status update generator by GrowthAudit.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Client Status Update Generator & Template">
+  <meta name="twitter:description" content="Turn ticket evidence into a client-safe weekly update in your browser. No upload, no account, human approval first.">
+  <meta name="twitter:image" content="https://newworldba.github.io/ai-growth-audit/assets/client-status-generator-og.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,6 +138,19 @@
             <a class="btn secondary" id="apply" href="automation-fix.html">Automate this workflow</a>
           </div>
         </div>
+
+        <section style="padding:32px 0 0;">
+          <div class="card">
+            <h2 style="font-size:26px;">Share this tool</h2>
+            <p class="muted">If it saves you time, send it to one project lead who still writes client updates by hand.</p>
+            <div class="actions">
+              <a class="btn secondary" href="https://twitter.com/intent/tweet?text=Client%20status%20update%20generator%20%E2%80%94%20turn%20ticket%20evidence%20into%20a%20client-safe%20update&url=https%3A%2F%2Fnewworldba.github.io%2Fai-growth-audit%2Fclient-status-generator.html%3Fexample%3D1">Share on X</a>
+              <a class="btn secondary" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnewworldba.github.io%2Fai-growth-audit%2Fclient-status-generator.html%3Fexample%3D1">Share on LinkedIn</a>
+              <a class="btn secondary" href="https://www.reddit.com/submit?url=https%3A%2F%2Fnewworldba.github.io%2Fai-growth-audit%2Fclient-status-generator.html%3Fexample%3D1&title=Client%20status%20update%20generator%20%E2%80%94%20turn%20ticket%20evidence%20into%20a%20client-safe%20update">Share on Reddit</a>
+              <button class="btn secondary" type="button" id="copy-link">Copy link</button>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -228,6 +253,12 @@ Decisions needed
         'DECISION: Confirm whether CSV export is in this release'
       ].join('\n');
       document.getElementById('status-form').requestSubmit();
+    });
+
+    document.getElementById('copy-link').addEventListener('click', async event => {
+      await navigator.clipboard.writeText('https://newworldba.github.io/ai-growth-audit/client-status-generator.html?example=1');
+      event.target.textContent = 'Copied';
+      setTimeout(() => { event.target.textContent = 'Copy link'; }, 1800);
     });
 
     if (new URLSearchParams(location.search).get('example') === '1') {
