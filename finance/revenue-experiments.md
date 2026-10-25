@@ -28,6 +28,11 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | Email | Stintly, Clienwork, MakeWay | Sent approved follow-ups | Apple Mail accepted the three sends; no reply yet | Check again after 24-48 hours |
 | Site | Conversion ROI calculator | Shipped English and Chinese calculator to both homepages and sitemap | Browser test passed on local files | Add to next distribution batch after current 48-hour review |
 | Site | Conversion ROI calculator | Added lead capture with copyable result and prefilled audit request | Browser test passed on both language versions | Use as the next lead magnet after 48-hour review |
+| Site | Conversion ROI calculator | Connected calculator to both Founder CRO Kit pages | Commit `b9ed1f65` | Check kit-page traffic and audit applications |
+| Xiaohongshu | Conversion ROI calculator | Prepared vertical image and two note drafts for approval | `marketing/assets/roi-calculator-xhs.png`, `marketing/notes/xhs-roi-calculator.md` | Publish one note only after explicit approval |
+| Skills | Content strategy and social content | Installed high-install content-strategy and social skills | Local skill files present | Use for the next distribution batch and message iteration |
+| Skills | Xiaohongshu operations | Installed skill-only; did not publish, like, comment, or start its browser service | Local skill files present | Use only after explicit approval for a scoped action |
+| Traffic | GitHub Pages | Public traffic API showed 0 views and 0 uniques in the last 14 days | `repos/newworldba/ai-growth-audit/traffic/views` | Treat distribution, not site polish, as the bottleneck |
 
 ## Time Allocation
 
