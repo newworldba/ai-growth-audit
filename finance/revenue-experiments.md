@@ -38,6 +38,7 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | Xiaohongshu | AI Agent Setup Help | User approved publishing Note A; browser login unavailable and Xiaohongshu web returned IP-risk error 300012 | Creator Studio redirected to login; main site returned `IP存在风险` | User can manually publish from prepared clipboard/asset; do not retry automated publish until login or trusted network changes |
 | Site | AI Agent Setup Help | Made both intake forms service-aware so Agent Setup asks for tool/repo, user, desired output, and boundaries instead of conversion-audit fields | Browser tests passed for EN/ZH package switching | Improve conversion friction for paid requests |
 | Delivery | AI Agent Setup Help | Added one-page 45-minute delivery agenda, safety-boundary template, runbook template, QA checks, and follow-up rule | `private-products/agent-setup-delivery-kit-en.md`, `private-products/agent-setup-delivery-kit-zh.md` | Use immediately if a paid request arrives |
+| GitHub | AI Agent Setup Help | Found three high-fit public issues and prepared one comment each for user approval | `marketing/github-agent-setup-outreach-2026-10-25.md` | Post one comment at a time only after explicit approval |
 
 ## Time Allocation
 
