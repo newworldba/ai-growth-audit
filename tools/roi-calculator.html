@@ -26,6 +26,7 @@
     .metric strong { display:block; font-size:28px; line-height:1.1; }
     .metric span { color:var(--muted); font-size:14px; }
     .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    .result-summary { width:100%; min-height:130px; margin-top:16px; padding:14px; border:1px solid var(--line); border-radius:12px; font:inherit; color:var(--ink); background:#fff; }
     footer { border-top:1px solid var(--line); margin-top:52px; padding:24px 0; color:var(--muted); font-size:14px; }
     @media(max-width:620px){ .metrics { grid-template-columns:1fr; } }
   </style>
@@ -62,8 +63,10 @@
       <div class="note">
         This is a planning estimate, not a revenue guarantee. Validate the uplift with a real experiment before committing spend.
       </div>
+      <textarea id="result-summary" class="result-summary" readonly aria-label="Calculator result summary"></textarea>
       <div class="actions" style="margin-top:18px;">
-        <a class="btn" href="apply.html?package=Quick%20Audit%20%24149">Book a 48-hour audit</a>
+        <a class="btn" id="apply-link" href="apply.html?package=Quick%20Audit%20%24149">Book a 48-hour audit</a>
+        <button class="btn secondary" type="button" id="copy-result">Copy result</button>
       </div>
     </section>
   </main>
@@ -87,8 +90,33 @@
       document.getElementById('projected-monthly').textContent = currency(projectedMonthly);
       document.getElementById('monthly-gain').textContent = currency(monthlyGain);
       document.getElementById('annual-gain').textContent = currency(annualGain);
+      const summary = [
+        'Conversion ROI calculator result',
+        `Monthly visitors: ${visitors.toLocaleString()}`,
+        `Current conversion rate: ${conversionRate}%`,
+        `Average revenue per conversion: ${currency(orderValue)}`,
+        `Expected uplift: ${uplift}%`,
+        `Current monthly revenue: ${currency(currentMonthly)}`,
+        `Projected monthly revenue: ${currency(projectedMonthly)}`,
+        `Incremental monthly revenue: ${currency(monthlyGain)}`,
+        `Incremental annual revenue: ${currency(annualGain)}`,
+        'Planning estimate only. Validate with a real experiment.'
+      ].join('\n');
+      document.getElementById('result-summary').value = summary;
+      const applyParams = new URLSearchParams({
+        package: 'Quick Audit $149',
+        context: summary
+      });
+      document.getElementById('apply-link').href = 'apply.html?' + applyParams.toString();
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('copy-result').addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      await navigator.clipboard.writeText(document.getElementById('result-summary').value);
+      button.textContent = 'Copied';
+      setTimeout(() => { button.textContent = 'Copy result'; }, 1800);
     });
   </script>
 </body>

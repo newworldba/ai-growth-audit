@@ -26,6 +26,7 @@
     .metric strong { display:block; font-size:28px; line-height:1.1; }
     .metric span { color:var(--muted); font-size:14px; }
     .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    .result-summary { width:100%; min-height:130px; margin-top:16px; padding:14px; border:1px solid var(--line); border-radius:12px; font:inherit; color:var(--ink); background:#fff; }
     footer { border-top:1px solid var(--line); margin-top:52px; padding:24px 0; color:var(--muted); font-size:14px; }
     @media(max-width:620px){ .metrics { grid-template-columns:1fr; } }
   </style>
@@ -62,8 +63,10 @@
       <div class="note">
         这是规划估算，不是收入保证。真实提升需要通过实验验证后再投入预算。
       </div>
+      <textarea id="result-summary" class="result-summary" readonly aria-label="计算结果摘要"></textarea>
       <div class="actions" style="margin-top:18px;">
-        <a class="btn" href="apply.html?package=%E5%BF%AB%E9%80%9F%E5%AE%A1%E8%AE%A1%20%C2%A51%2C080">申请 48 小时审计</a>
+        <a class="btn" id="apply-link" href="apply.html?package=%E5%BF%AB%E9%80%9F%E5%AE%A1%E8%AE%A1%20%C2%A51%2C080">申请 48 小时审计</a>
+        <button class="btn secondary" type="button" id="copy-result">复制结果</button>
       </div>
     </section>
   </main>
@@ -87,8 +90,33 @@
       document.getElementById('projected-monthly').textContent = currency(projectedMonthly);
       document.getElementById('monthly-gain').textContent = currency(monthlyGain);
       document.getElementById('annual-gain').textContent = currency(annualGain);
+      const summary = [
+        '转化 ROI 计算器结果',
+        `每月访问量：${visitors.toLocaleString('zh-CN')}`,
+        `当前转化率：${conversionRate}%`,
+        `单次转化平均收入：${currency(orderValue)}`,
+        `预期提升：${uplift}%`,
+        `当前每月收入：${currency(currentMonthly)}`,
+        `预估每月收入：${currency(projectedMonthly)}`,
+        `每月增量收入：${currency(monthlyGain)}`,
+        `每年增量收入：${currency(annualGain)}`,
+        '仅为规划估算，需要用真实实验验证。'
+      ].join('\n');
+      document.getElementById('result-summary').value = summary;
+      const applyParams = new URLSearchParams({
+        package: '快速审计 ¥1,080',
+        context: summary
+      });
+      document.getElementById('apply-link').href = 'apply.html?' + applyParams.toString();
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('copy-result').addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      await navigator.clipboard.writeText(document.getElementById('result-summary').value);
+      button.textContent = '已复制';
+      setTimeout(() => { button.textContent = '复制结果'; }, 1800);
     });
   </script>
 </body>
