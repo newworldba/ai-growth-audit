@@ -20,6 +20,13 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | LinkedIn | Client status generator | Post creation blocked | LinkedIn post-create endpoint returned HTTP 451 | Pause unless a direct legal route or user-approved network route appears |
 | X / Twitter | Client status generator | Post blocked | Composer reload reached `chrome-error://chromewebdata/` | Pause unless user approves a scoped network workaround |
 
+## 2026-10-25 Experiment Log
+
+| Channel | Asset | Action | Evidence | Next review |
+|---|---|---|---|---|
+| Xiaohongshu | Client status generator | First 48-hour metrics check | Creator Studio: 3 views, 0 comments, 0 likes, 1 favorite, 0 shares | Continue existing note; do not expand channels until traffic or qualified reply appears |
+| Email | Stintly, Clienwork, MakeWay | Sent approved follow-ups | Apple Mail accepted the three sends; no reply yet | Check again after 24-48 hours |
+
 ## Time Allocation
 
 - 60% on the highest-priority experiment for the week.

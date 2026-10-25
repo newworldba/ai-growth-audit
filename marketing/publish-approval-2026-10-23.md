@@ -30,6 +30,7 @@ Reply with one of: `发送 Stintly`, `发送 Clienwork`, `发送 MakeWay`, `发�
 ## Execution log — 2026-10-25
 
 - Sent individually via Apple Mail: Stintly, Clienwork, and MakeWay follow-up emails from `zh/follow-ups-batch-7-client-portals.md`.
+- Xiaohongshu first 48-hour metrics: 3 views, 0 comments, 0 likes, 1 favorite, 0 shares.
 - No revenue yet.
 - Next review: check replies and Xiaohongshu metrics after 48 hours.
 
