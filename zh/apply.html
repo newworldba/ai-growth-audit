@@ -89,18 +89,72 @@
       if (value) document.getElementById(id).value = value;
     });
 
+    function serviceFieldCopy(packageValue) {
+      if (packageValue === 'AI Agent 配置帮助 ¥199') {
+        return {
+          websiteLabel: '产品 / 仓库 / 文档链接',
+          websitePlaceholder: 'https://example.com 或 https://github.com/owner/repo',
+          websiteHint: '公开链接即可。请勿发送密码或密钥。',
+          audienceLabel: '谁会使用这个工作流',
+          audiencePlaceholder: '例如：经常写客户周报的自由职业者',
+          goalLabel: '期望输出',
+          goalPlaceholder: '例如：把会议记录整理成客户可读的状态更新',
+          contextLabel: '当前工具 / 重复任务',
+          contextPlaceholder: '例如：每周从会议记录生成客户周报；工具：Codex CLI、macOS、飞书。',
+          websiteLine: '产品/仓库/文档',
+          audienceLine: '工作流使用者',
+          goalLine: '期望输出',
+          contextLine: '当前工具/重复任务',
+          confirmationLine: '我确认已获得申请中涉及系统或仓库的使用授权。'
+        };
+      }
+      return {
+        websiteLabel: '网站链接',
+        websitePlaceholder: 'https://example.com',
+        websiteHint: '必须是你拥有或已获得授权审查的网站。',
+        audienceLabel: '目标客户',
+        audiencePlaceholder: '例如：跨境电商运营负责人',
+        goalLabel: '主要转化目标',
+        goalPlaceholder: '例如：预约演示 / 开始试用 / 直接下单',
+        contextLabel: '流量来源 / 已知问题',
+        contextPlaceholder: '例如：每月约 2000 访问，主要来自自然搜索和微信；用户到价格页后流失。',
+        websiteLine: '网站',
+        audienceLine: '目标客户',
+        goalLine: '主要转化目标',
+        contextLine: '流量来源/已知问题',
+        confirmationLine: '我确认我拥有该网站或已获得审查授权。'
+      };
+    }
+
+    function updateServiceFields() {
+      const copy = serviceFieldCopy(packageSelect.value);
+      document.querySelector('label[for="website"]').textContent = copy.websiteLabel;
+      document.getElementById('website').placeholder = copy.websitePlaceholder;
+      document.querySelector('.hint').textContent = copy.websiteHint;
+      document.querySelector('label[for="audience"]').textContent = copy.audienceLabel;
+      document.getElementById('audience').placeholder = copy.audiencePlaceholder;
+      document.querySelector('label[for="goal"]').textContent = copy.goalLabel;
+      document.getElementById('goal').placeholder = copy.goalPlaceholder;
+      document.querySelector('label[for="context"]').textContent = copy.contextLabel;
+      document.getElementById('context').placeholder = copy.contextPlaceholder;
+    }
+
+    packageSelect.addEventListener('change', updateServiceFields);
+    updateServiceFields();
+
     document.getElementById('audit-form').addEventListener('submit', (event) => {
       event.preventDefault();
       const data = new FormData(event.target);
+      const copy = serviceFieldCopy(packageSelect.value);
       const lines = [
         `称呼：${data.get('name')}`,
         `公司/产品：${data.get('company')}`,
-        `网站：${data.get('website')}`,
-        `目标客户：${data.get('audience')}`,
-        `主要转化目标：${data.get('goal')}`,
+        `${copy.websiteLine}：${data.get('website')}`,
+        `${copy.audienceLine}：${data.get('audience')}`,
+        `${copy.goalLine}：${data.get('goal')}`,
         `套餐：${data.get('package')}`,
-        `流量来源/已知问题：${data.get('context') || '未填写'}`,
-        '我确认我拥有该网站或已获得审查授权。'
+        `${copy.contextLine}：${data.get('context') || '未填写'}`,
+        copy.confirmationLine
       ];
       const subject = `审计申请：${data.get('company')}`;
       const body = encodeURIComponent(lines.join('\n'));
@@ -109,15 +163,16 @@
 
     document.getElementById('copy-request').addEventListener('click', async (event) => {
       const data = new FormData(document.getElementById('audit-form'));
+      const copy = serviceFieldCopy(packageSelect.value);
       const lines = [
         `称呼：${data.get('name')}`,
         `公司/产品：${data.get('company')}`,
-        `网站：${data.get('website')}`,
-        `目标客户：${data.get('audience')}`,
-        `主要转化目标：${data.get('goal')}`,
+        `${copy.websiteLine}：${data.get('website')}`,
+        `${copy.audienceLine}：${data.get('audience')}`,
+        `${copy.goalLine}：${data.get('goal')}`,
         `套餐：${data.get('package')}`,
-        `流量来源/已知问题：${data.get('context') || '未填写'}`,
-        '我确认我拥有该网站或已获得审查授权。'
+        `${copy.contextLine}：${data.get('context') || '未填写'}`,
+        copy.confirmationLine
       ];
       await navigator.clipboard.writeText(lines.join('\n'));
       event.target.textContent = '已复制';

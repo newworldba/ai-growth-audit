@@ -35,6 +35,8 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | Traffic | GitHub Pages | Public traffic API showed 0 views and 0 uniques in the last 14 days | `repos/newworldba/ai-growth-audit/traffic/views` | Treat distribution, not site polish, as the bottleneck |
 | Site | AI Agent Setup Help | Shipped English and Chinese fixed-price pages, form package, payment row, homepage CTA, and sitemap entries | Working files committed in this session | Validate live URLs, then request approval for one distribution channel |
 | Xiaohongshu | AI Agent Setup Help | Prepared two note drafts and one WeChat draft for approval | `marketing/notes/agent-setup-xhs.md` | Publish one note only after explicit approval |
+| Site | AI Agent Setup Help | Made both intake forms service-aware so Agent Setup asks for tool/repo, user, desired output, and boundaries instead of conversion-audit fields | Browser tests passed for EN/ZH package switching | Improve conversion friction for paid requests |
+| Delivery | AI Agent Setup Help | Added one-page 45-minute delivery agenda, safety-boundary template, runbook template, QA checks, and follow-up rule | `private-products/agent-setup-delivery-kit-en.md`, `private-products/agent-setup-delivery-kit-zh.md` | Use immediately if a paid request arrives |
 
 ## Time Allocation
 

@@ -89,18 +89,72 @@
       if (value) document.getElementById(id).value = value;
     });
 
+    function serviceFieldCopy(packageValue) {
+      if (packageValue === 'AI Agent Setup Help $29') {
+        return {
+          websiteLabel: 'Product / repo / docs link',
+          websitePlaceholder: 'https://example.com or https://github.com/owner/repo',
+          websiteHint: 'A public link is enough. Do not send credentials.',
+          audienceLabel: 'Who will use the workflow',
+          audiencePlaceholder: 'For example: solo founder preparing client updates',
+          goalLabel: 'Desired output',
+          goalPlaceholder: 'For example: a client-safe status update draft from task notes',
+          contextLabel: 'Current tools / repeating task',
+          contextPlaceholder: 'For example: weekly client update from meeting notes; tools: Codex CLI, macOS, Notion.',
+          websiteLine: 'Product/repo/docs',
+          audienceLine: 'Workflow user',
+          goalLine: 'Desired output',
+          contextLine: 'Current tools/repeating task',
+          confirmationLine: 'I confirm I have authorization for any system or repository included in this request.'
+        };
+      }
+      return {
+        websiteLabel: 'Website link',
+        websitePlaceholder: 'https://example.com',
+        websiteHint: 'You must own this website or have authorization to review it.',
+        audienceLabel: 'Target customer',
+        audiencePlaceholder: 'For example: self-hosted SaaS founders',
+        goalLabel: 'Primary conversion goal',
+        goalPlaceholder: 'For example: waitlist signup / trial start / demo booking',
+        contextLabel: 'Traffic sources / known problems',
+        contextPlaceholder: 'For example: around 2,000 visits/month from organic search and X; users drop off after viewing pricing.',
+        websiteLine: 'Website',
+        audienceLine: 'Target customer',
+        goalLine: 'Primary conversion goal',
+        contextLine: 'Traffic sources/known problems',
+        confirmationLine: 'I confirm that I own the website or have authorization to review it.'
+      };
+    }
+
+    function updateServiceFields() {
+      const copy = serviceFieldCopy(packageSelect.value);
+      document.querySelector('label[for="website"]').textContent = copy.websiteLabel;
+      document.getElementById('website').placeholder = copy.websitePlaceholder;
+      document.querySelector('.hint').textContent = copy.websiteHint;
+      document.querySelector('label[for="audience"]').textContent = copy.audienceLabel;
+      document.getElementById('audience').placeholder = copy.audiencePlaceholder;
+      document.querySelector('label[for="goal"]').textContent = copy.goalLabel;
+      document.getElementById('goal').placeholder = copy.goalPlaceholder;
+      document.querySelector('label[for="context"]').textContent = copy.contextLabel;
+      document.getElementById('context').placeholder = copy.contextPlaceholder;
+    }
+
+    packageSelect.addEventListener('change', updateServiceFields);
+    updateServiceFields();
+
     document.getElementById('audit-form').addEventListener('submit', (event) => {
       event.preventDefault();
       const data = new FormData(event.target);
+      const copy = serviceFieldCopy(packageSelect.value);
       const lines = [
         `Name: ${data.get('name')}`,
         `Company/product: ${data.get('company')}`,
-        `Website: ${data.get('website')}`,
-        `Target customer: ${data.get('audience')}`,
-        `Primary conversion goal: ${data.get('goal')}`,
+        `${copy.websiteLine}: ${data.get('website')}`,
+        `${copy.audienceLine}: ${data.get('audience')}`,
+        `${copy.goalLine}: ${data.get('goal')}`,
         `Package: ${data.get('package')}`,
-        `Traffic sources/known problems: ${data.get('context') || 'Not provided'}`,
-        'I confirm that I own the website or have authorization to review it.'
+        `${copy.contextLine}: ${data.get('context') || 'Not provided'}`,
+        copy.confirmationLine
       ];
       const subject = `Audit request: ${data.get('company')}`;
       const body = encodeURIComponent(lines.join('\n'));
@@ -109,15 +163,16 @@
 
     document.getElementById('copy-request').addEventListener('click', async (event) => {
       const data = new FormData(document.getElementById('audit-form'));
+      const copy = serviceFieldCopy(packageSelect.value);
       const lines = [
         `Name: ${data.get('name')}`,
         `Company/product: ${data.get('company')}`,
-        `Website: ${data.get('website')}`,
-        `Target customer: ${data.get('audience')}`,
-        `Primary conversion goal: ${data.get('goal')}`,
+        `${copy.websiteLine}: ${data.get('website')}`,
+        `${copy.audienceLine}: ${data.get('audience')}`,
+        `${copy.goalLine}: ${data.get('goal')}`,
         `Package: ${data.get('package')}`,
-        `Traffic sources/known problems: ${data.get('context') || 'Not provided'}`,
-        'I confirm that I own the website or have authorization to review it.'
+        `${copy.contextLine}: ${data.get('context') || 'Not provided'}`,
+        copy.confirmationLine
       ];
       await navigator.clipboard.writeText(lines.join('\n'));
       event.target.textContent = 'Copied';
