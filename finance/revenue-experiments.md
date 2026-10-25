@@ -33,6 +33,8 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | Skills | Content strategy and social content | Installed high-install content-strategy and social skills | Local skill files present | Use for the next distribution batch and message iteration |
 | Skills | Xiaohongshu operations | Installed skill-only; did not publish, like, comment, or start its browser service | Local skill files present | Use only after explicit approval for a scoped action |
 | Traffic | GitHub Pages | Public traffic API showed 0 views and 0 uniques in the last 14 days | `repos/newworldba/ai-growth-audit/traffic/views` | Treat distribution, not site polish, as the bottleneck |
+| Site | AI Agent Setup Help | Shipped English and Chinese fixed-price pages, form package, payment row, homepage CTA, and sitemap entries | Working files committed in this session | Validate live URLs, then request approval for one distribution channel |
+| Xiaohongshu | AI Agent Setup Help | Prepared two note drafts and one WeChat draft for approval | `marketing/notes/agent-setup-xhs.md` | Publish one note only after explicit approval |
 
 ## Time Allocation
 
