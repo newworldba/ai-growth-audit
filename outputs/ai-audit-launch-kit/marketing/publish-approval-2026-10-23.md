@@ -23,7 +23,7 @@ Reply with one of: `发送 Stintly`, `发送 Clienwork`, `发送 MakeWay`, `发�
 - Ready: Xiaohongshu image at `marketing/assets/client-status-generator-xhs.png`.
 - Published: Xiaohongshu note via Creator Studio (`published=true`).
 - Published blocked: LinkedIn returned HTTP 451 during post creation.
-- Pending retry: X composer kept previous draft content and exceeded the limit; will retry with a fresh draft.
+- Published blocked: X direct access failed after reload with a Chrome network error.
 - Blocked pending login or browser access: Indie Hackers.
 
 ## X / Twitter
