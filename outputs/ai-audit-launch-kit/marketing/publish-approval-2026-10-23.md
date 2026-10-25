@@ -21,7 +21,8 @@ Reply with one of: `发送 Stintly`, `发送 Clienwork`, `发送 MakeWay`, `发�
 
 - Sent: Stintly, Clienwork, MakeWay cold emails.
 - Ready: Xiaohongshu image at `marketing/assets/client-status-generator-xhs.png`.
-- Blocked pending login or browser access: X, LinkedIn, Xiaohongshu, Indie Hackers.
+- Published: Xiaohongshu note via Creator Studio (`published=true`).
+- Blocked pending login or browser access: X, LinkedIn, Indie Hackers.
 
 ## X / Twitter
 
