@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free AI Agent Setup Runbook Template — GrowthAudit</title>
+  <meta name="description" content="Use this one-page AI agent setup runbook to define the task, safety boundaries, verification command, and stop rule before an agent runs.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free AI Agent Setup Runbook Template">
+  <meta property="og:description" content="Define the task, safety boundaries, verification command, and stop rule before an agent runs.">
+  <meta property="og:url" content="https://newworldba.github.io/ai-growth-audit/agent-setup-runbook.html">
+  <link rel="canonical" href="https://newworldba.github.io/ai-growth-audit/agent-setup-runbook.html">
+  <link rel="alternate" hreflang="en" href="https://newworldba.github.io/ai-growth-audit/agent-setup-runbook.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://newworldba.github.io/ai-growth-audit/zh/agent-setup-runbook.html">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(980px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:20px 0; }
+    .logo { font-weight:800; letter-spacing:-.02em; text-decoration:none; color:var(--ink); }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:70px 0 56px; background:linear-gradient(180deg,#fff 0%,var(--soft) 100%); }
+    .eyebrow { font-size:14px; font-weight:700; color:var(--brand); margin:0 0 16px; }
+    h1 { font-size:clamp(32px,5vw,52px); line-height:1.08; letter-spacing:-.03em; margin:0 0 16px; }
+    .sub { max-width:760px; font-size:19px; color:var(--muted); margin:0 0 28px; }
+    section { padding:58px 0; }
+    h2 { font-size:clamp(25px,3.5vw,34px); letter-spacing:-.02em; line-height:1.15; margin:0 0 12px; }
+    .muted { color:var(--muted); }
+    pre { margin:0; padding:20px; background:#0b1220; color:#e6edf6; border-radius:14px; overflow:auto; font-size:14px; line-height:1.6; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:22px; background:#fff; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:30px 0; }
+    footer { padding:26px 0; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    @media(max-width:760px){ .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="logo" href="/">GrowthAudit</a><a class="btn" href="apply.html?package=AI%20Agent%20Setup%20Help%20%2429">Get setup help</a></div></header>
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Free template</p>
+        <h1>AI Agent Setup Runbook</h1>
+        <p class="sub">Use this one-page runbook before letting an agent work. It forces four decisions: what the task is, what the agent may touch, how you verify the result, and when it must stop.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn" href="#template">Copy the template</a>
+          <a class="btn secondary" href="agent-setup.html">See the paid setup session</a>
+        </div>
+      </div>
+    </div>
+    <section id="template" style="padding-top:0;">
+      <div class="wrap">
+        <h2>One-page template</h2>
+        <p class="muted">Copy this into your repository. Replace the examples with one real task.</p>
+        <p><button class="btn secondary" id="copy-template" type="button" aria-live="polite">Copy template</button></p>
+        <pre><code># Task runbook
+
+## Task
+- Goal: Revise one module / create one report / summarize one source.
+- Input files: `src/example.py`, `docs/brief.md`
+- Desired output: `docs/output.md`
+- Verification: `npm test` / `python script.py --check`
+
+## Safety boundaries
+- May read: files listed above.
+- May write: only the desired output.
+- May execute: only the verification command.
+- Must ask first: deleting files, installing dependencies, sending messages.
+- Never: credentials, customer data, production systems.
+
+## Stop rule
+- Stop after two failed attempts.
+- Stop if the task expands beyond the listed files.
+- Stop if verification output cannot be shown.
+
+## Review record
+- Reviewer:
+- Result:
+- Evidence:
+- Next step:</code></pre>
+      </div>
+    </section>
+    <section style="background:var(--soft);">
+      <div class="wrap">
+        <h2>Why this works</h2>
+        <div class="grid">
+          <div class="card"><h3>Less drift</h3><p>The agent has a fixed input, output, and verification command.</p></div>
+          <div class="card"><h3>Clear limits</h3><p>Permissions are explicit instead of inferred from a long chat.</p></div>
+          <div class="card"><h3>Reusable</h3><p>The same form works for code, research, reporting, and document work.</p></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>Need it configured for your repository?</h2>
+        <p class="muted">In a 45-minute session, I adapt this runbook to one real task, run one representative test, and leave you with the working version.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;">
+          <a class="btn" href="apply.html?package=AI%20Agent%20Setup%20Help%20%2429">Book the session</a>
+          <a class="btn secondary" href="payment.html">Payment options</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit. No guaranteed results. Do not grant access to unauthorized systems.</div></footer>
+  <script>
+    document.getElementById('copy-template').addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      const text = document.querySelector('#template pre code').textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.textContent = 'Copied';
+      } catch {
+        button.textContent = 'Press Cmd+C';
+      }
+      setTimeout(() => { button.textContent = 'Copy template'; }, 1800);
+    });
+  </script>
+</body>
+</html>

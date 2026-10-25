@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>免费 AI Agent 配置运行手册模板 — GrowthAudit</title>
+  <meta name="description" content="用这页 AI Agent 配置运行手册，在执行前明确任务、安全边界、验证命令和停止规则。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="免费 AI Agent 配置运行手册模板">
+  <meta property="og:description" content="在执行前明确任务、安全边界、验证命令和停止规则。">
+  <meta property="og:url" content="https://newworldba.github.io/ai-growth-audit/zh/agent-setup-runbook.html">
+  <link rel="canonical" href="https://newworldba.github.io/ai-growth-audit/zh/agent-setup-runbook.html">
+  <link rel="alternate" hreflang="en" href="https://newworldba.github.io/ai-growth-audit/agent-setup-runbook.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://newworldba.github.io/ai-growth-audit/zh/agent-setup-runbook.html">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+    .wrap { width:min(980px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:20px 0; }
+    .logo { font-weight:800; letter-spacing:-.02em; text-decoration:none; color:var(--ink); }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:70px 0 56px; background:linear-gradient(180deg,#fff 0%,var(--soft) 100%); }
+    .eyebrow { font-size:14px; font-weight:700; color:var(--brand); margin:0 0 16px; }
+    h1 { font-size:clamp(32px,5vw,52px); line-height:1.08; letter-spacing:-.02em; margin:0 0 16px; }
+    .sub { max-width:760px; font-size:19px; color:var(--muted); margin:0 0 28px; }
+    section { padding:58px 0; }
+    h2 { font-size:clamp(25px,3.5vw,34px); letter-spacing:-.01em; line-height:1.15; margin:0 0 12px; }
+    .muted { color:var(--muted); }
+    pre { margin:0; padding:20px; background:#0b1220; color:#e6edf6; border-radius:14px; overflow:auto; font-size:14px; line-height:1.6; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:22px; background:#fff; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:30px 0; }
+    footer { padding:26px 0; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    @media(max-width:760px){ .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="logo" href="../zh/">GrowthAudit</a><a class="btn" href="apply.html?package=AI%20Agent%20%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9%20%C2%A5199">获取配置帮助</a></div></header>
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">免费模板</p>
+        <h1>AI Agent 配置运行手册</h1>
+        <p class="sub">在让 Agent 工作前，先写清四件事：任务是什么、Agent 能碰什么、怎么验证结果、什么时候必须停下。</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn" href="#template">复制模板</a>
+          <a class="btn secondary" href="agent-setup.html">查看付费配置服务</a>
+        </div>
+      </div>
+    </div>
+    <section id="template" style="padding-top:0;">
+      <div class="wrap">
+        <h2>一页模板</h2>
+        <p class="muted">把它复制到仓库里，用你的真实任务替换示例。</p>
+        <p><button class="btn secondary" id="copy-template" type="button" aria-live="polite">复制模板</button></p>
+        <pre><code># 任务运行手册
+
+## 任务
+- 目标：修改一个模块 / 生成一份报告 / 总结一个资料源。
+- 输入文件：`src/example.py`、`docs/brief.md`
+- 期望输出：`docs/output.md`
+- 验证方式：`npm test` / `python script.py --check`
+
+## 安全边界
+- 可读：只读上面列出的文件。
+- 可写：只写期望输出文件。
+- 可执行：只执行验证命令。
+- 需要先确认：删除文件、安装依赖、发送消息。
+- 禁止：密码、客户数据、生产系统。
+
+## 停止规则
+- 同一问题连续失败两次后停止。
+- 任务超出列出的文件范围后停止。
+- 无法展示验证输出时停止。
+
+## 复核记录
+- 复核人：
+- 结果：
+- 证据：
+- 下一步：</code></pre>
+      </div>
+    </section>
+    <section style="background:var(--soft);">
+      <div class="wrap">
+        <h2>为什么有用</h2>
+        <div class="grid">
+          <div class="card"><h3>减少跑偏</h3><p>Agent 有固定输入、输出和验证命令。</p></div>
+          <div class="card"><h3>边界清楚</h3><p>权限不用从长对话里猜。</p></div>
+          <div class="card"><h3>可以复用</h3><p>适合代码、研究、报告和文档工作。</p></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>需要按你的仓库配置吗？</h2>
+        <p class="muted">45 分钟配置会话会把这份手册适配到一个真实任务，跑一次代表性测试，并留下可用版本。</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;">
+          <a class="btn" href="apply.html?package=AI%20Agent%20%E9%85%8D%E7%BD%AE%E5%B8%AE%E5%8A%A9%20%C2%A5199">预约配置</a>
+          <a class="btn secondary" href="../payment.html">支付方式</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit。不保证结果，也不要授权访问未经批准的系统。</div></footer>
+  <script>
+    document.getElementById('copy-template').addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      const text = document.querySelector('#template pre code').textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.textContent = '已复制';
+      } catch {
+        button.textContent = '请按 Cmd+C';
+      }
+      setTimeout(() => { button.textContent = '复制模板'; }, 1800);
+    });
+  </script>
+</body>
+</html>
