@@ -26,6 +26,7 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 |---|---|---|---|---|
 | Xiaohongshu | Client status generator | First 48-hour metrics check | Creator Studio: 3 views, 0 comments, 0 likes, 1 favorite, 0 shares | Continue existing note; do not expand channels until traffic or qualified reply appears |
 | Email | Stintly, Clienwork, MakeWay | Sent approved follow-ups | Apple Mail accepted the three sends; no reply yet | Check again after 24-48 hours |
+| Site | Conversion ROI calculator | Shipped English and Chinese calculator to both homepages and sitemap | Browser test passed on local files | Add to next distribution batch after current 48-hour review |
 
 ## Time Allocation
 
