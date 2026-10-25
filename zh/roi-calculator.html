@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>免费转化率 ROI 计算器</title>
+  <meta name="description" content="估算转化率提升带来的每月和每年收入影响。免费、隐私安全，无需注册。">
+  <style>
+    :root { color-scheme: light; --ink:#101828; --muted:#5c6473; --brand:#1f5eff; --soft:#f5f7fa; --line:#dfe3ea; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .wrap { width:min(860px,calc(100% - 40px)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:20px 0; }
+    .brand { font-weight:800; color:var(--ink); text-decoration:none; }
+    h1 { font-size:clamp(32px,5vw,46px); letter-spacing:-.03em; line-height:1.1; margin:42px 0 12px; }
+    .lede { color:var(--muted); font-size:18px; max-width:700px; }
+    form { display:grid; gap:14px; margin:32px 0; }
+    label { font-weight:700; font-size:14px; }
+    input { width:100%; min-height:46px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:12px 22px; border:0; border-radius:10px; font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--line); }
+    .result { display:none; border:1px solid var(--line); border-radius:16px; padding:24px; margin:28px 0; }
+    .metrics { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:20px 0; }
+    .metric { background:var(--soft); border-radius:14px; padding:18px; }
+    .metric strong { display:block; font-size:28px; line-height:1.1; }
+    .metric span { color:var(--muted); font-size:14px; }
+    .note { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--muted); font-size:14px; }
+    footer { border-top:1px solid var(--line); margin-top:52px; padding:24px 0; color:var(--muted); font-size:14px; }
+    @media(max-width:620px){ .metrics { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="index.html">GrowthAudit</a></div></header>
+  <main class="wrap">
+    <h1>免费转化率 ROI 计算器</h1>
+    <p class="lede">在增加投放前，先估算一次转化率优化可能带来的收入影响。</p>
+
+    <form id="roi-form">
+      <label for="visitors">每月访问量</label>
+      <input id="visitors" name="visitors" type="number" min="1" step="1" value="2000" required>
+      <label for="conversion-rate">当前转化率（%）</label>
+      <input id="conversion-rate" name="conversion-rate" type="number" min="0.01" step="0.01" value="2" required>
+      <label for="order-value">单次转化平均收入</label>
+      <input id="order-value" name="order-value" type="number" min="0.01" step="0.01" value="200" required>
+      <label for="uplift">预期转化率提升（%）</label>
+      <input id="uplift" name="uplift" type="number" min="0.01" step="0.01" value="20" required>
+      <div class="actions">
+        <button class="btn" type="submit">计算</button>
+        <a class="btn secondary" href="conversion-scorecard.html">先做免费体检</a>
+      </div>
+    </form>
+
+    <section id="result" class="result" aria-live="polite">
+      <h2>收入影响估算</h2>
+      <div class="metrics">
+        <div class="metric"><strong id="current-monthly">—</strong><span>当前每月收入</span></div>
+        <div class="metric"><strong id="projected-monthly">—</strong><span>预估每月收入</span></div>
+        <div class="metric"><strong id="monthly-gain">—</strong><span>每月增量收入</span></div>
+        <div class="metric"><strong id="annual-gain">—</strong><span>每年增量收入</span></div>
+      </div>
+      <div class="note">
+        这是规划估算，不是收入保证。真实提升需要通过实验验证后再投入预算。
+      </div>
+      <div class="actions" style="margin-top:18px;">
+        <a class="btn" href="apply.html?package=%E5%BF%AB%E9%80%9F%E5%AE%A1%E8%AE%A1%20%C2%A51%2C080">申请 48 小时审计</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 GrowthAudit。仅提供分析与建议；不保证收入。</div></footer>
+
+  <script>
+    document.getElementById('roi-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const visitors = Number(document.getElementById('visitors').value);
+      const conversionRate = Number(document.getElementById('conversion-rate').value);
+      const orderValue = Number(document.getElementById('order-value').value);
+      const uplift = Number(document.getElementById('uplift').value);
+      const currentConversions = visitors * conversionRate / 100;
+      const projectedConversions = currentConversions * (1 + uplift / 100);
+      const currentMonthly = currentConversions * orderValue;
+      const projectedMonthly = projectedConversions * orderValue;
+      const monthlyGain = projectedMonthly - currentMonthly;
+      const annualGain = monthlyGain * 12;
+      const currency = (value) => value.toLocaleString('zh-CN', { style: 'currency', currency: 'CNY', maximumFractionDigits: 0 });
+      document.getElementById('current-monthly').textContent = currency(currentMonthly);
+      document.getElementById('projected-monthly').textContent = currency(projectedMonthly);
+      document.getElementById('monthly-gain').textContent = currency(monthlyGain);
+      document.getElementById('annual-gain').textContent = currency(annualGain);
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+</html>
