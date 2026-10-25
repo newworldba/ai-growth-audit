@@ -17,6 +17,22 @@ Rule: one approved action at a time. Do not post to a channel that prohibits pro
 Alignear remains ready in `zh/outreach-batch-5-status-evidence.md`.
 Reply with one of: `发送 Stintly`, `发送 Clienwork`, `发送 MakeWay`, `发布 X`, `发布 LinkedIn`, `发布小红书`, `提交 Indie Hackers`, `准备 Product Hunt`, or `批准全部`.
 
+## Execution log — 2026-10-23
+
+- Sent: Stintly, Clienwork, MakeWay cold emails.
+- Ready: Xiaohongshu image at `marketing/assets/client-status-generator-xhs.png`.
+- Published: Xiaohongshu note via Creator Studio (`published=true`).
+- Xiaohongshu note URL: https://www.xiaohongshu.com/explore/6addfdf70000000033010b51?xsec_token=YBVfi6fyjmsAN0mdMqQ4H6rKBaaejWffKK9dhBR9hU7b8=&xsec_source=pc_creatormng
+- Published blocked: LinkedIn returned HTTP 451 during post creation.
+- Published blocked: X direct access failed after reload with a Chrome network error.
+- Blocked pending login or browser access: Indie Hackers.
+
+## Execution log — 2026-10-25
+
+- Sent individually via Apple Mail: Stintly, Clienwork, and MakeWay follow-up emails from `zh/follow-ups-batch-7-client-portals.md`.
+- No revenue yet.
+- Next review: check replies and Xiaohongshu metrics after 48 hours.
+
 ## X / Twitter
 
 ```text

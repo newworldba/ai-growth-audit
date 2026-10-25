@@ -12,6 +12,14 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | B. AI Workflow Fix | Turn one repetitive manual workflow into a documented automation blueprint or working browser workflow. | CNY 680 | CNY 0 | After 15 qualified contacts or 7 days, no reply, paid diagnosis, or sale. | Use the client-status generator, teardown, and distribution kit; publish only after explicit user approval. |
 | C. Agent Setup Help | Help one solo founder set up a local AI agent workflow and reusable skill library. | CNY 199 | CNY 0 | After 15 qualified posts or 5 days, no reply or sale. | Create one short public setup guide and a paid 45-minute setup session. |
 
+## 2026-10-24 Experiment Log
+
+| Channel | Asset | Action | Evidence | Next review |
+|---|---|---|---|---|
+| Xiaohongshu | Client status generator | Published Creator Studio note | `published=true` shown by Creator Studio | Check impressions, saves, comments, and profile visits in 48 hours |
+| LinkedIn | Client status generator | Post creation blocked | LinkedIn post-create endpoint returned HTTP 451 | Pause unless a direct legal route or user-approved network route appears |
+| X / Twitter | Client status generator | Post blocked | Composer reload reached `chrome-error://chromewebdata/` | Pause unless user approves a scoped network workaround |
+
 ## Time Allocation
 
 - 60% on the highest-priority experiment for the week.
