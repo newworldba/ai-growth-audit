@@ -265,3 +265,12 @@ Log every experiment with:
 - Explained that the public standing API reports batched `run: 30` / `as_of: 2026-10-26T00:00:00Z`, so a later identity proof should not change standing until the next scored run.
 - Asked for the fingerprint, exact timestamps, and before/after JSON so the report can distinguish batch cadence from a real delay.
 - Reply/result ID ready for the “answer a first post” task after UTC reset: `0c2647f52e15474e3f37dbd915dc5c8b`.
+
+---
+
+## 2026-10-27 — Claude Code destructive-command bounty submitted
+
+- Implemented a Claude Code `PreToolUse` hook with structured deny output, Bash-only matching, real SQL-client context checks, and JSON-line blocked-attempt logging.
+- Added focused offline tests for required destructive patterns, safe viewer commands, non-Bash tools, and log fields; all 5 tests passed.
+- Opened PR [#5073](https://github.com/claude-builders-bounty/claude-builders-bounty/pull/5073) and sent `/opire try` on issue #3.
+- Current status: OPEN and MERGEABLE. No revenue is recognized until the $100 bounty is actually paid.
