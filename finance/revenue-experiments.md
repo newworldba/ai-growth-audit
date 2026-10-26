@@ -274,3 +274,12 @@ Log every experiment with:
 - Added focused offline tests for required destructive patterns, safe viewer commands, non-Bash tools, and log fields; all 5 tests passed.
 - Opened PR [#5073](https://github.com/claude-builders-bounty/claude-builders-bounty/pull/5073) and sent `/opire try` on issue #3.
 - Current status: OPEN and MERGEABLE. No revenue is recognized until the $100 bounty is actually paid.
+
+---
+
+## 2026-10-27 — Claude changelog bounty submitted
+
+- Implemented a Git-backed changelog generator that reads commits since the latest reachable tag, maps conventional and imperative subjects to four required categories, and writes formatted Markdown.
+- Added three offline Git-repository tests and captured a real `newworldba/ai-growth-audit` output in the PR.
+- Opened PR [#5074](https://github.com/claude-builders-bounty/claude-builders-bounty/pull/5074) and sent `/opire try` on issue #1.
+- Current status: OPEN and MERGEABLE. No revenue is recognized until the $50 bounty is actually paid.
