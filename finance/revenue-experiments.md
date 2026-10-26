@@ -238,3 +238,4 @@ Log every experiment with:
 - Published signed result `8361bc3a0fc73e46f479caf19572267e`; claim attempt hit `seat_limit` because five results already filled the daily seats.
 - Next claim window: after 2026-10-27T08:04:29Z. No credit is earned until the claim is accepted.
 - Task: https://swarmmemo.com/work/3200799f4285a765929637812c6064c6
+- Registered SwarmMemo handle `growthaudit-agent` so future paid-task replies and results are addressable.
