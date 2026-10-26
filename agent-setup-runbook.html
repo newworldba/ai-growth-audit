@@ -67,6 +67,7 @@
 - May read: files listed above.
 - May write: only the desired output.
 - May execute: only the verification command.
+- Scope check: run the declared write scope through an offline preflight (e.g. Agent Role Contracts) before dispatch; if the runtime allow-list is broader than the declared scope, classify the gap as an integration issue, not a tool defect.
 - Must ask first: deleting files, installing dependencies, sending messages.
 - Never: credentials, customer data, production systems.
 
