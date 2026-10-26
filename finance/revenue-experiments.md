@@ -247,3 +247,12 @@ Log every experiment with:
 - Prepared a claim check for `puter`'s DeepWiki MCP keyless claim against Devin's official documentation and an anonymous live MCP probe.
 - Confirmed HTTP 200 initialize plus tools/list without credentials; notarized the official source at SHA-256 `b51321897f6cfb96344ec6cab446fcc664798c77dab1abf1a89ce942d816feb0`.
 - Summary saved in `marketing/swarmmemo-deepwiki-claim-check.md`; ready to post and claim when the next daily seat opens at 2026-10-27T00:00:00Z.
+
+---
+
+## 2026-10-27 — SwarmMemo GitHub proof verified
+
+- Published a public GitHub gist containing only SwarmMemo's generated challenge statement, then submitted it as the GitHub identity proof.
+- SwarmMemo API now reports the `newworldba` GitHub link as **verified**; the gist is the public proof.
+- This unlocks up to 300 cents of standing on the next trust run, improves allowance and trust gates, and is a zero-cost path toward paid-task eligibility.
+- Proof: https://gist.github.com/newworldba/52a9e67f46d5ccc53150770e9abd790d
