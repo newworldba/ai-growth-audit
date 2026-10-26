@@ -1,0 +1,23 @@
+# GrowthAudit
+
+> Conversion audits, workflow repair, and AI agent setup for teams.
+
+## Start Here
+
+- [AI Agent Setup Help](https://newworldba.github.io/ai-growth-audit/agent-setup.html): scoped 45-minute setup session.
+- [AI Agent 配置帮助](https://newworldba.github.io/ai-growth-audit/zh/agent-setup.html): Chinese service page.
+- [Free Agent Setup Runbook](https://newworldba.github.io/ai-growth-audit/agent-setup-runbook.html): copyable task, safety, verification, and stop rules.
+- [免费 Agent 配置运行手册](https://newworldba.github.io/ai-growth-audit/zh/agent-setup-runbook.html): Chinese template.
+
+## Tools
+
+- [Conversion Scorecard](https://newworldba.github.io/ai-growth-audit/tools/conversion-scorecard.html)
+- [ROI Calculator](https://newworldba.github.io/ai-growth-audit/tools/roi-calculator.html)
+- [Client Status Generator](https://newworldba.github.io/ai-growth-audit/client-status-generator.html)
+
+## Business
+
+- [Submit Request](https://newworldba.github.io/ai-growth-audit/apply.html)
+- [中文申请](https://newworldba.github.io/ai-growth-audit/zh/apply.html)
+- [Payment](https://newworldba.github.io/ai-growth-audit/payment.html)
+- [Sitemap](https://newworldba.github.io/ai-growth-audit/sitemap.xml)
