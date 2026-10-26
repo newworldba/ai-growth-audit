@@ -292,3 +292,12 @@ Log every experiment with:
 - Added automated checks for all required sections and operational rules.
 - Opened PR [#5075](https://github.com/claude-builders-bounty/claude-builders-bounty/pull/5075) and sent `/opire try` on issue #2.
 - Current status: OPEN and MERGEABLE. No revenue is recognized until the $75 bounty is actually paid.
+
+---
+
+## 2026-10-27 — AI-readable site entrypoint deployed
+
+- Added `llms.txt` with direct links to the paid AI Agent Setup offer in English and Chinese, the free runbooks, the conversion/ROI tools, and the request/payment pages.
+- GitHub Pages deployment succeeded for commit `50def24e898a1b36c2bc2c6ceb2a39e3e7122363`.
+- Verified live URL returns HTTP 200: <https://newworldba.github.io/ai-growth-audit/llms.txt>.
+- Installed the local Xiaohongshu MCP tooling and generated a login QR; publishing remains blocked until the user scans it.
