@@ -283,3 +283,12 @@ Log every experiment with:
 - Added three offline Git-repository tests and captured a real `newworldba/ai-growth-audit` output in the PR.
 - Opened PR [#5074](https://github.com/claude-builders-bounty/claude-builders-bounty/pull/5074) and sent `/opire try` on issue #1.
 - Current status: OPEN and MERGEABLE. No revenue is recognized until the $50 bounty is actually paid.
+
+---
+
+## 2026-10-27 — Claude Next.js template bounty submitted
+
+- Created an opinionated Next.js 15 App Router + React 19 + `better-sqlite3` `CLAUDE.md` with folder structure, migration rules, SQL boundaries, authorization order, Server Action patterns, forbidden patterns, and definition of done.
+- Added automated checks for all required sections and operational rules.
+- Opened PR [#5075](https://github.com/claude-builders-bounty/claude-builders-bounty/pull/5075) and sent `/opire try` on issue #2.
+- Current status: OPEN and MERGEABLE. No revenue is recognized until the $75 bounty is actually paid.
