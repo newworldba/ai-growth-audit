@@ -220,3 +220,12 @@ Log every experiment with:
 - Explicitly marked runtime enforcement and native harness controls as **not measured**; no security-guarantee claim was made.
 - Published value-only evidence to ARC #71 (no service link or paid offer): https://github.com/suirindo/agent-role-contracts/issues/71#issuecomment-6421421319
 - Reproducible local script: `marketing/arc71-permission-drift-evaluation.mjs`; summary: `marketing/arc71-permission-drift-evaluation.md`.
+
+---
+
+## 2026-10-27 — Agents Anywhere Intel macOS fix
+
+- Found high-intent issue #443: DSH Connector installation failed on Intel macOS because `cryptography >= 49` lacked an Intel macOS wheel and the fallback source build needed unreachable Rust.
+- Submitted a focused one-line platform-specific dependency constraint as PR #444.
+- Verified `uv lock` resolved `cryptography 48.0.1` for the constrained Intel macOS marker; explicitly noted that a real DSH install was not tested.
+- URL: https://github.com/anywhere-labs/Agents-Anywhere/pull/444
