@@ -301,3 +301,12 @@ Log every experiment with:
 - GitHub Pages deployment succeeded for commit `50def24e898a1b36c2bc2c6ceb2a39e3e7122363`.
 - Verified live URL returns HTTP 200: <https://newworldba.github.io/ai-growth-audit/llms.txt>.
 - Installed the local Xiaohongshu MCP tooling and generated a login QR; publishing remains blocked until the user scans it.
+
+---
+
+## 2026-10-27 — GitPay order-payment security bounty submitted
+
+- Fixed a $200 security issue in [worknenjoy/gitpay#1627](https://github.com/worknenjoy/gitpay/issues/1627): PayPal order payment now checks both order ID and authenticated user ownership before capture.
+- Added an API regression test proving a cross-user request does not call PayPal and does not change `transfer_id`.
+- Validated the focused and full order suites (`34 passing`, `2 pending`), ESLint, Prettier, and TypeScript.
+- Opened PR [#1628](https://github.com/worknenjoy/gitpay/pull/1628). No revenue is recognized until the $200 bounty is actually paid.
