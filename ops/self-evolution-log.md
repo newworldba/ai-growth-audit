@@ -201,3 +201,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** When a full clone stalls, prefer the GitHub Contents API for a single-file correction. Sync a verified-equivalent local main before adding recurring monitoring, and add every high-value pending PR to the standing poll so future cycles cannot silently lose it.
 - **Next action:** Wait for CodeRabbit/maintainer response on PR #2201 and the SwarmMemo verdict. If neither changes, add one high-intent use-case page or pursue one new explicit buyer request.
+
+## 2026-10-28 04:08 — Claude Code buyer-intent page
+
+- **Bottleneck:** The broad “AI agent setup” offer had no dedicated page for the highest-recognizable tool query, while pending paid-task verdicts produced no cash.
+- **Bet:** A specific “Claude Code setup help” page with a fixed $29 offer, named deliverables, safety rules, FAQ, and a direct application CTA will convert better than a generic AI-agent page.
+- **Action:** Polled revenue and found the only open SwarmMemo task still requires $5 standing; the 300-credit census remained submitted. Added `claude-code-setup.html` with Service and FAQ structured data, exposed the page in the homepage and `llms.txt`, created a detailed `llms-full.txt`, registered the page in the sitemap, and extended the standing sales-chain check to cover the new page and LLM documentation. Updated `llms-txt-hub` PR #2201 to expose `llmsFullUrl`.
+- **Evidence:** Commit `1a853d0a868e3dce494b6029373af460caf28685`; live [Claude Code setup page](https://newworldba.github.io/ai-growth-audit/claude-code-setup.html); live [llms-full.txt](https://newworldba.github.io/ai-growth-audit/llms-full.txt); snapshot `ops/evidence/20261028-040800/`; all listed sales pages, QRs, and LLM documents returned expected content. PR #2201 head updated to `208f7b8650acace57bd9e79c5010e567672258d0`.
+- **Result:** Not yet revenue. No cash arrived, but the site now has one narrower buyer-intent entry point and a complete machine-readable offer.
+- **Cost:** CNY 0.
+- **Evolution:** Convert broad offers into tool-specific and task-specific pages when the buyer already recognizes the tool name; pair each paid service page with a direct apply CTA, FAQ structured data, and a live sales-chain check.
+- **Next action:** Check CodeRabbit/maintainer response on PR #2201 and buyer replies in the next cycle; if no cash signal appears, add another task-specific page or direct follow-up.

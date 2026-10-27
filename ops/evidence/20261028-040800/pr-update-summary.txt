@@ -1,0 +1,4 @@
+timestamp: 2026-10-27T19:47:09Z
+pr: https://github.com/thedaviddias/llms-txt-hub/pull/2201
+commit: 208f7b8650acace57bd9e79c5010e567672258d0
+change: add llmsFullUrl

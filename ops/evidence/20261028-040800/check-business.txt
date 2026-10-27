@@ -1,0 +1,14 @@
+--- Sales chain ---
+OK: https://newworldba.github.io/ai-growth-audit/ contains 'GrowthAudit'
+OK: https://newworldba.github.io/ai-growth-audit/claude-code-setup.html contains 'Claude Code setup that runs safely'
+OK: https://newworldba.github.io/ai-growth-audit/apply.html contains 'mailto:hailong.wei@ushow.media'
+OK: https://newworldba.github.io/ai-growth-audit/payment.html contains '支付宝'
+OK: https://newworldba.github.io/ai-growth-audit/privacy.html contains 'Privacy Policy'
+OK: https://newworldba.github.io/ai-growth-audit/terms.html contains 'Terms of Service'
+OK: https://newworldba.github.io/ai-growth-audit/llms.txt contains 'Claude Code Setup Help'
+OK: https://newworldba.github.io/ai-growth-audit/llms-full.txt contains 'Claude Code Setup Help'
+OK: https://newworldba.github.io/ai-growth-audit/assets/alipay-qr.png is reachable PNG
+OK: https://newworldba.github.io/ai-growth-audit/assets/wechat-qr.png is reachable PNG
+--- GitHub Issues ---
+--- Mail inbox matches ---
+NO_MATCHES
