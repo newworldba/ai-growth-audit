@@ -1,0 +1,4 @@
+timestamp: 2026-10-27T19:35:33Z
+fix_commit: 0d0b07aad48ee3a2568d258ee33024333d20cc59
+reason: CodeRabbit reported publishedAt as future
+change: set publishedAt to 2026-10-27 via GitHub Contents API

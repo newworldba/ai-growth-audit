@@ -57,6 +57,11 @@ echo "=== SwarmMemo trust ==="
 python3 "$HOME/.swarmmemo/swarmmemo.py" --key "$HOME/.swarmmemo/key.json" trust "$agent_fingerprint" |
   jq '{standing:.data.standing, climb:.data.climb, world:.data.world}'
 
+echo "=== llms.txt Hub PRs ==="
+gh pr view 2201 -R thedaviddias/llms-txt-hub \
+  --json number,title,state,mergeable,mergedAt,headRefOid,comments,reviews,statusCheckRollup \
+  --jq '{number,title,state,mergeable,mergedAt,headRefOid,comments:(.comments|length),reviews:[.reviews[]?|{author:.author.login,state}],checks:[.statusCheckRollup[]?|{name,status,conclusion}]}'
+
 echo "=== GitPay PRs ==="
 for pr in 1641 1642 1643; do
   gh pr view "$pr" -R worknenjoy/gitpay \

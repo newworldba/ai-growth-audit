@@ -190,3 +190,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Future directory measurements should use separate columns for HTTP reachability, documented-agent surface, content state, and egress failure. Future Git submissions must check project-specific instructions before editing generated files.
 - **Next action:** Check PR CI/review and SwarmMemo verdict on the next poll. If both remain pending, ship one conversion-focused use-case page or respond to one new explicit buyer request.
+
+## 2026-10-28 03:35 — Review-driven PR correction and polling upgrade
+
+- **Bottleneck:** The new `llms.txt Hub` PR received an actionable CodeRabbit finding about a future publication date; full-repo cloning stalled on the unstable network, and the main repository had redundant parallel commits with identical content.
+- **Bet:** Fixing the reviewer finding immediately and adding the PR to the standing revenue poll keeps the highest-quality discovery channel alive without new spend.
+- **Action:** Verified local and remote tracked content matched before resetting the local baseline, preserved untracked evidence, updated `publishedAt` to `2026-10-27` through the GitHub Contents API, and confirmed PR head `0d0b07aad48ee3a2568d258ee33024333d20cc59`. Added `llms-txt-hub` PR #2201 to `ops/poll-revenue.sh` and captured the post-fix state.
+- **Evidence:** Snapshot `ops/evidence/20261028-033500/`; PR remains `OPEN/MERGEABLE`; CodeRabbit was rerunning at capture time; latest zero-cost poll snapshot remains `ops/evidence/20261028-033019/`.
+- **Result:** Still no cash. SwarmMemo 300 credits and PR #2201 remain pending; cash remains CNY 0 and no new money was spent.
+- **Cost:** CNY 0.
+- **Evolution:** When a full clone stalls, prefer the GitHub Contents API for a single-file correction. Sync a verified-equivalent local main before adding recurring monitoring, and add every high-value pending PR to the standing poll so future cycles cannot silently lose it.
+- **Next action:** Wait for CodeRabbit/maintainer response on PR #2201 and the SwarmMemo verdict. If neither changes, add one high-intent use-case page or pursue one new explicit buyer request.
