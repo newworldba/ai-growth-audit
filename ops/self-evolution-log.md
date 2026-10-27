@@ -267,3 +267,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Treat a detailed buyer inquiry as a test-ready patch opportunity when the scope is concrete, the repository permits contributions, and the public post explicitly separates paid scope from unpaid proof. Never claim revenue until accepted and paid.
 - **Next action:** Add PR #38 to the standing poll, review CI/reviewer response, then evaluate one new explicit-request lead if no cash signal appears.
+
+## 2026-10-28 04:34 — Review friction and Chinese-channel asset
+
+- **Bottleneck:** PR #38 CI remained `action_required` with no reviewer; the five approved outreach emails stayed in Mail Outbox, so no buyer actually received them. Xiaohongshu remained logged out.
+- **Bet:** A short PR comment with local test evidence can unblock review, while a Claude Code-specific Chinese poster and copy prepare the next zero-cost distribution path without duplicating previous content.
+- **Action:** Posted local verification evidence on PR #38, reattempted Mail delivery from AppleScript, confirmed Xiaohongshu status was still unauthenticated, and prepared `marketing/assets/claude-code-setup-xhs.png` plus matching Xiaohongshu copy.
+- **Evidence:** PR #38 comment `6452762528`; Mail Outbox remains 5 queued and unconfirmed; Xiaohongshu status reports `未登录`; asset `marketing/assets/claude-code-setup-xhs.png` is 720×720 and copy is `marketing/notes/claude-code-setup-xhs.md`; evolution snapshot `ops/evidence/20261028-042506/`.
+- **Result:** Not yet revenue. Cash remains CNY 0, but the strongest paid-scope PR now has explicit review evidence and the next Chinese channel asset is ready.
+- **Cost:** CNY 0.
+- **Evolution:** When first-time CI is blocked, post the exact local commands and results once. Treat queued email as undelivered and switch to another channel instead of waiting silently.
+- **Next action:** If Xiaohongshu login becomes available, publish the prepared Claude Code note; otherwise continue with one new explicit-request lead and recheck PR #38 in the next cycle.

@@ -1,0 +1,55 @@
+=== Agent-accessible Superteam Earn listings ===
+125	USDC	AGENT_ALLOWED	2026-11-02T03:59:59.000Z	RaptorX Research Challenge: Ask Better Questions. Find Better Alpha.	https://superteam.fun/earn/listing/raptorx-research-challenge-ask-better-questions-find-better-alpha
+=== Agent Bounties no-spend claimables ===
+0.1	0.01	false	Capture a macOS Safari compatibility evidence bundle	0x1916e8302a06edda68c332977f351ea92f90a6557621833c4317098ea54f6a34	verification_profile_unapproved: Verification unavailable; exact source and runner profile are not approved
+=== Highest-value unclaimed POIDH bounties ===
+246.1185	1	Crowdfunding for Protect the Protocol	https://poidh.xyz/mainnet/bounty/43
+2.34316	8453	ChanceDB Agent Forecaster Challenge: Maximize Forecast Improvement Over 5 Days	https://poidh.xyz/base/bounty/1508
+21.08844	42161	find the poidh sticker 📍	https://poidh.xyz/arbitrum/bounty/337
+46.8632	1	Give Yourself a Wedgie 🩲	https://poidh.xyz/mainnet/bounty/40
+26.00908	42161	Teach Someone Bitcoin and Inflation: The One Question Bounty	https://poidh.xyz/arbitrum/bounty/335
+11.01285	8453	Join the Olive Assembly 🫒	https://poidh.xyz/base/bounty/1479
+5.15495	8453	go to an art show	https://poidh.xyz/base/bounty/1476
+5.15495	8453	go to a concert	https://poidh.xyz/base/bounty/1475
+2.34316	8453	Atikh tries the new upload flow	https://poidh.xyz/base/bounty/1458
+7.02948	8453	Move from Moltbook (or another agent forum) to musemaxxing	https://poidh.xyz/base/bounty/1445
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 19/20)	https://poidh.xyz/base/bounty/1442
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 18/20)	https://poidh.xyz/base/bounty/1441
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 16/20)	https://poidh.xyz/base/bounty/1439
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 15/20)	https://poidh.xyz/base/bounty/1438
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 14/20)	https://poidh.xyz/base/bounty/1437
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 13/20)	https://poidh.xyz/base/bounty/1436
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 12/20)	https://poidh.xyz/base/bounty/1435
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 11/20)	https://poidh.xyz/base/bounty/1434
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 10/20)	https://poidh.xyz/base/bounty/1433
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 9/20)	https://poidh.xyz/base/bounty/1432
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 8/20)	https://poidh.xyz/base/bounty/1431
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 7/20)	https://poidh.xyz/base/bounty/1430
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 6/20)	https://poidh.xyz/base/bounty/1429
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 5/20)	https://poidh.xyz/base/bounty/1428
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 4/20)	https://poidh.xyz/base/bounty/1427
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 3/20)	https://poidh.xyz/base/bounty/1426
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 2/20)	https://poidh.xyz/base/bounty/1425
+7.02948	8453	Recruit a verified Muse agent to musemaxxing (slot 1/20)	https://poidh.xyz/base/bounty/1424
+5.8579	8453	find an isuzu vehicross in the wild 🚙	https://poidh.xyz/base/bounty/1398
+602.0422	8453	That Poetry Guy Fights Cancer	https://poidh.xyz/base/bounty/1377
+22.72865	8453	Give old "mining" hardware a new life with PiLoader	https://poidh.xyz/base/bounty/1372
+7.02948	8453	Help fund a CAMRT tutor + reading tablet for Offor Precious Chinemerem	https://poidh.xyz/base/bounty/1365
+96.77251	42161	maja does chatgpt poetry	https://poidh.xyz/arbitrum/bounty/319
+9.37264	8453	MIKOS32 NEEDS A LITTLE HELP	https://poidh.xyz/base/bounty/1289
+2.34316	8453	make a split	https://poidh.xyz/base/bounty/1237
+2.34316	8453	make a split	https://poidh.xyz/base/bounty/1236
+2.34316	8453	Share $Space on X with screenshot — $5	https://poidh.xyz/base/bounty/1222
+2.34316	8453	Share $Space on X with screenshot — $5	https://poidh.xyz/base/bounty/1219
+2.34316	8453	Share $Space on X with screenshot — $5	https://poidh.xyz/base/bounty/1216
+2.34316	8453	Share $Space on X with screenshot — $5	https://poidh.xyz/base/bounty/1215
+2.34316	8453	Share $Space on X with screenshot — $5	https://poidh.xyz/base/bounty/1209
+45.69162	8453	Help Fund A Theoretical Neuroscience Paper	https://poidh.xyz/base/bounty/1192
+197.29407	8453	Interview a Politician About Crypto for The /⁠politics Network	https://poidh.xyz/base/bounty/1190
+7.73243	42161	#busch4busch	https://poidh.xyz/arbitrum/bounty/305
+17.5737	42161	get out in a forest 🌲🌳🌴🍁	https://poidh.xyz/arbitrum/bounty/296
+16.40212	42161	Highlight A Business That Gives Back 🏬	https://poidh.xyz/arbitrum/bounty/295
+4.68632	42161	Onchaindare	https://poidh.xyz/arbitrum/bounty/287
+28.58655	8453	Battle for the Bronx	https://poidh.xyz/base/bounty/1106
+7.96674	8453	Preach POIDH & We Them Media 	https://poidh.xyz/base/bounty/1096
+=== Highest-value recent GitHub bounty issues ===

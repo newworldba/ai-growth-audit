@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+    body { width: 720px; height: 960px; margin: 0; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; color: #101828; background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%); }
+    .poster { display: flex; flex-direction: column; height: 100%; padding: 56px 44px; }
+    .tag { display: inline-flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; color: #1f5eff; }
+    .tag::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: #1f5eff; }
+    h1 { margin: 22px 0 16px; font-size: 52px; line-height: 1.12; letter-spacing: -0.03em; }
+    p { margin: 0 0 28px; font-size: 21px; line-height: 1.65; color: #5c6473; }
+    .card { border: 1px solid #dfe3ea; border-radius: 20px; padding: 28px; background: #ffffff; box-shadow: 0 14px 34px rgba(16, 24, 40, 0.06); }
+    .item { display: flex; align-items: flex-start; gap: 14px; }
+    .item + .item { margin-top: 22px; }
+    .num { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; border-radius: 12px; background: #eaf1ff; color: #1f5eff; font-weight: 800; }
+    .item h2 { margin: 2px 0 5px; font-size: 23px; line-height: 1.25; }
+    .item p { margin: 0; font-size: 17px; color: #5c6473; }
+    .cta { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 26px; border-radius: 18px; background: #101828; color: #ffffff; }
+    .cta strong { display: block; font-size: 21px; }
+    .cta span { display: block; margin-top: 4px; font-size: 15px; color: rgba(255, 255, 255, 0.72); }
+    .qr { flex: 0 0 auto; width: 82px; height: 82px; border-radius: 12px; background: #ffffff; padding: 6px; }
+    .qr img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <span class="tag">Claude Code</span>
+    <h1>Claude Code<br>用不起来？</h1>
+    <p>45 分钟，把它变成一个能跑重复任务的助手。</p>
+    <section class="card">
+      <div class="item">
+        <span class="num">1</span>
+        <div><h2>任务拆清</h2><p>输入、输出、验证命令</p></div>
+      </div>
+      <div class="item">
+        <span class="num">2</span>
+        <div><h2>权限收窄</h2><p>可读、可写、可执行边界</p></div>
+      </div>
+      <div class="item">
+        <span class="num">3</span>
+        <div><h2>安全护栏</h2><p>高风险命令先拦下</p></div>
+      </div>
+      <div class="item">
+        <span class="num">4</span>
+        <div><h2>复用手册</h2><p>下次照着跑，不用重猜</p></div>
+      </div>
+    </section>
+    <div class="cta">
+      <div><strong>¥199 / 45 分钟</strong><span>先确认范围 · 支付宝或微信</span></div>
+      <div class="qr"><img src="agent-setup-runbook-qr.png" alt="免费 AI Agent 运行手册二维码"></div>
+    </div>
+  </main>
+</body>
+</html>
