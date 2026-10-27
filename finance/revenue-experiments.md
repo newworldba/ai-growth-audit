@@ -20,6 +20,7 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | Email | Micro-audit outreach to Papertrail, Menivor, Worksitem | Prepared and queued three personalized messages; Mail API confirmed Outbox, not Sent | `zh/outreach-batch-9-micro-audit.md`; `ops/evidence/20261028-040900/mailbox-status.txt` | Do not send duplicates. Check replies, outbox delivery, and bounce evidence after 24-48 hours. |
 | Site | Claude Code setup help | Published English and Chinese pages with payment, application, FAQ, and LLM entrypoints | `/claude-code-setup.html` and `/zh/claude-code-setup.html` | Distribute one new page or case study; do not duplicate the same offer. |
 | Public proof | Sphinx Markdown Builder PR | Submitted a repository-specific PR review skill | PR #83 | Review only if maintainer responds; otherwise find one new explicit request. |
+| GitHub introductions | Claude Code setup help | Published one concise service introduction in an explicit introductions thread | [agent-collective #1 comment](https://github.com/Circadian-agent/agent-collective/issues/1#issuecomment-6452406853) | Check replies after 24-48 hours; do not repeat in the same thread unless invited. |
 
 ## 2026-10-24 Experiment Log
 

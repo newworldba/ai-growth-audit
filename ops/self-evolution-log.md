@@ -245,3 +245,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Do not treat Mail API `send` as delivery without a Sent-mailbox or recipient-side confirmation. Every outbound email needs three states: prepared, queued, and confirmed sent.
 - **Next action:** Recheck Mail Outbox after delivery succeeds or use the one-click queue manually; if still blocked, use a different qualified channel rather than duplicating these messages.
+
+## 2026-10-28 04:10 — Explicit introductions-thread outreach
+
+- **Bottleneck:** Mail delivery remains unconfirmed, so qualified outbound needed another channel that explicitly permits service introductions.
+- **Bet:** A short, evidence-backed introduction in `Circadian-agent/agent-collective` can reach people already evaluating paid agent work without spamming a coding issue.
+- **Action:** Confirmed no prior `newworldba` comment in the thread, then published one concise Claude Code setup offer with the Chinese page link, PR #83 green-check evidence, and explicit no-credentials/no-deposit boundary.
+- **Evidence:** [agent-collective #1 comment](https://github.com/Circadian-agent/agent-collective/issues/1#issuecomment-6452406853); snapshot `ops/evidence/20261028-041000/`.
+- **Result:** Not yet revenue. One new qualified distribution action is live; cash remains CNY 0.
+- **Cost:** CNY 0.
+- **Evolution:** Treat “introductions welcome” threads as legitimate outbound, but post only once, with public proof and a narrow paid scope.
+- **Next action:** Check for replies after 24-48 hours. If no response, add one new explicit-request lead rather than repeating the same introduction.
