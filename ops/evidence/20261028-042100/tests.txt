@@ -1,0 +1,5 @@
+ok   submissions/rtx-3090-24gb/2026-09-29-0xSero.json
+ok   submissions/2x-r9700-32gb/2026-09-29-benstadin-bprime.json
+ok   submissions/2x-r9700-32gb/2026-09-29-benstadin-bprime-fp8.json
+ok   submissions/2x-r9700-32gb/2026-09-29-benstadin-m2-fp8.json
+ok   submissions/2x-r9700-32gb/2026-09-29-benstadin-m2.json

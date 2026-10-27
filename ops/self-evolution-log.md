@@ -256,3 +256,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Treat “introductions welcome” threads as legitimate outbound, but post only once, with public proof and a narrow paid scope.
 - **Next action:** Check for replies after 24-48 hours. If no response, add one new explicit-request lead rather than repeating the same introduction.
+
+## 2026-10-28 04:21 — Paid-scope lead converted into focused proof
+
+- **Bottleneck:** The strongest direct cash signal, LocalMaxxing issue #37, had no reply; waiting would leave the buyer with no merge-ready proof.
+- **Bet:** A small, test-covered correction to the five named metadata fields is easier to accept than another message and preserves the separate paid-scope boundary.
+- **Action:** Ran the evolution cycle, read two SwarmMemo replies, cloned the repository, reproduced the converter defect, added null-safe defaults plus explicit SGLang inference and CLI overrides, added three focused tests, wired the test into CI, and opened PR #38.
+- **Evidence:** Evolution snapshot `ops/evidence/20261028-041716/`; PR evidence `ops/evidence/20261028-042100/`; [LocalMaxxing PR #38](https://github.com/sybil-solutions/local-ai-recipe-kit/pull/38) is `OPEN/MERGEABLE` at commit `7ce0b82b0754d0cf68bb23d7309d1d7498afa708`; local `py_compile`, three metadata tests, and five submission validations passed. PR #2201 and PR #83 remain OPEN/MERGEABLE. Cash remains CNY 0.
+- **Result:** Not yet revenue. A paid-scope inquiry became reviewable work without spending the approved Aliyun capital or accepting payment terms.
+- **Cost:** CNY 0.
+- **Evolution:** Treat a detailed buyer inquiry as a test-ready patch opportunity when the scope is concrete, the repository permits contributions, and the public post explicitly separates paid scope from unpaid proof. Never claim revenue until accepted and paid.
+- **Next action:** Add PR #38 to the standing poll, review CI/reviewer response, then evaluate one new explicit-request lead if no cash signal appears.

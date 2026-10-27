@@ -67,6 +67,11 @@ gh pr view 83 -R liran-funaro/sphinx-markdown-builder \
   --json number,title,state,mergeable,mergedAt,headRefOid,comments,reviews,statusCheckRollup \
   --jq '{number,title,state,mergeable,mergedAt,headRefOid,comments:(.comments|length),reviews:[.reviews[]?|{author:.author.login,state}],checks:[.statusCheckRollup[]?|{name,status,conclusion}]}'
 
+echo "=== LocalMaxxing paid-scope PR ==="
+gh pr view 38 -R sybil-solutions/local-ai-recipe-kit \
+  --json number,title,state,mergeable,mergedAt,headRefOid,comments,reviews,statusCheckRollup \
+  --jq '{number,title,state,mergeable,mergedAt,headRefOid,comments:(.comments|length),reviews:[.reviews[]?|{author:.author.login,state}],checks:[.statusCheckRollup[]?|{name,status,conclusion}]}'
+
 echo "=== GitPay PRs ==="
 for pr in 1641 1642 1643; do
   gh pr view "$pr" -R worknenjoy/gitpay \

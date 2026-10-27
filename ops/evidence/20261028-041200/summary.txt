@@ -1,0 +1,4 @@
+timestamp: 2026-10-27T20:12:20Z
+poll_status: OK
+scan_status: OK
+snapshot: /Users/weihailong/Documents/Codex/2026-10-19/base-vim-a-youcompleteme-unavailable-requires/outputs/ai-audit-launch-kit/ops/evidence/20261028-041200

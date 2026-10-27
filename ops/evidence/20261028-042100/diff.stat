@@ -1,0 +1,5 @@
+7ce0b82 Fix LocalMaxxing unknown metadata defaults
+ .github/workflows/validate.yml      |  1 +
+ tools/test_localmaxxing_metadata.py | 49 +++++++++++++++++++++++++++++++++++++
+ tools/to_localmaxxing.py            | 24 ++++++++++++++----
+ 3 files changed, 69 insertions(+), 5 deletions(-)

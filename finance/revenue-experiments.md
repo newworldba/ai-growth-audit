@@ -320,3 +320,13 @@ Log every experiment with:
 - Added an API regression test proving a cross-user request does not call PayPal and does not change `transfer_id`.
 - Validated the focused and full order suites (`34 passing`, `2 pending`), ESLint, Prettier, and TypeScript.
 - Opened PR [#1628](https://github.com/worknenjoy/gitpay/pull/1628). No revenue is recognized until the $200 bounty is actually paid.
+
+---
+
+## 2026-10-28 — LocalMaxxing metadata correction submitted
+
+- Reused the open paid-scope inquiry in [sybil-solutions/local-ai-recipe-kit#37](https://github.com/sybil-solutions/local-ai-recipe-kit/issues/37) without duplicating the outreach or accepting payment terms.
+- Reproduced the converter problem and changed five unknown or unsupported metadata fields (`engineName`, `engineRepository`, `quantization`, `specDecoding`, and `batchSize`) to safe values.
+- Added focused CI tests for unknown vLLM metadata, explicit SGLang metadata, and operator-verified CLI overrides.
+- Opened PR [#38](https://github.com/sybil-solutions/local-ai-recipe-kit/pull/38) at commit `7ce0b82b0754d0cf68bb23d7309d1d7498afa708`.
+- Current status: OPEN and MERGEABLE. No revenue is recognized because the inquiry has not accepted a scope or paid.
