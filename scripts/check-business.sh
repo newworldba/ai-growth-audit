@@ -2,6 +2,34 @@
 set -euo pipefail
 
 repo="${GROWTHAUDIT_REPO:-newworldba/ai-growth-audit}"
+base="${GROWTHAUDIT_BASE_URL:-https://newworldba.github.io/ai-growth-audit}"
+
+printf '%s\n' '--- Sales chain ---'
+check_url() {
+  local url="$1"
+  local expected="$2"
+  local body
+  body=$(mktemp)
+  curl -fsSL --max-time 20 "$url" -o "$body"
+  if ! grep -qi "$expected" "$body"; then
+    echo "FAIL: $url does not contain '$expected'"
+    exit 1
+  fi
+  echo "OK: $url contains '$expected'"
+}
+
+check_url "$base/" "GrowthAudit"
+check_url "$base/apply.html" "mailto:hailong.wei@ushow.media"
+check_url "$base/payment.html" "支付宝"
+check_url "$base/privacy.html" "Privacy Policy"
+check_url "$base/terms.html" "Terms of Service"
+
+for qr in alipay-qr.png wechat-qr.png; do
+  curl -fsSL --max-time 20 "$base/assets/$qr" -o "/tmp/$qr"
+  file "/tmp/$qr" | grep -q "PNG image data" || { echo "FAIL: $base/assets/$qr is not PNG"; exit 1; }
+  echo "OK: $base/assets/$qr is reachable PNG"
+done
+
 keywords=(
   "GrowthAudit"
   "审计"
