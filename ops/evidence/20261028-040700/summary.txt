@@ -1,0 +1,5 @@
+timestamp: 2026-10-27T19:55:53Z
+commit: a6e60fe94443386d5d034eb1c0baa9e0b4b23b38
+live_page: https://newworldba.github.io/ai-growth-audit/zh/claude-code-setup.html
+live_llms_full: https://newworldba.github.io/ai-growth-audit/llms-full.txt
+result: live sales-chain check passed

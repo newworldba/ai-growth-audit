@@ -1,0 +1,57 @@
+# GrowthAudit
+
+GrowthAudit provides conversion audits, workflow repair, and AI agent setup for founders and small teams. The offer is scoped, evidence-based, and delivered as a prioritized backlog or working configuration. Payment is accepted through Alipay or WeChat Pay. No service guarantees revenue.
+
+## Services
+
+### AI Agent Setup Help
+
+A 45-minute fixed-price working session to configure one practical AI agent workflow. The client selects one task, the configuration is completed during the session, and the deliverables include a working workflow, documentation, verification steps, and a reusable checklist.
+
+- Price: $29.
+- Page: https://newworldba.github.io/ai-growth-audit/agent-setup.html
+- Apply: https://newworldba.github.io/ai-growth-audit/apply.html?package=AI%20Agent%20Setup%20Help%20%2429
+
+### Claude Code Setup Help
+
+A 45-minute fixed-price working session to make one Claude Code workflow safe and repeatable. Suitable workflows include code review, test repair, release notes, issue triage, deployment checks, and guarded terminal work.
+
+- Price: $29.
+- Page: https://newworldba.github.io/ai-growth-audit/claude-code-setup.html
+- Apply: https://newworldba.github.io/ai-growth-audit/apply.html?package=Claude%20Code%20Setup%20Help%20%2429
+- Deliverables: working workflow, permissions, verification commands, stop rules, rollback notes, and a reusable runbook.
+- Access rule: access is limited to the approved scope; screen sharing is accepted; destructive commands are not run.
+
+#### Claude Code 配置帮助 / Claude Code Setup Help in Chinese
+
+A 45-minute fixed-price working session for a safe and repeatable Claude Code workflow. Chinese buyers can pay with Alipay or WeChat Pay.
+
+- Price: ¥199 / $29.
+- Page: https://newworldba.github.io/ai-growth-audit/zh/claude-code-setup.html
+- Apply: https://newworldba.github.io/ai-growth-audit/zh/apply.html?package=Claude%20Code%20%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%20%C2%A5199
+
+### Conversion Audits
+
+Focused audits turn live-site friction into prioritized implementation actions. They are available for one page, a small multi-page funnel, or an implementation sprint.
+
+- Quick Audit: $149, one key page, top 10 prioritized fixes, 48-hour delivery.
+- Growth Audit: $399, up to five pages, conversion plus SEO and mobile review, competitor snapshot, 30-day plan.
+- Implementation Sprint: $999, implementation of up to ten approved changes.
+- Apply: https://newworldba.github.io/ai-growth-audit/apply.html
+
+## Free Tools And Templates
+
+- Agent Setup Runbook: https://newworldba.github.io/ai-growth-audit/agent-setup-runbook.html
+- Conversion Scorecard: https://newworldba.github.io/ai-growth-audit/tools/conversion-scorecard.html
+- ROI Calculator: https://newworldba.github.io/ai-growth-audit/tools/roi-calculator.html
+- Client Status Generator: https://newworldba.github.io/ai-growth-audit/client-status-generator.html
+
+## Business
+
+- Home: https://newworldba.github.io/ai-growth-audit/
+- Chinese home: https://newworldba.github.io/ai-growth-audit/zh/
+- Request form: https://newworldba.github.io/ai-growth-audit/apply.html
+- Payment page: https://newworldba.github.io/ai-growth-audit/payment.html
+- Privacy policy: https://newworldba.github.io/ai-growth-audit/privacy.html
+- Terms of service: https://newworldba.github.io/ai-growth-audit/terms.html
+- Sitemap: https://newworldba.github.io/ai-growth-audit/sitemap.xml

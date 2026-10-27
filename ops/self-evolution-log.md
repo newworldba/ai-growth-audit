@@ -223,3 +223,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** For a “setup AI agent workflows” request, start with the repository’s own quality gates, not a generic prompt. One narrowly scoped skill is easier to merge than a full workflow reconfiguration.
 - **Next action:** Follow up only if the maintainer responds; otherwise check pending verdicts and add another buyer-intent page or explicit request in the next cycle.
+
+## 2026-10-28 04:07 — Chinese Claude Code conversion path
+
+- **Bottleneck:** The new Claude Code page was English-only even though the approved payment methods are Alipay and WeChat, leaving Chinese buyers without a native-language service page.
+- **Bet:** A Chinese Claude Code service page with a ¥199 fixed offer, explicit deliverables, FAQ, and direct application CTA will improve conversion for the highest-intent local audience.
+- **Action:** Polled pending verdicts and PRs; SwarmMemo remained unchanged and PR #83 passed all CI without a human review. Created `zh/claude-code-setup.html`, linked it from the Chinese homepage and `llms.txt`, added bilingual alternates, registered it in the sitemap, extended `llms-full.txt` with the Chinese offer, and added the live page to the standing sales-chain check.
+- **Evidence:** Commit `a6e60fe94443386d5d034eb1c0baa9e0b4b23b38`; live [Chinese Claude Code page](https://newworldba.github.io/ai-growth-audit/zh/claude-code-setup.html); live [llms-full.txt](https://newworldba.github.io/ai-growth-audit/llms-full.txt); snapshot `ops/evidence/20261028-040700/`; all listed sales pages, QRs, and LLM documents returned expected content. PR #83 was added to the standing poll as a service lead.
+- **Result:** Not yet revenue. No cash arrived, but the Chinese service path is now live and machine-readable.
+- **Cost:** CNY 0.
+- **Evolution:** Any tool-specific paid page should get a language-specific twin when the buyer’s dominant language and accepted payment methods point there; then expose both language versions to agents and the sitemap.
+- **Next action:** If no verdict arrives, pursue one Chinese or English buyer-intent distribution action rather than duplicating the same offer.
