@@ -1,0 +1,14 @@
+HTTP/2 200 
+date: Tue, 27 Oct 2026 18:53:02 GMT
+content-type: text/plain; charset=utf-8
+content-length: 21889
+access-control-allow-origin: *
+cache-control: no-store, max-age=0
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-voidly-public-discovery: zero-value-staging
+x-robots-tag: index, follow, max-image-preview:large, max-snippet:-1
+server: cloudflare
+cf-ray: a513e6bd4c0dc4e6-LAX
+alt-svc: h3=":443"; ma=86400
+

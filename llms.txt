@@ -20,4 +20,6 @@
 - [Submit Request](https://newworldba.github.io/ai-growth-audit/apply.html)
 - [中文申请](https://newworldba.github.io/ai-growth-audit/zh/apply.html)
 - [Payment](https://newworldba.github.io/ai-growth-audit/payment.html)
+- [Privacy Policy](https://newworldba.github.io/ai-growth-audit/privacy.html)
+- [Terms of Service](https://newworldba.github.io/ai-growth-audit/terms.html)
 - [Sitemap](https://newworldba.github.io/ai-growth-audit/sitemap.xml)

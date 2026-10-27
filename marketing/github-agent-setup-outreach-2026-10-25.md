@@ -9,9 +9,9 @@ Rule: send one issue comment at a time after explicit user approval. Do not mass
 **Fit:** The maintainer explicitly asks for feedback on evaluating a real AI-agent workflow, including handoff boundaries and controls.
 
 ```markdown
-I can share a one-page evaluation outline for one real workflow: task inputs, reviewer role, allowed tools, deliberate out-of-scope case, approval gate, and evidence fields. It will stay within your public-data boundary and will not grant runtime authority.
+`Agent/workflow: scoped code change | Mismatch: task contract permits writing the requested module, but the runtime allow-list can still include unrelated paths and the reviewer may only see the final diff | Existing control: diff review, unless the allow-list is checked at dispatch and the verification command/result is attached.`
 
-The useful part is the mismatch checklist: what the declaration says, what the runtime allows, what the reviewer verifies, and what stops automation when evidence is incomplete. I can post the outline here if useful.
+I can turn this into a four-point checklist with a deliberate out-of-scope case and evidence fields if useful.
 ```
 
 ## 2. DomMurphy-git/ViTAl-Hardware #7
@@ -20,9 +20,9 @@ The useful part is the mismatch checklist: what the declaration says, what the r
 **Fit:** The issue asks for an Obsidian vault, verification/reproducibility rules, prompts, logs, and AI-tool tracking—close to a 45-minute setup session.
 
 ```markdown
-For the AI tooling half, I would define four reusable files first: a task intake template, a prompts-and-logs format, a verification checklist, and a permissions/boundary note. The vault then has one place per task to answer: input, allowed source, desired output, review step, and when the agent must stop.
+For the AI-tooling half, start with four repo-local files: task intake, system prompt, session log, and literature/claim template. The intake should record input paths, desired output path, verification command, allowed tools, and the exact stop rule.
 
-I can outline that as a short runbook tied to your Obsidian folder structure. It stays repo-local and does not require granting credentials.
+I can turn that into a short runbook tied to your proposed Obsidian folders—no credentials needed.
 ```
 
 ## 3. JonatanGarbuyo/agents-workflow #1
@@ -31,10 +31,28 @@ I can outline that as a short runbook tied to your Obsidian folder structure. It
 **Fit:** The project needs a repeatable handoff/runbook for Agents/OpenCode/GitHub Actions with explicit recovery and approval boundaries.
 
 ```markdown
-One lightweight addition that may help the remaining pilot: a one-page handoff runbook with fields for task contract, permitted workspace paths, execution runner, evidence artifacts, failure count, reviewer output, and resume-from state. It would make the Actions ↔ OpenCode handoff auditable without turning conversation transcripts into the source of truth.
+For the Actions ↔ OpenCode pilot, a one-page handoff runbook may make the resume path easier to audit: task contract, permitted paths, runner, evidence artifacts, failure count, reviewer output, and resume-from state.
 
-I can draft that as a markdown template you can adapt to the existing ADR and JSON handoff schema.
+Want a markdown template that fits the existing ADR and JSON handoff schema?
 ```
+
+## 4. lightspeedwp/.github #2734
+
+**Issue:** https://github.com/lightspeedwp/.github/issues/2734
+**Fit:** The issue explicitly requests discoverable quick starts, troubleshooting, and a maintainer runbook for issue/PR management agents with safety gates.
+
+```markdown
+A useful first draft is a one-page runbook with five blocks: quick start, config boundaries, dry-run command, audit-log locations, and disable/escalate path. Each block should name the exact file, script, or command and what a reviewer must verify before letting the agent touch labels, reviewers, or milestones.
+
+Want a markdown template for that first draft?
+```
+
+## Priority
+
+1. `DomMurphy-git/ViTAl-Hardware#7` — direct setup request and a tailored free sample is ready.
+2. `suirindo/agent-role-contracts#37` — active maintainer conversation and a one-line mismatch answer is ready.
+3. `lightspeedwp/.github#2734` — explicit runbook/documentation request.
+4. `JonatanGarbuyo/agents-workflow#1` — useful but repository implementation is still early.
 
 ## Offer link
 

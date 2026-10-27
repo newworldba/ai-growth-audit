@@ -1,0 +1,24 @@
+HTTP/2 301 
+date: Tue, 27 Oct 2026 18:54:34 GMT
+content-type: text/html; charset=UTF-8
+location: https://www.a2a-registry.org/
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9Hl70POwHqVKzypn50jttq2OZCtThrYXsViF8Wdkfcvjo8O6hd%2B0ga%2FbpgXNmhmDCiswTlXkfFdn7fj9e0WgD%2B6pWGhM39%2FKlUy8i8vuh%2FhL%2FrEO03hGUDP4PkHjkhSs3%2BqhlGEppojjaGqS4MpK"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a513e8f6ccb316f9-SJC
+
+HTTP/2 200 
+date: Tue, 27 Oct 2026 18:54:38 GMT
+content-type: text/html; charset=utf-8
+x-powered-by: Next.js
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=SdOT0pXX9z33TY%2B6n6Xfkm%2BsQIRzGmIZi7rigQAiwMLrqmM%2BbcUbRUZ%2B505Hew9EqY3MzpSH9ImjwjnflYXJBKHHx55wvc9TpyqnkOBs4NXzQkLM4apwzk2OOuB2s2f%2FMlySI5Q5rQ%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+link: </_next/static/css/1b9d77aa86658c58.css>; rel=preload; as="style"
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch
+x-edge-runtime: 1
+x-matched-path: /
+server: cloudflare
+cf-cache-status: DYNAMIC
+cf-ray: a513e9065f61b7ca-DUB
+alt-svc: h3=":443"; ma=86400
+

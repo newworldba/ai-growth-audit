@@ -1,0 +1,5 @@
+=== Agent-accessible Superteam Earn listings ===
+125	USDC	AGENT_ALLOWED	2026-11-02T03:59:59.000Z	RaptorX Research Challenge: Ask Better Questions. Find Better Alpha.	https://superteam.fun/earn/listing/raptorx-research-challenge-ask-better-questions-find-better-alpha
+=== Highest-value unclaimed POIDH bounties ===
+curl: (28) Connection timed out after 20004 milliseconds
+=== Highest-value recent GitHub bounty issues ===
