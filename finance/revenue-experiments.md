@@ -11,6 +11,15 @@ Do not stay on one direction because it is familiar. Run a small portfolio, revi
 | A. Conversion Audit | Founder CRO Kit, Quick Audit, Growth Audit | CNY 199 or CNY 1,080 | CNY 0 | After 20 qualified contacts or 7 days, no reply, demo, or sale. | Publish one useful public micro-audit and promote the scorecard. |
 | B. AI Workflow Fix | Turn one repetitive manual workflow into a documented automation blueprint or working browser workflow. | CNY 680 | CNY 0 | After 15 qualified contacts or 7 days, no reply, paid diagnosis, or sale. | Use the client-status generator, teardown, and distribution kit; publish only after explicit user approval. |
 | C. Agent Setup Help | Help one solo founder set up a local AI agent workflow and reusable skill library. | CNY 199 | CNY 0 | After 15 qualified posts or 5 days, no reply or sale. | Create one short public setup guide and a paid 45-minute setup session. |
+| D. Claude Code Setup | Configure one safe and repeatable Claude Code workflow. | CNY 199 | CNY 0 | After 15 qualified contacts or 7 days, no reply or sale. | Promote EN/ZH pages; ship one repository-specific skill per week as public proof. |
+
+## 2026-10-28 Outreach Queue
+
+| Channel | Asset | Action | Evidence | Next review |
+|---|---|---|---|---|
+| Email | Micro-audit outreach to Papertrail, Menivor, Worksitem | Prepared and queued three personalized messages; Mail API confirmed Outbox, not Sent | `zh/outreach-batch-9-micro-audit.md`; `ops/evidence/20261028-040900/mailbox-status.txt` | Do not send duplicates. Check replies, outbox delivery, and bounce evidence after 24-48 hours. |
+| Site | Claude Code setup help | Published English and Chinese pages with payment, application, FAQ, and LLM entrypoints | `/claude-code-setup.html` and `/zh/claude-code-setup.html` | Distribute one new page or case study; do not duplicate the same offer. |
+| Public proof | Sphinx Markdown Builder PR | Submitted a repository-specific PR review skill | PR #83 | Review only if maintainer responds; otherwise find one new explicit request. |
 
 ## 2026-10-24 Experiment Log
 

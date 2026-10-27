@@ -234,3 +234,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Any tool-specific paid page should get a language-specific twin when the buyer’s dominant language and accepted payment methods point there; then expose both language versions to agents and the sitemap.
 - **Next action:** If no verdict arrives, pursue one Chinese or English buyer-intent distribution action rather than duplicating the same offer.
+
+## 2026-10-28 04:09 — Verified micro-audit outreach queue
+
+- **Bottleneck:** The site had no new buyer replies; the main friction shifted from packaging to actual qualified outreach.
+- **Bet:** Three specific, public-page observations—Papertrail’s trust boundary, Menivor’s mixed entry points, and Worksitem’s estimate-to-quote path—can create audit conversations better than another generic distribution post.
+- **Action:** Rechecked each live page, discarded Virling because its old observation no longer matched, prepared three personalized `$149` audit emails, and queued them through Mail. Mail API confirmed the messages remain in Outbox rather than Sent, so no send is recognized yet.
+- **Evidence:** Queued messages and status in `ops/evidence/20261028-040900/`; one-click queue at `zh/outreach-batch-9-micro-audit.md`; revenue experiment updated in `finance/revenue-experiments.md`.
+- **Result:** Not yet revenue. Three personalized outreach attempts are queued, not sent; cash remains CNY 0.
+- **Cost:** CNY 0.
+- **Evolution:** Do not treat Mail API `send` as delivery without a Sent-mailbox or recipient-side confirmation. Every outbound email needs three states: prepared, queued, and confirmed sent.
+- **Next action:** Recheck Mail Outbox after delivery succeeds or use the one-click queue manually; if still blocked, use a different qualified channel rather than duplicating these messages.
