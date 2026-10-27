@@ -19,10 +19,13 @@ check_url() {
 }
 
 check_url "$base/" "GrowthAudit"
+check_url "$base/claude-code-setup.html" "Claude Code setup that runs safely"
 check_url "$base/apply.html" "mailto:hailong.wei@ushow.media"
 check_url "$base/payment.html" "支付宝"
 check_url "$base/privacy.html" "Privacy Policy"
 check_url "$base/terms.html" "Terms of Service"
+check_url "$base/llms.txt" "Claude Code Setup Help"
+check_url "$base/llms-full.txt" "Claude Code Setup Help"
 
 for qr in alipay-qr.png wechat-qr.png; do
   curl -fsSL --max-time 20 "$base/assets/$qr" -o "/tmp/$qr"
