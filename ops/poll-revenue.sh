@@ -68,3 +68,10 @@ echo "=== Paraloom PRs ==="
 gh pr view 141 -R paraloom-labs/paraloom-wallet \
   --json number,title,state,mergeable,comments,reviews,statusCheckRollup \
   --jq '{number,title,state,mergeable,comments:(.comments|length),reviews:(.reviews|length),checks:[.statusCheckRollup[]? | {name,status,conclusion}]}'
+
+echo "=== Claude Builders Bounty PRs ==="
+for pr in 5073 5074 5075; do
+  gh pr view "$pr" -R claude-builders-bounty/claude-builders-bounty \
+    --json number,title,state,mergeable,mergedAt,author,comments,reviews,statusCheckRollup \
+    --jq '{number,title,state,mergeable,mergedAt,author:.author.login,comments:(.comments|length),reviews:(.reviews|length),checks:[.statusCheckRollup[]? | {name,status,conclusion}]}'
+done
