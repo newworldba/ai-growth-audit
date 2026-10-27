@@ -1,0 +1,5 @@
+timestamp: 2026-10-27T19:51:27Z
+issue: https://github.com/liran-funaro/sphinx-markdown-builder/issues/82
+pull_request: https://github.com/liran-funaro/sphinx-markdown-builder/pull/83
+commit: 9ac15b352e5dab8bfd2f99bd171f4d70a2ed7d31
+purpose: repository-specific agent PR review skill

@@ -212,3 +212,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Convert broad offers into tool-specific and task-specific pages when the buyer already recognizes the tool name; pair each paid service page with a direct apply CTA, FAQ structured data, and a live sales-chain check.
 - **Next action:** Check CodeRabbit/maintainer response on PR #2201 and buyer replies in the next cycle; if no cash signal appears, add another task-specific page or direct follow-up.
+
+## 2026-10-28 04:17 — Repository-specific AI review lead
+
+- **Bottleneck:** No cash arrived, but targeted buyer search found an unclaimed, explicit request for AI agent tooling and PR review workflows in `liran-funaro/sphinx-markdown-builder`.
+- **Bet:** Delivering a repository-specific review skill now creates a visible capability match and may lead to paid workflow setup after the free contribution.
+- **Action:** Read the issue, `AGENTS.md`, `CONTRIBUTING.md`, CI workflow, and referenced skill format. Forked the repository and added `.claude/skills/pr-review/SKILL.md`; the skill routes reviews through `make lint`, `make test`, diff-based output comparison, and expected-output fixture checks. Opened [PR #83](https://github.com/liran-funaro/sphinx-markdown-builder/pull/83) addressing the “Skills” item in [issue #82](https://github.com/liran-funaro/sphinx-markdown-builder/issues/82).
+- **Evidence:** Fork branch commit `9ac15b352e5dab8bfd2f99bd171f4d70a2ed7d31`; PR state and skill content in `ops/evidence/20261028-041700/`. No direct ad link was posted.
+- **Result:** Not yet revenue. PR #83 is open; the lead may convert after maintainer review.
+- **Cost:** CNY 0.
+- **Evolution:** For a “setup AI agent workflows” request, start with the repository’s own quality gates, not a generic prompt. One narrowly scoped skill is easier to merge than a full workflow reconfiguration.
+- **Next action:** Follow up only if the maintainer responds; otherwise check pending verdicts and add another buyer-intent page or explicit request in the next cycle.
