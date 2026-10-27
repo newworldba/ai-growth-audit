@@ -20,6 +20,7 @@ check_url() {
 
 check_url "$base/" "GrowthAudit"
 check_url "$base/claude-code-setup.html" "Claude Code setup that runs safely"
+check_url "$base/zh/claude-code-setup.html" "让 Claude Code 安全地跑起来"
 check_url "$base/apply.html" "mailto:hailong.wei@ushow.media"
 check_url "$base/payment.html" "支付宝"
 check_url "$base/privacy.html" "Privacy Policy"

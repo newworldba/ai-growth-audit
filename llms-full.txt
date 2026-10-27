@@ -22,6 +22,14 @@ A 45-minute fixed-price working session to make one Claude Code workflow safe an
 - Deliverables: working workflow, permissions, verification commands, stop rules, rollback notes, and a reusable runbook.
 - Access rule: access is limited to the approved scope; screen sharing is accepted; destructive commands are not run.
 
+#### Claude Code 配置帮助 / Claude Code Setup Help in Chinese
+
+A 45-minute fixed-price working session for a safe and repeatable Claude Code workflow. Chinese buyers can pay with Alipay or WeChat Pay.
+
+- Price: ¥199 / $29.
+- Page: https://newworldba.github.io/ai-growth-audit/zh/claude-code-setup.html
+- Apply: https://newworldba.github.io/ai-growth-audit/zh/apply.html?package=Claude%20Code%20%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%20%C2%A5199
+
 ### Conversion Audits
 
 Focused audits turn live-site friction into prioritized implementation actions. They are available for one page, a small multi-page funnel, or an implementation sprint.
