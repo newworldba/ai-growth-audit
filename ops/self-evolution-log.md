@@ -295,7 +295,7 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Bottleneck:** Xiaohongshu was still unauthenticated and its web endpoint returned an IP-risk block, so the approved note could not use that channel immediately.
 - **Bet:** The own-site page can publish the truthful ¥209 / CNY 0 experiment immediately, while Xiaohongshu waits for login without changing the honest framing.
 - **Action:** Created `zh/ai-money-log.html` with the current-capital, zero-revenue state, completed actions, honesty disclaimer, and three daily metrics; added a homepage entry and updated the sitemap.
-- **Evidence:** Draft `marketing/notes/ai-money-log-xhs.md`; publishable page `zh/ai-money-log.html`; experiment row in `finance/revenue-experiments.md`.
+- **Evidence:** Draft `marketing/notes/ai-money-log-xhs.md`; live page `https://newworldba.github.io/ai-growth-audit/zh/ai-money-log.html` returns HTTP 200; deployment run `40722345609`; experiment row in `finance/revenue-experiments.md`.
 - **Result:** Not yet revenue. Cash remains CNY 0; the next signals are page deployment, views, clicks to the service page, and any paid conversion.
 - **Cost:** CNY 0.
 - **Evolution:** When a social channel is blocked, keep the approved message intact and publish first on the channel the user controls; use social only after login.
