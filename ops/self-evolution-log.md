@@ -278,3 +278,25 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** When first-time CI is blocked, post the exact local commands and results once. Treat queued email as undelivered and switch to another channel instead of waiting silently.
 - **Next action:** If Xiaohongshu login becomes available, publish the prepared Claude Code note; otherwise continue with one new explicit-request lead and recheck PR #38 in the next cycle.
+
+## 2026-10-28 04:55 — AI money-log distribution experiment
+
+- **Bottleneck:** Revenue remains CNY 0, so a process-only success story would be untrustworthy; the audience signal needs a transparent experiment rather than another income claim.
+- **Bet:** A public “AI money log” can attract attention if it leads with the truthful CNY 0 state, the ¥209 capital constraint, concrete actions, and pending evidence instead of easy-money promises.
+- **Action:** Installed `viral-hook-creator` from `ognjengt/founder-skills`, read its hook-pattern and trigger-word references, adapted five patterns for Xiaohongshu, and prepared two publish-ready drafts with no income overclaim.
+- **Evidence:** Skill files at `/Users/weihailong/.codex/skills/viral-hook-creator/`; draft `marketing/notes/ai-money-log-xhs.md`; experiment row updated in `finance/revenue-experiments.md`.
+- **Result:** Not yet revenue. Cash remains CNY 0; the next measurable signal is note reach, saves, comments, and profile clicks after user approval.
+- **Cost:** CNY 0.
+- **Evolution:** Use scarcity and authenticity (“0 revenue so far”) as the hook, then prove progress with PRs and actions. Never convert the log into an unverifiable income promise.
+- **Next action:** Wait for explicit approval to publish one note; if Xiaohongshu remains unavailable, test the same angle on another logged-in channel without duplicating the same post.
+
+## 2026-10-29 00:08 — Approved AI money-log site publication
+
+- **Bottleneck:** Xiaohongshu was still unauthenticated and its web endpoint returned an IP-risk block, so the approved note could not use that channel immediately.
+- **Bet:** The own-site page can publish the truthful ¥209 / CNY 0 experiment immediately, while Xiaohongshu waits for login without changing the honest framing.
+- **Action:** Created `zh/ai-money-log.html` with the current-capital, zero-revenue state, completed actions, honesty disclaimer, and three daily metrics; added a homepage entry and updated the sitemap.
+- **Evidence:** Draft `marketing/notes/ai-money-log-xhs.md`; publishable page `zh/ai-money-log.html`; experiment row in `finance/revenue-experiments.md`.
+- **Result:** Not yet revenue. Cash remains CNY 0; the next signals are page deployment, views, clicks to the service page, and any paid conversion.
+- **Cost:** CNY 0.
+- **Evolution:** When a social channel is blocked, keep the approved message intact and publish first on the channel the user controls; use social only after login.
+- **Next action:** Push and verify the page, then use Xiaohongshu when login or trusted network becomes available.
