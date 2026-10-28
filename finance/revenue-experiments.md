@@ -333,3 +333,11 @@ Log every experiment with:
 - Added focused CI tests for unknown vLLM metadata, explicit SGLang metadata, and operator-verified CLI overrides.
 - Opened PR [#38](https://github.com/sybil-solutions/local-ai-recipe-kit/pull/38) at commit `7ce0b82b0754d0cf68bb23d7309d1d7498afa708`.
 - Current status: OPEN and MERGEABLE. No revenue is recognized because the inquiry has not accepted a scope or paid.
+
+---
+
+## 2026-10-29 — AI money-log Xiaohongshu publication
+
+- Published the approved, truthful “AI 替我打工，但它现在还没挣到 1 块钱” note through the user’s logged-in Chrome after recovering the long-form draft from the browser draft box.
+- Bypassed the missing visible submit control by dispatching the component’s `publish` event directly; the creator platform returned its success page.
+- Current status: distributed, but no revenue is recognized. Cash remains CNY 0 until a real payment arrives.

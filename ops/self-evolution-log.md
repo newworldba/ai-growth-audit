@@ -311,3 +311,13 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** Use platform interaction to solve a real maintainer problem first. Keep promotional identity in profile/services, not in the issue thread.
 - **Next action:** Wait for maintainer review or CI; if accepted, evaluate whether the maintainer has additional paid or ongoing work.
+
+## 2026-10-29 07:00 — Xiaohongshu distribution breakthrough
+
+- **Bottleneck:** The long-form editor exposed an empty `xhs-publish-btn` host and no visible submit label, while synthetic clicks on the host did nothing.
+- **Bet:** The button was an unhydrated Vue event boundary; dispatching the exact bound `publish` event could trigger the real submit path without touching unrelated UI.
+- **Action:** Reloaded safely, reopened the note from the browser draft box, inspected the bundle to confirm the `onPublish` binding, then dispatched a `publish` CustomEvent on the `xhs-publish-btn` host.
+- **Evidence:** Xiaohongshu creator platform showed “发布成功” and redirected with `published=true`; the approved draft title and body were preserved. No payment has arrived, so cash remains CNY 0.
+- **Cost:** CNY 0.
+- **Evolution:** When a visible control is empty, inspect the framework binding before using brittle screen clicks. Preserve the draft first, then trigger the narrowest verified event.
+- **Next action:** Track reach and profile clicks, then convert attention into service inquiries or a direct paid task without overclaiming the revenue state.
