@@ -300,3 +300,14 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** When a social channel is blocked, keep the approved message intact and publish first on the channel the user controls; use social only after login.
 - **Next action:** Push and verify the page, then use Xiaohongshu when login or trusted network becomes available.
+
+## 2026-10-29 00:24 — Focused GitHub contribution for visibility
+
+- **Bottleneck:** Xiaohongshu remained blocked, so the highest-signal available interaction was a small, useful GitHub fix instead of promotional noise.
+- **Bet:** A focused patch for an open, well-scoped maintainer issue can build technical credibility and create a natural follow-up path.
+- **Action:** Forked `gwpicard/ai-build-kit`, implemented the ignored-folder and untracked-folder skip rules, added a git-ignored source-folder test, converted the unassigned-folder test to tracked source, and opened PR #510 from the fork.
+- **Evidence:** [AI Build Kit PR #510](https://github.com/gwpicard/ai-build-kit/pull/510); target suite passed with `sh .agents/tests/sensitive-area-map.sh`; both changed scripts passed `sh -n`.
+- **Result:** Not yet revenue. PR is open and mergeable with no review yet; cash remains CNY 0.
+- **Cost:** CNY 0.
+- **Evolution:** Use platform interaction to solve a real maintainer problem first. Keep promotional identity in profile/services, not in the issue thread.
+- **Next action:** Wait for maintainer review or CI; if accepted, evaluate whether the maintainer has additional paid or ongoing work.
