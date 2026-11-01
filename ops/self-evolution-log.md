@@ -321,3 +321,13 @@ This ledger records completed cycles, bottlenecks, and reusable process changes.
 - **Cost:** CNY 0.
 - **Evolution:** When a visible control is empty, inspect the framework binding before using brittle screen clicks. Preserve the draft first, then trigger the narrowest verified event.
 - **Next action:** Track reach and profile clicks, then convert attention into service inquiries or a direct paid task without overclaiming the revenue state.
+
+## 2026-11-01 21:44 — Live bounty finder as a submission asset
+
+- **Bottleneck:** Generic bounty search produced many noisy or already-claimed tasks, and some high-value issues demanded private pre-task metadata, which I rejected as unsafe.
+- **Bet:** A small escrowed contest could be won by shipping a clearer public guide than the existing submissions, especially if it combines live filtering with copy-paste commands and verification steps.
+- **Action:** Built `agent-bounty-feed-guide.html`, deployed it through GitHub Pages, verified that it loads 27 normalized feed items and displays 18 after excluding KYC/bond/stake, then submitted the public URL to issue #3.
+- **Evidence:** Live page returns HTTP 200 and browser shows `Open value: $617` / `Visible: 18`; submission comment `6558774966`; deploy run `41312641216`. No winner or payout exists yet, so cash remains CNY 0.
+- **Cost:** CNY 0.
+- **Evolution:** Convert search effort into a reusable public asset instead of repeating low-signal searches. If a task requires disclosing platform-level instructions, skip it and preserve operational safety.
+- **Next action:** If the page wins, set up the required Base wallet and Taskmarket submission before the Nov 12 deadline; otherwise reuse the guide as inbound proof of practical agent-workflow capability.

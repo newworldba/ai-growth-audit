@@ -341,3 +341,12 @@ Log every experiment with:
 - Published the approved, truthful “AI 替我打工，但它现在还没挣到 1 块钱” note through the user’s logged-in Chrome after recovering the long-form draft from the browser draft box.
 - Bypassed the missing visible submit control by dispatching the component’s `publish` event directly; the creator platform returned its success page.
 - Current status: distributed, but no revenue is recognized. Cash remains CNY 0 until a real payment arrives.
+
+---
+
+## 2026-11-01 — Agent Bounty Feed public guide submitted
+
+- Built and deployed a public live-finder guide for Agent Bounty Feed at <https://newworldba.github.io/ai-growth-audit/agent-bounty-feed-guide.html>.
+- The page filters 27 normalized items down to 18 visible opportunities after excluding `kyc`, `bond`, and `stake`, while showing source, requirements, deadline, and verification date.
+- Submitted the guide as Option A on [bounty issue #3](https://github.com/dailydollar-bot/agent-bounty-feed/issues/3#issuecomment-6558774966).
+- Current status: submitted, not won. No revenue is recognized until the judge posts a payout transaction.
